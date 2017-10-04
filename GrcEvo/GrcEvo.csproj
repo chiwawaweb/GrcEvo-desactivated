@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A57CE4D6-1C4B-41C0-861E-0DE5F1E9EAE8}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>GrcEvo</RootNamespace>
     <AssemblyName>GrcEvo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -30,6 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -82,6 +85,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrcEvo.DAL\GrcEvo.DAL.csproj">
+      <Project>{9887861a-f444-420a-ac1f-43ceb89c090d}</Project>
+      <Name>GrcEvo.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrcEvo.DTO\GrcEvo.DTO.csproj">
+      <Project>{474be314-7f9d-45d4-bff4-4dc69fd5f7a2}</Project>
+      <Name>GrcEvo.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -47,11 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerProvider.cs" />
+    <Compile Include="GrcEvoContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrcEvo.DTO\GrcEvo.DTO.csproj">
+      <Project>{474be314-7f9d-45d4-bff4-4dc69fd5f7a2}</Project>
+      <Name>GrcEvo.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

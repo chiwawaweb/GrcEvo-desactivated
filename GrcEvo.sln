@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrcEvo", "GrcEvo\GrcEvo.csproj", "{A57CE4D6-1C4B-41C0-861E-0DE5F1E9EAE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrcEvo.DAL", "GrcEvo.DAL\GrcEvo.DAL.csproj", "{9887861A-F444-420A-AC1F-43CEB89C090D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrcEvo.DTO", "GrcEvo.DTO\GrcEvo.DTO.csproj", "{474BE314-7F9D-45D4-BFF4-4DC69FD5F7A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A57CE4D6-1C4B-41C0-861E-0DE5F1E9EAE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A57CE4D6-1C4B-41C0-861E-0DE5F1E9EAE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A57CE4D6-1C4B-41C0-861E-0DE5F1E9EAE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9887861A-F444-420A-AC1F-43CEB89C090D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9887861A-F444-420A-AC1F-43CEB89C090D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9887861A-F444-420A-AC1F-43CEB89C090D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9887861A-F444-420A-AC1F-43CEB89C090D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{474BE314-7F9D-45D4-BFF4-4DC69FD5F7A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474BE314-7F9D-45D4-BFF4-4DC69FD5F7A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474BE314-7F9D-45D4-BFF4-4DC69FD5F7A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474BE314-7F9D-45D4-BFF4-4DC69FD5F7A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

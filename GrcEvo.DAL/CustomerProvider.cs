@@ -23,5 +23,25 @@ namespace GrcEvo.DAL
                 return context.Customers.ToList();
             }
         }
+
+        /// <summary>
+        /// Créer une entité de type Customer dans la BDD
+        /// </summary>
+        /// <param name="Customer"></param>
+        public void Create(EntityCustomer Customer)
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                try
+                {
+                    context.Customers.Add(Customer);
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

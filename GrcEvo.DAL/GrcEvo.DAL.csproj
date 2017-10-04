@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="CustomerProvider.cs" />
     <Compile Include="GrcEvoContext.cs" />
+    <Compile Include="GrcEvoContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

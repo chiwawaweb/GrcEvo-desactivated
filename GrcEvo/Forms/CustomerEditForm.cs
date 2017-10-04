@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GrcEvo.Forms
 {
-    public partial class CustomerEdit : Form
+    public partial class CustomerEditForm : Form
     {
-        public CustomerEdit()
+        public CustomerEditForm()
         {
             InitializeComponent();
         }

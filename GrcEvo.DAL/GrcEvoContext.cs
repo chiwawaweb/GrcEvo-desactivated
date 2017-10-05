@@ -20,7 +20,7 @@ namespace GrcEvo.DAL
         public DbSet<EntityCustomer> Customers { get; set; }
         public DbSet<EntitySupplier> Suppliers { get; set; }
         public DbSet<EntityProspect> Prospects { get; set; }
-        public DbSet<EntityTiers> Tierss { get; set; }
+        public DbSet<EntityThirdParty> ThirdParties { get; set; }
         public DbSet<EntityCountry> Countries { get; set; }
         public DbSet<EntityCivility> Civilities { get; set; }
     }

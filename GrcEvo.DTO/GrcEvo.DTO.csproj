@@ -45,7 +45,8 @@
     <Compile Include="EntityCustomer.cs" />
     <Compile Include="EntityProspect.cs" />
     <Compile Include="EntitySupplier.cs" />
-    <Compile Include="EntityTiers.cs" />
+    <Compile Include="EntityThirdPartyFamily.cs" />
+    <Compile Include="EntityThirdParty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,9 +7,9 @@ using GrcEvo.DTO;
 
 namespace GrcEvo.DAL
 {
-    public class TiersProvider
+    public class ThirdPartyProvider
     {
-        public TiersProvider()
+        public ThirdPartyProvider()
         {
 
         }
@@ -18,13 +18,13 @@ namespace GrcEvo.DAL
         /// Recupère la liste de toutes les entités
         /// </summary>
         /// <returns>La Liste de toutes les entités</returns>
-        public List<EntityTiers> getAll()
+        public List<EntityThirdParty> getAll()
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
                 try
                 {
-                    return context.Tierss.ToList<EntityTiers>();
+                    return context.ThirdParties.ToList<EntityThirdParty>();
                 }
                 catch
                 {
@@ -36,14 +36,14 @@ namespace GrcEvo.DAL
         /// <summary>
         /// Créer une entité de type Tiers dans la BDD
         /// </summary>
-        /// <param name="Tiers"></param>
-        public void Create(EntityTiers Tiers)
+        /// <param name="ThirdParty"></param>
+        public void Create(EntityThirdParty ThirdParty)
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
                 try
                 {
-                    context.Tierss.Add(Tiers);
+                    context.ThirdParties.Add(ThirdParty);
                     context.SaveChanges();
                 }
                 catch

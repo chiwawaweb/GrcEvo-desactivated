@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GrcEvo.DTO
 {
-    public class EntityCustomer : EntityTiers
+    public class EntityCustomer : EntityThirdParty
     {
         public string VatNumbber { get; set; }
 

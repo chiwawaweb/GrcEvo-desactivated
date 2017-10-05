@@ -29,9 +29,9 @@ namespace GrcEvo.Forms
 
         static void AfficheAllTiers()
         {
-            TiersProvider tiersProvider = new TiersProvider();
+            ThirdPartyProvider tiersProvider = new ThirdPartyProvider();
 
-            foreach (EntityTiers tiers in tiersProvider.getAll())
+            foreach (EntityThirdParty tiers in tiersProvider.getAll())
             {
                 Console.WriteLine(tiers);
             }

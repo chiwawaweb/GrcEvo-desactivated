@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace GrcEvo.DTO
 {
-    public class EntityProspect : EntityThirdParty
+    public class EntityThirdPartyFamily
     {
-        public EntityProspect()
-        {
-            PrefixCode = "PP";
-        }
+        public int ID { get; set; }
     }
 }

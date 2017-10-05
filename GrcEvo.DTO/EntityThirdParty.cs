@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GrcEvo.DTO
 {
-    public class EntityTiers
+    public class EntityThirdParty
     {
         public int ID { get; set; }
         public string PrefixCode { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GrcEvo.DTO
 {
-    public class EntitySupplier : EntityTiers
+    public class EntitySupplier : EntityThirdParty
     {
         public EntitySupplier()
         {

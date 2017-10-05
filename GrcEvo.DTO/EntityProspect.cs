@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace GrcEvo.DTO
 {
-    public class EntityProspect
+    public class EntityProspect : EntityTiers
     {
-
+        public EntityProspect()
+        {
+            PrefixCode = "PP";
+        }
     }
 }

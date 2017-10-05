@@ -12,7 +12,7 @@ namespace GrcEvo.DTO
 
         public override string ToString()
         {
-            return String.Concat("Je suis un client ", Civility, " de code ", NumberCode, " et ID ", ID);
+            return String.Concat("Je suis un client ", Civility, " de code ", NumberCode, " et ID ", ID, " Prefixe ", PrefixCode);
         }
 
         public EntityCustomer()

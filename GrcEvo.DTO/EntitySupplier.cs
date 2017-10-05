@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace GrcEvo.DTO
 {
-    public class EntitySupplier
+    public class EntitySupplier : EntityTiers
     {
-
+        public EntitySupplier()
+        {
+            PrefixCode = "FR";
+        }
     }
 }

@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityCustomer.cs" />
+    <Compile Include="EntityProspect.cs" />
+    <Compile Include="EntitySupplier.cs" />
     <Compile Include="EntityTiers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

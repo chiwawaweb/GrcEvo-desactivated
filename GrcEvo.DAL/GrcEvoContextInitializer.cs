@@ -16,6 +16,13 @@ namespace GrcEvo.DAL
         /// <param name="context"></param>
         protected override void Seed(GrcEvoContext context)
         {
+            EntityCustomer customer1 = context.Customers.Add(new EntityCustomer());
+
+            List<EntityCustomer> listeCustomer = new List < EntityCustomer>();
+            listeCustomer.Add(new EntityCustomer { NumberCode = 98, Civility = "Mlle", PrefixCode = "ZZ" });
+            listeCustomer.Add(new EntityCustomer { NumberCode = 99, Civility = "Mzle", PrefixCode = "ZX" });
+
+            listeCustomer.ForEach(entity => context.Customers.Add(entity));
             /*
             EntityGarage garage = context.Garage.Add(new EntityGarage());
 

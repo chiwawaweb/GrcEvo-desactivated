@@ -30,5 +30,10 @@ namespace GrcEvo.DTO
         public string Note { get; set; }
         public string CreatedAt { get; set; }
         public string UpdatedAt { get; set; }
+
+        public override string ToString()
+        {
+            return String.Concat("Je suis un client ", Civility, " de code ", NumberCode, " et ID ", ID);
+        }
     }
 }

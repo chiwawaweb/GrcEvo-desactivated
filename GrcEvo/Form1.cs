@@ -19,6 +19,8 @@ namespace GrcEvo
             InitializeComponent();
             AfficheAllClient();
             AddCustomer();
+            AfficheAllClient();
+
             Console.WriteLine("Fin");
             Console.ReadLine();
         }

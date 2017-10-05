@@ -12,11 +12,18 @@ using GrcEvo.DAL;
 
 namespace GrcEvo.Forms
 {
-    public partial class CustomerEditForm : Form
+    public partial class MainForm : Form
     {
-        public CustomerEditForm()
+        public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void btnAction_Click(object sender, EventArgs e)
+        {
+            /* TEMPORAIRE fonctions de test de l'application */
+            Console.WriteLine("TEST GRCEVO");
+            Console.ReadLine();
         }
     }
 }

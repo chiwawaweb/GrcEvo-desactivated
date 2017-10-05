@@ -16,13 +16,25 @@ namespace GrcEvo.DAL
 
         }
 
+        /// <summary>
+        /// Recupère la liste de toutes les entités
+        /// </summary>
+        /// <returns>La Liste de toutes les entités</returns>
         public List<EntityCustomer> getAll()
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
-                return context.Customers.ToList();
+                try
+                {
+                    return context.Customers.ToList<EntityCustomer>();
+                }
+                catch
+                {
+                    throw;
+                }
             }
         }
+        
 
         /// <summary>
         /// Créer une entité de type Customer dans la BDD

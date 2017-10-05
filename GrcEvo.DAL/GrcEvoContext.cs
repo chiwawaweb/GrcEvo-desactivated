@@ -17,11 +17,15 @@ namespace GrcEvo.DAL
             Database.SetInitializer<GrcEvoContext>(new GrcEvoContextInitializer());
         }
 
+        public DbSet<EntityThirdParty> ThirdParties { get; set; }
         public DbSet<EntityCustomer> Customers { get; set; }
         public DbSet<EntitySupplier> Suppliers { get; set; }
         public DbSet<EntityProspect> Prospects { get; set; }
-        public DbSet<EntityThirdParty> ThirdParties { get; set; }
         public DbSet<EntityCountry> Countries { get; set; }
         public DbSet<EntityCivility> Civilities { get; set; }
+        public DbSet<EntityThirdPartyFamily> ThirdPartyFamilies { get; set; }
+        public DbSet<EntityCustomerFamily> CustomerFamilies { get; set; }
+        public DbSet<EntitySupplierFamily> SupplierFamilies { get; set; }
+        public DbSet<EntityProspectFamily> ProspectFamilies { get; set; }
     }
 }

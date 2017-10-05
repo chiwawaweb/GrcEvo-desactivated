@@ -27,9 +27,14 @@ namespace GrcEvo.DAL
             List<EntityProspect> listeProspect = new List<EntityProspect>();
             listeProspect.Add(new EntityProspect { NumberCode = 998, Civility = "Pp1" });
 
+            List<EntityCustomerFamily> listeCustomerFamily = new List<EntityCustomerFamily>();
+            listeCustomerFamily.Add(new EntityCustomerFamily { Name = "Fam1CL", Abbreviation = "FA1"});
+            listeCustomerFamily.Add(new EntityCustomerFamily { Name = "Fam2CL", Abbreviation = "FA2"});
+
             listeCustomer.ForEach(entity => context.Customers.Add(entity));
             listeSupplier.ForEach(entity => context.Suppliers.Add(entity));
             listeProspect.ForEach(entity => context.Prospects.Add(entity));
+            listeCustomerFamily.ForEach(entity => context.CustomerFamilies.Add(entity));
             /*
             EntityGarage garage = context.Garage.Add(new EntityGarage());
 

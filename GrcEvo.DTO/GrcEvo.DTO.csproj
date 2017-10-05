@@ -43,8 +43,11 @@
     <Compile Include="EntityCivility.cs" />
     <Compile Include="EntityCountry.cs" />
     <Compile Include="EntityCustomer.cs" />
+    <Compile Include="EntityCustomerFamily.cs" />
     <Compile Include="EntityProspect.cs" />
+    <Compile Include="EntityProspectFamily.cs" />
     <Compile Include="EntitySupplier.cs" />
+    <Compile Include="EntitySupplierFamily.cs" />
     <Compile Include="EntityThirdPartyFamily.cs" />
     <Compile Include="EntityThirdParty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

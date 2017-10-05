@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityCivility.cs" />
+    <Compile Include="EntityCountry.cs" />
     <Compile Include="EntityCustomer.cs" />
     <Compile Include="EntityProspect.cs" />
     <Compile Include="EntitySupplier.cs" />

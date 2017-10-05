@@ -14,7 +14,6 @@ namespace GrcEvo.DAL
     {
         public GrcEvoContext() : base("GrcEvo")
         {
-            // Change la stratégie d'initialisation avec celle que nous avons défini dans GarageContextInitializer
             Database.SetInitializer<GrcEvoContext>(new GrcEvoContextInitializer());
         }
 
@@ -22,5 +21,7 @@ namespace GrcEvo.DAL
         public DbSet<EntitySupplier> Suppliers { get; set; }
         public DbSet<EntityProspect> Prospects { get; set; }
         public DbSet<EntityTiers> Tierss { get; set; }
+        public DbSet<EntityCountry> Countries { get; set; }
+        public DbSet<EntityCivility> Civilities { get; set; }
     }
 }

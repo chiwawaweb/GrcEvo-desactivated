@@ -10,10 +10,12 @@ namespace GrcEvo.DTO
     {
         public string VatNumbber { get; set; }
 
+        /*
         public override string ToString()
         {
-            return String.Concat("Je suis un client ", Civility, " de code ", NumberCode, " et ID ", ID, " Prefixe ", PrefixCode);
+            return String.Concat("Je suis un ", PrefixCode, " Genre ", Civility, " de code ", NumberCode, " et ID ", ID);
         }
+        */
 
         public EntityCustomer()
         {

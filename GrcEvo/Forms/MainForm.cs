@@ -16,13 +16,28 @@ namespace GrcEvo.Forms
     {
         public MainForm()
         {
+            /*
             AfficheAllClient();
             AddCustomer();
             AfficheAllClient();
+            */
+
+            AfficheAllTiers();
 
             InitializeComponent();
         }
 
+        static void AfficheAllTiers()
+        {
+            TiersProvider tiersProvider = new TiersProvider();
+
+            foreach (EntityTiers tiers in tiersProvider.getAll())
+            {
+                Console.WriteLine(tiers);
+            }
+        }
+
+        /*
         static void AfficheAllClient()
         {
             CustomerProvider customerProvider = new CustomerProvider();
@@ -58,7 +73,7 @@ namespace GrcEvo.Forms
             });
             Console.WriteLine("======================");
         }
-
+        */
         private void btnAction_Click(object sender, EventArgs e)
         {
             /* TEMPORAIRE fonctions de test de l'application */

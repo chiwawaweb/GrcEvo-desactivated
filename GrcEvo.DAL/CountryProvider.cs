@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.Entity;
-using GrcEvo.DTO; 
+using GrcEvo.DTO;
 
 namespace GrcEvo.DAL
 {
-    public class CustomerProvider
+    public class CountryProvider
     {
-        public CustomerProvider()
+        public CountryProvider()
         {
 
         }
@@ -20,13 +18,13 @@ namespace GrcEvo.DAL
         /// Recupère la liste de toutes les entités
         /// </summary>
         /// <returns>La Liste de toutes les entités</returns>
-        public List<EntityCustomer> getAll()
+        public List<EntityCountry> getAll()
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
                 try
                 {
-                    return context.Customers.ToList<EntityCustomer>();
+                    return context.Countries.ToList<EntityCountry>();
                 }
                 catch
                 {
@@ -34,19 +32,18 @@ namespace GrcEvo.DAL
                 }
             }
         }
-        
 
         /// <summary>
-        /// Créer une entité de type Customer dans la BDD
+        /// Créer une entité de type Country dans la BDD
         /// </summary>
-        /// <param name="Customer"></param>
-        public void Create(EntityCustomer Customer)
+        /// <param name="Country"></param>
+        public void Create(EntityCountry Country)
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
                 try
                 {
-                    context.Customers.Add(Customer);
+                    context.Countries.Add(Country);
                     context.SaveChanges();
                 }
                 catch

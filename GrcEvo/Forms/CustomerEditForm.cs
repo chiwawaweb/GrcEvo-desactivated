@@ -27,7 +27,9 @@ namespace GrcEvo.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            ThirdParty.Create();
+            ThirdParty thirdParty = new ThirdParty();
+            
+            thirdParty.Create();
         }
     }
 }

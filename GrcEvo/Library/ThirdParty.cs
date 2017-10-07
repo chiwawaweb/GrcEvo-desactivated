@@ -13,10 +13,11 @@ namespace GrcEvo.Library
     {
         public void Create()
         {
-            EntityThirdParty newThirdParty = new EntityThirdParty();
+            EntityCustomer newThirdParty = new EntityCustomer();
             ThirdPartyProvider tpp = new ThirdPartyProvider();
 
-            newThirdParty.Company = txtCompany.Text;
+            newThirdParty.Company = txtCompany.Text.ToString();
+            newThirdParty.Adress1 = "adresse1";
             tpp.Create(newThirdParty);
         }
     }

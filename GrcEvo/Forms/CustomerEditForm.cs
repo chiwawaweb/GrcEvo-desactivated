@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GrcEvo.DTO;
 using GrcEvo.DAL;
+using GrcEvo.Library;
 
 namespace GrcEvo.Forms
 {
@@ -17,6 +18,16 @@ namespace GrcEvo.Forms
         public CustomerEditForm()
         {
             InitializeComponent();
+        }
+
+        private void CustomerEditForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            ThirdParty.Create();
         }
     }
 }

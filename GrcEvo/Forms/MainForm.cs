@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GrcEvo.DTO;
 using GrcEvo.DAL;
-using System.Data.Entity;
 
 namespace GrcEvo.Forms
 {
@@ -89,6 +88,17 @@ namespace GrcEvo.Forms
 
             Console.ReadLine();
 
+        }
+
+        private void clientsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nouveauToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerEditForm frm = new CustomerEditForm();
+            frm.ShowDialog();
         }
     }
 }

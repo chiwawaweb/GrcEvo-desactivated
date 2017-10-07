@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GrcEvo.DTO;
 using GrcEvo.DAL;
+using System.Data.Entity;
 
 namespace GrcEvo.Forms
 {
@@ -78,7 +79,16 @@ namespace GrcEvo.Forms
         {
             /* TEMPORAIRE fonctions de test de l'application */
             Console.WriteLine("TEST GRCEVO");
+            Console.WriteLine("Enregistrement d'un nouvel enregistrement");
+
+            EntityCountry newCountry = new EntityCountry();
+            CountryProvider cp = new CountryProvider();
+            newCountry.Name = "PAYS MERVEILLEUX";
+            newCountry.Abbreviation = "PM";
+            cp.Create(newCountry);
+
             Console.ReadLine();
+
         }
     }
 }

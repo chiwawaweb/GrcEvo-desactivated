@@ -61,7 +61,7 @@ namespace GrcEvo.Forms
 
         private void nouveauToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CustomerEditForm frm = new CustomerEditForm();
+            ThirdPartyEditForm frm = new ThirdPartyEditForm();
             frm.ShowDialog();
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace GrcEvo.Forms
 {
-    partial class CustomerEditForm
+    partial class ThirdPartyEditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,33 +31,32 @@
             this.grpDenomination = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxCivility = new System.Windows.Forms.ComboBox();
-            this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtCompany = new System.Windows.Forms.TextBox();
             this.txtNumberCode = new System.Windows.Forms.TextBox();
             this.txtPrefixCode = new System.Windows.Forms.TextBox();
-            this.grpCommunication = new System.Windows.Forms.GroupBox();
-            this.grpDivers = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.grpDenomination.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpDenomination
             // 
             this.grpDenomination.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpDenomination.Controls.Add(this.label2);
-            this.grpDenomination.Controls.Add(this.cbxCivility);
-            this.grpDenomination.Controls.Add(this.lblFirstName);
             this.grpDenomination.Controls.Add(this.lblLastName);
+            this.grpDenomination.Controls.Add(this.label2);
             this.grpDenomination.Controls.Add(this.label1);
+            this.grpDenomination.Controls.Add(this.cbxCivility);
+            this.grpDenomination.Controls.Add(this.txtLastName);
             this.grpDenomination.Controls.Add(this.lblCode);
-            this.grpDenomination.Controls.Add(this.textBox2);
-            this.grpDenomination.Controls.Add(this.textBox1);
             this.grpDenomination.Controls.Add(this.txtCompany);
             this.grpDenomination.Controls.Add(this.txtNumberCode);
             this.grpDenomination.Controls.Add(this.txtPrefixCode);
@@ -65,15 +64,16 @@
             this.grpDenomination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpDenomination.Name = "grpDenomination";
             this.grpDenomination.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpDenomination.Size = new System.Drawing.Size(902, 180);
+            this.grpDenomination.Size = new System.Drawing.Size(1174, 180);
             this.grpDenomination.TabIndex = 0;
             this.grpDenomination.TabStop = false;
             this.grpDenomination.Text = "Dénomination";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 100);
+            this.label2.Location = new System.Drawing.Point(8, 103);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 20);
@@ -82,28 +82,20 @@
             // 
             // cbxCivility
             // 
+            this.cbxCivility.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxCivility.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCivility.FormattingEnabled = true;
-            this.cbxCivility.Location = new System.Drawing.Point(10, 125);
+            this.cbxCivility.Location = new System.Drawing.Point(77, 98);
             this.cbxCivility.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxCivility.Name = "cbxCivility";
-            this.cbxCivility.Size = new System.Drawing.Size(102, 31);
+            this.cbxCivility.Size = new System.Drawing.Size(370, 31);
             this.cbxCivility.TabIndex = 9;
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(448, 100);
-            this.lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(72, 20);
-            this.lblFirstName.TabIndex = 8;
-            this.lblFirstName.Text = "Prénom :";
             // 
             // lblLastName
             // 
+            this.lblLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(118, 100);
+            this.lblLastName.Location = new System.Drawing.Point(455, 104);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(50, 20);
@@ -130,34 +122,25 @@
             this.lblCode.TabIndex = 5;
             this.lblCode.Text = "Code client :";
             // 
-            // textBox2
+            // txtLastName
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(453, 125);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(438, 30);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(123, 125);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 30);
-            this.textBox1.TabIndex = 3;
+            this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLastName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Location = new System.Drawing.Point(523, 98);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(629, 30);
+            this.txtLastName.TabIndex = 3;
             // 
             // txtCompany
             // 
-            this.txtCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCompany.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCompany.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCompany.Location = new System.Drawing.Point(123, 57);
             this.txtCompany.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCompany.Name = "txtCompany";
-            this.txtCompany.Size = new System.Drawing.Size(768, 30);
+            this.txtCompany.Size = new System.Drawing.Size(1041, 30);
             this.txtCompany.TabIndex = 2;
             // 
             // txtNumberCode
@@ -180,33 +163,9 @@
             this.txtPrefixCode.Size = new System.Drawing.Size(34, 30);
             this.txtPrefixCode.TabIndex = 0;
             // 
-            // grpCommunication
-            // 
-            this.grpCommunication.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpCommunication.Location = new System.Drawing.Point(18, 272);
-            this.grpCommunication.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpCommunication.Name = "grpCommunication";
-            this.grpCommunication.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpCommunication.Size = new System.Drawing.Size(903, 105);
-            this.grpCommunication.TabIndex = 1;
-            this.grpCommunication.TabStop = false;
-            this.grpCommunication.Text = "Communication";
-            // 
-            // grpDivers
-            // 
-            this.grpDivers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpDivers.Location = new System.Drawing.Point(20, 386);
-            this.grpDivers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpDivers.Name = "grpDivers";
-            this.grpDivers.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpDivers.Size = new System.Drawing.Size(902, 154);
-            this.grpDivers.TabIndex = 2;
-            this.grpDivers.TabStop = false;
-            this.grpDivers.Text = "Informations diverses";
-            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(655, 548);
+            this.btnSave.Location = new System.Drawing.Point(1055, 529);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(139, 51);
             this.btnSave.TabIndex = 3;
@@ -214,41 +173,83 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // CustomerEditForm
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1211, 25);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 260);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1187, 253);
+            this.tabControl1.TabIndex = 5;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1179, 220);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(879, 220);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ThirdPartyEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 617);
+            this.ClientSize = new System.Drawing.Size(1211, 608);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.grpDivers);
-            this.Controls.Add(this.grpCommunication);
             this.Controls.Add(this.grpDenomination);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "CustomerEditForm";
-            this.Text = "CustomerEdit";
-            this.Load += new System.EventHandler(this.CustomerEditForm_Load);
+            this.Name = "ThirdPartyEditForm";
+            this.Text = "Fiche client";
             this.grpDenomination.ResumeLayout(false);
             this.grpDenomination.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox grpDenomination;
-        private System.Windows.Forms.GroupBox grpCommunication;
-        private System.Windows.Forms.GroupBox grpDivers;
         private System.Windows.Forms.TextBox txtNumberCode;
         private System.Windows.Forms.TextBox txtPrefixCode;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxCivility;
-        protected System.Windows.Forms.TextBox txtCompany;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TextBox txtCompany;
     }
 }

@@ -35,21 +35,7 @@ namespace GrcEvo.DAL
             listeSupplier.ForEach(entity => context.Suppliers.Add(entity));
             listeProspect.ForEach(entity => context.Prospects.Add(entity));
             listeCustomerFamily.ForEach(entity => context.CustomerFamilies.Add(entity));
-            /*
-            EntityGarage garage = context.Garage.Add(new EntityGarage());
-
-            List<EntityHarley> listeHarley = new List<EntityHarley>();
-            listeHarley.Add(new EntityHarley { Couleur = "Noire", Modele = "Fatbob", Reservoir = 15, Garage = garage });
-            listeHarley.Add(new EntityHarley { Couleur = "Blanche", Modele = "Road King", Reservoir = 30, Garage = garage });
-            listeHarley.Add(new EntityHarley { Couleur = "Noire", Modele = "883 Iron", Reservoir = 12, Garage = garage });
-
-            List<EntityFerrari> listeFerrari = new List<EntityFerrari>();
-            listeFerrari.Add(new EntityFerrari { Couleur = "Rouge", Modele = "Enzo", Garage = garage });
-            listeFerrari.Add(new EntityFerrari { Couleur = "Bleue", Garage = garage });
-
-            listeHarley.ForEach(entity => context.Harleys.Add(entity));
-            listeFerrari.ForEach(entity => context.Ferraris.Add(entity));
-            */
+            
         }
     }
 }

@@ -9,6 +9,7 @@ namespace GrcEvo.DTO
     public class EntityCustomer : EntityThirdParty
     {
         public string VatNumbber { get; set; }
+        public bool Blocked { get; set; }
 
         /*
         public override string ToString()

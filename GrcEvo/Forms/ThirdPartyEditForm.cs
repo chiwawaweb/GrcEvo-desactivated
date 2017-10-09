@@ -30,14 +30,17 @@ namespace GrcEvo.Forms
             {
                 case "CL":
                     formTitle += "Client";
+                    chkBlocked.Visible = true;
                     break;
 
                 case "FR":
                     formTitle += "Fournisseur";
+                    chkBlocked.Visible = false;
                     break;
 
                 case "PP":
                     formTitle += "Prospect";
+                    chkBlocked.Visible = false;
                     break;
             }
 
@@ -57,7 +60,6 @@ namespace GrcEvo.Forms
         private void btnSave_Click(object sender, EventArgs e)
         {
             Save();
-            lblAction.Text = thirdPartyType;
         }
 
         private void Save()
@@ -70,6 +72,7 @@ namespace GrcEvo.Forms
             
             ec.Civility = cbxCivility.Text;
             ec.Name = txtName.Text;
+            ec.Blocked = chkBlocked.Checked;
             
 
             tpp.Create(ec);

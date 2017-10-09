@@ -61,7 +61,25 @@ namespace GrcEvo.Forms
 
         private void nouveauToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /* Temp */
             ThirdPartyEditForm frm = new ThirdPartyEditForm("CL","C");
+            frm.MdiParent = this.MdiParent;
+            frm.ShowDialog();
+        }
+
+        private void nouveauToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            /* Temp */
+            ThirdPartyEditForm frm = new ThirdPartyEditForm("PP", "C");
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
+
+        private void nouveauToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            /* Temp */
+            ThirdPartyEditForm frm = new ThirdPartyEditForm("FR", "C");
+            frm.MdiParent = this.MdiParent;
             frm.ShowDialog();
         }
     }

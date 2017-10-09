@@ -15,19 +15,49 @@ namespace GrcEvo.Forms
 {
     public partial class ThirdPartyEditForm : Form
     {
-        public ThirdPartyEditForm()
+        private string thirdPartyAction;
+        private string thirdPartyType;
+        private string formTitle;
+        
+        public ThirdPartyEditForm(string type, string action)
         {
             InitializeComponent();
+            thirdPartyAction = action;
+            thirdPartyType = type;
+
+            formTitle = "Fiche ";
+            switch (thirdPartyType)
+            {
+                case "CL":
+                    formTitle += "Client";
+                    break;
+
+                case "FR":
+                    formTitle += "Fournisseur";
+                    break;
+
+                case "PP":
+                    formTitle += "Prospect";
+                    break;
+            }
+
+            switch (thirdPartyAction)
+            {
+                case "C":
+                    formTitle += " (Création)";
+                    break;
+                case "U":
+                    formTitle += " (Modification)";
+                    break;
+            }
+
+            this.Text = formTitle;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             Save();
-        }
-
-        public string Company()
-        {
-            return txtCompany.Text;
+            lblAction.Text = thirdPartyType;
         }
 
         private void Save()
@@ -37,10 +67,10 @@ namespace GrcEvo.Forms
             EntityCustomer ec = new EntityCustomer();
             ThirdPartyProvider tpp = new ThirdPartyProvider();
 
-            ec.Company = txtCompany.Text;
+            
             ec.Civility = cbxCivility.Text;
-            ec.LastName = txtLastName.Text;
-            ec.FirstName = txtFirstName.Text;
+            ec.Name = txtName.Text;
+            
 
             tpp.Create(ec);
         }

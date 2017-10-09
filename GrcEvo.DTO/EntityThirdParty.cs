@@ -13,8 +13,7 @@ namespace GrcEvo.DTO
         public int NumberCode { get; set; }
         public string Company { get; set; }
         public string Civility { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
+        public string Name { get; set; }
         public string Adress1 { get; set; }
         public string Adress2 { get; set; }
         public string Adress3 { get; set; }

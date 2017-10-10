@@ -54,6 +54,10 @@ namespace GrcEvo.Forms
                     break;
             }
 
+            ThirdPartyProvider tpp = new ThirdPartyProvider();
+            formTitle += tpp.NextCode();
+
+            /* Barre titre du formulaire */
             this.Text = formTitle;
         }
 

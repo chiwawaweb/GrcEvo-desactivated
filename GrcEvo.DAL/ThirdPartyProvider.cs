@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GrcEvo.DTO;
+using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 
 namespace GrcEvo.DAL
 {
@@ -51,6 +53,60 @@ namespace GrcEvo.DAL
                     throw;
                 }
             }
+        }
+
+        /// <summary>
+        /// Mettre à jour dans la BDD l'entité passée en paramètre
+        /// </summary>
+        /// <param name="ThirdParty">L'entité à mettre à jour dans la BDD</param>
+        public void Update(EntityThirdParty ThirdParty)
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                try
+                {
+                    context.ThirdParties.Attach(ThirdParty);
+                    // Très important, signifier le fait que l'entité a été modifiée.
+                    context.Entry<EntityThirdParty>(ThirdParty).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Recupère l'entité dont l'ID est passé en paramètre
+        /// </summary>
+        /// <param name="ID">ID(clé primaire) de l'entité à retrouver.</param>
+        /// <returns>L'entité si elle existe, sinon NULL</returns>
+        public EntityThirdParty getThirdPartyById(int ID)
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                try
+                {
+                    return context.ThirdParties.Find(ID);
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Renvoie le prochain code du tiers avec son préfixe
+        /// </summary>
+        /// <returns></returns>
+        public string NextCode()
+        {
+            
+
+                return "";
+            
         }
     }
 }

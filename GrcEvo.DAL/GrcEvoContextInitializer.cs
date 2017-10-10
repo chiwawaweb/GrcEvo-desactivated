@@ -21,8 +21,8 @@ namespace GrcEvo.DAL
             listeCustomer.Add(new EntityCustomer { NumberCode = 99, Civility = "M." });
 
             List<EntitySupplier> listeSupplier = new List<EntitySupplier>();
-            listeSupplier.Add(new EntitySupplier { NumberCode = 498, Civility = "Fr1" });
-            listeSupplier.Add(new EntitySupplier { NumberCode = 499, Civility = "Fr2" });
+            listeSupplier.Add(new EntitySupplier { NumberCode = 498, Civility = "SARL" });
+            listeSupplier.Add(new EntitySupplier { NumberCode = 792, Civility = "SA" });
 
             List<EntityProspect> listeProspect = new List<EntityProspect>();
             listeProspect.Add(new EntityProspect { NumberCode = 998, Civility = "Pp1" });

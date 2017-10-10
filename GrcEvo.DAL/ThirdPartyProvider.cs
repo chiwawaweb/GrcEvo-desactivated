@@ -11,6 +11,8 @@ namespace GrcEvo.DAL
 {
     public class ThirdPartyProvider
     {
+        private string resultatNC;
+
         public ThirdPartyProvider()
         {
 
@@ -100,19 +102,15 @@ namespace GrcEvo.DAL
         /// <summary>
         /// Renvoie le prochain code du tiers avec son préfixe
         /// </summary>
+        /// /// <param name="prefixCode">Préfixe du tiers (CL, FR, PP,...)</param>
         /// <returns></returns>
-        string resultatNC;
-        public string NextCode()
+        public string NextCode(string prefixCode)
         {
-            
             using (GrcEvoContext context = new GrcEvoContext())
             {
                 
-                int NumberCode = 99;
-                
-
                 var testQuery = from EntityThirdParty in context.ThirdParties
-                                   where EntityThirdParty.NumberCode == NumberCode
+                                   where EntityThirdParty.PrefixCode == prefixCode
                                    select EntityThirdParty;
 
                 // Iterate through the results of the parameterized query.
@@ -124,7 +122,6 @@ namespace GrcEvo.DAL
             }
 
             return " * " + resultatNC;
-
         }
     }
 }

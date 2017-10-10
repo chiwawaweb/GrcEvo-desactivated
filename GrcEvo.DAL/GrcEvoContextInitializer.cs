@@ -18,7 +18,7 @@ namespace GrcEvo.DAL
         {
             List<EntityCustomer> listeCustomer = new List < EntityCustomer>();
             listeCustomer.Add(new EntityCustomer { NumberCode = 98, Civility = "Mlle" });
-            listeCustomer.Add(new EntityCustomer { NumberCode = 99, Civility = "Mzle" });
+            listeCustomer.Add(new EntityCustomer { NumberCode = 99, Civility = "M." });
 
             List<EntitySupplier> listeSupplier = new List<EntitySupplier>();
             listeSupplier.Add(new EntitySupplier { NumberCode = 498, Civility = "Fr1" });

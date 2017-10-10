@@ -55,7 +55,7 @@ namespace GrcEvo.Forms
             }
 
             ThirdPartyProvider tpp = new ThirdPartyProvider();
-            formTitle += tpp.NextCode();
+            formTitle += tpp.NextCode(thirdPartyType);
 
             /* Barre titre du formulaire */
             this.Text = formTitle;

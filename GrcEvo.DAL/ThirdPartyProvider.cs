@@ -101,12 +101,30 @@ namespace GrcEvo.DAL
         /// Renvoie le prochain code du tiers avec son préfixe
         /// </summary>
         /// <returns></returns>
+        string resultatNC;
         public string NextCode()
         {
             
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                
+                int NumberCode = 99;
+                
 
-                return "";
-            
+                var testQuery = from EntityThirdParty in context.ThirdParties
+                                   where EntityThirdParty.NumberCode == NumberCode
+                                   select EntityThirdParty;
+
+                // Iterate through the results of the parameterized query.
+                foreach (var result in testQuery)
+                {
+                    resultatNC += result.Civility + " - " + result.PrefixCode;
+                    Console.WriteLine("{0} {1} ", result.Civility, result.PrefixCode);
+                }
+            }
+
+            return " * " + resultatNC;
+
         }
     }
 }

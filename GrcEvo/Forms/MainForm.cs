@@ -54,11 +54,6 @@ namespace GrcEvo.Forms
 
         }
 
-        private void clientsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void nouveauToolStripMenuItem_Click(object sender, EventArgs e)
         {
             /* Temp */

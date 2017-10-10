@@ -100,7 +100,7 @@ namespace GrcEvo.DAL
         }
 
         /// <summary>
-        /// Renvoie le prochain code du tiers avec son préfixe
+        /// Renvoie le prochain code du tiers selon son préfixe
         /// </summary>
         /// /// <param name="prefixCode">Préfixe du tiers (CL, FR, PP,...)</param>
         /// <returns></returns>
@@ -112,13 +112,12 @@ namespace GrcEvo.DAL
                                    where EntityThirdParty.PrefixCode == prefixCode
                                    orderby EntityThirdParty.NumberCode descending
                                    select EntityThirdParty).Take(1);
-
+                
                 foreach (var result in nextCodeQuery)
                 {
                     nextCode = result.NumberCode + 1;
                 }
             }
-
             return nextCode;
         }
     }

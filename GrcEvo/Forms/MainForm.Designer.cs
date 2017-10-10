@@ -34,16 +34,16 @@
             this.listesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nouveauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouveauToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.prospectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouveauToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.btnAction = new System.Windows.Forms.Button();
-            this.supplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nouveauToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.prospectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nouveauToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +91,6 @@
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
             this.customerToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.customerToolStripMenuItem.Text = "Clients";
-            this.customerToolStripMenuItem.Click += new System.EventHandler(this.clientsToolStripMenuItem_Click);
             // 
             // nouveauToolStripMenuItem
             // 
@@ -99,6 +98,36 @@
             this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.nouveauToolStripMenuItem.Text = "Nouveau...";
             this.nouveauToolStripMenuItem.Click += new System.EventHandler(this.nouveauToolStripMenuItem_Click);
+            // 
+            // supplierToolStripMenuItem
+            // 
+            this.supplierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nouveauToolStripMenuItem1});
+            this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
+            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.supplierToolStripMenuItem.Text = "Fournisseurs ";
+            // 
+            // nouveauToolStripMenuItem1
+            // 
+            this.nouveauToolStripMenuItem1.Name = "nouveauToolStripMenuItem1";
+            this.nouveauToolStripMenuItem1.Size = new System.Drawing.Size(179, 30);
+            this.nouveauToolStripMenuItem1.Text = "Nouveau...";
+            this.nouveauToolStripMenuItem1.Click += new System.EventHandler(this.nouveauToolStripMenuItem1_Click);
+            // 
+            // prospectToolStripMenuItem
+            // 
+            this.prospectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nouveauToolStripMenuItem2});
+            this.prospectToolStripMenuItem.Name = "prospectToolStripMenuItem";
+            this.prospectToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.prospectToolStripMenuItem.Text = "Prospects";
+            // 
+            // nouveauToolStripMenuItem2
+            // 
+            this.nouveauToolStripMenuItem2.Name = "nouveauToolStripMenuItem2";
+            this.nouveauToolStripMenuItem2.Size = new System.Drawing.Size(179, 30);
+            this.nouveauToolStripMenuItem2.Text = "Nouveau...";
+            this.nouveauToolStripMenuItem2.Click += new System.EventHandler(this.nouveauToolStripMenuItem2_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -145,36 +174,6 @@
             this.btnAction.Text = "ACTION";
             this.btnAction.UseVisualStyleBackColor = true;
             this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
-            // 
-            // supplierToolStripMenuItem
-            // 
-            this.supplierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nouveauToolStripMenuItem1});
-            this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
-            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
-            this.supplierToolStripMenuItem.Text = "Fournisseurs ";
-            // 
-            // nouveauToolStripMenuItem1
-            // 
-            this.nouveauToolStripMenuItem1.Name = "nouveauToolStripMenuItem1";
-            this.nouveauToolStripMenuItem1.Size = new System.Drawing.Size(210, 30);
-            this.nouveauToolStripMenuItem1.Text = "Nouveau...";
-            this.nouveauToolStripMenuItem1.Click += new System.EventHandler(this.nouveauToolStripMenuItem1_Click);
-            // 
-            // prospectToolStripMenuItem
-            // 
-            this.prospectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nouveauToolStripMenuItem2});
-            this.prospectToolStripMenuItem.Name = "prospectToolStripMenuItem";
-            this.prospectToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
-            this.prospectToolStripMenuItem.Text = "Prospects";
-            // 
-            // nouveauToolStripMenuItem2
-            // 
-            this.nouveauToolStripMenuItem2.Name = "nouveauToolStripMenuItem2";
-            this.nouveauToolStripMenuItem2.Size = new System.Drawing.Size(210, 30);
-            this.nouveauToolStripMenuItem2.Text = "Nouveau...";
-            this.nouveauToolStripMenuItem2.Click += new System.EventHandler(this.nouveauToolStripMenuItem2_Click);
             // 
             // MainForm
             // 

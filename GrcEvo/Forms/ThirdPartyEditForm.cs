@@ -82,5 +82,9 @@ namespace GrcEvo.Forms
             tpp.Create(ec);
         }
 
+        private void tsbSave_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
     }
 }

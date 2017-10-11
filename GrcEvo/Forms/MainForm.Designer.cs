@@ -33,7 +33,6 @@
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nouveauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nouveauToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.prospectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,25 +86,17 @@
             // 
             // customerToolStripMenuItem
             // 
-            this.customerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nouveauToolStripMenuItem});
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.customerToolStripMenuItem.Text = "Clients";
-            // 
-            // nouveauToolStripMenuItem
-            // 
-            this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.nouveauToolStripMenuItem.Text = "Nouveau...";
-            this.nouveauToolStripMenuItem.Click += new System.EventHandler(this.nouveauToolStripMenuItem_Click);
+            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
             // 
             // supplierToolStripMenuItem
             // 
             this.supplierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nouveauToolStripMenuItem1});
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
-            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.supplierToolStripMenuItem.Text = "Fournisseurs ";
             // 
             // nouveauToolStripMenuItem1
@@ -120,7 +111,7 @@
             this.prospectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nouveauToolStripMenuItem2});
             this.prospectToolStripMenuItem.Name = "prospectToolStripMenuItem";
-            this.prospectToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.prospectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.prospectToolStripMenuItem.Text = "Prospects";
             // 
             // nouveauToolStripMenuItem2
@@ -170,7 +161,7 @@
             // btnAction
             // 
             this.btnAction.Location = new System.Drawing.Point(8, 35);
-            this.btnAction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAction.Margin = new System.Windows.Forms.Padding(2);
             this.btnAction.Name = "btnAction";
             this.btnAction.Size = new System.Drawing.Size(98, 56);
             this.btnAction.TabIndex = 2;
@@ -188,7 +179,7 @@
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "GRC Evo";
             this.menuStrip.ResumeLayout(false);
@@ -211,7 +202,6 @@
         private System.Windows.Forms.Button btnAction;
         private System.Windows.Forms.ToolStripMenuItem listesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nouveauToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supplierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nouveauToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem prospectToolStripMenuItem;

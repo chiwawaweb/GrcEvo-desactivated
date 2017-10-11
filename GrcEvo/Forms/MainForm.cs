@@ -16,28 +16,9 @@ namespace GrcEvo.Forms
     {
         public MainForm()
         {
-            /*
-            AfficheAllClient();
-            AddCustomer();
-            AfficheAllClient();
-            */
-
-            AfficheAllTiers();
-
             InitializeComponent();
         }
 
-        static void AfficheAllTiers()
-        {
-            ThirdPartyProvider tiersProvider = new ThirdPartyProvider();
-
-            foreach (EntityThirdParty tiers in tiersProvider.getAll())
-            {
-                Console.WriteLine(tiers);
-            }
-        }
-
-        
         private void btnAction_Click(object sender, EventArgs e)
         {
             /* TEMPORAIRE fonctions de test de l'application */
@@ -54,14 +35,6 @@ namespace GrcEvo.Forms
 
         }
 
-        private void nouveauToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            /* Temp */
-            ThirdPartyEditForm frm = new ThirdPartyEditForm("CL","C");
-            frm.MdiParent = this.MdiParent;
-            frm.ShowDialog();
-        }
-
         private void nouveauToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             /* Temp */
@@ -74,6 +47,18 @@ namespace GrcEvo.Forms
         {
             /* Temp */
             ThirdPartyEditForm frm = new ThirdPartyEditForm("FR", "C");
+            frm.MdiParent = this.MdiParent;
+            frm.ShowDialog();
+        }
+
+        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenCustomerList();
+        }
+
+        private void OpenCustomerList()
+        {
+            ThirdParties frm = new ThirdParties("CL");
             frm.MdiParent = this.MdiParent;
             frm.ShowDialog();
         }

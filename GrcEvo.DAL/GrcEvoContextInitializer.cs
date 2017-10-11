@@ -43,16 +43,21 @@ namespace GrcEvo.DAL
             listCustomerFamily.Add(new EntityCustomerFamily { Name = "Comité d'entreprise", Abbreviation = "CE"});
             listCustomerFamily.Add(new EntityCustomerFamily { Name = "Société", Abbreviation = "SO" });
 
+            List<EntitySupplierFamily> listSupplierFamily = new List<EntitySupplierFamily>();
+            listSupplierFamily.Add(new EntitySupplierFamily { Name = "Entreprise", Abbreviation = "EN" });
+            listSupplierFamily.Add(new EntitySupplierFamily { Name = "Association", Abbreviation = "AS" });
+
             List<EntityProspectFamily> listProspectFamily = new List<EntityProspectFamily>();
             listProspectFamily.Add(new EntityProspectFamily { Name = "Particulier", Abbreviation = "PA" });
             listProspectFamily.Add(new EntityProspectFamily { Name = "Comité d'entreprise", Abbreviation = "CE" });
             listProspectFamily.Add(new EntityProspectFamily { Name = "Société", Abbreviation = "SO" });
 
             listCivility.ForEach(entity => context.Civilities.Add(entity));
-            //listeCustomer.ForEach(entity => context.Customers.Add(entity));
+            listeCustomer.ForEach(entity => context.Customers.Add(entity));
             listeSupplier.ForEach(entity => context.Suppliers.Add(entity));
             listeProspect.ForEach(entity => context.Prospects.Add(entity));
             listCustomerFamily.ForEach(entity => context.CustomerFamilies.Add(entity));
+            listSupplierFamily.ForEach(entity => context.SupplierFamilies.Add(entity));
             listProspectFamily.ForEach(entity => context.ProspectFamilies.Add(entity));
 
         }

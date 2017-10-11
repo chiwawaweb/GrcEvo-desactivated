@@ -74,7 +74,7 @@ namespace GrcEvo.Forms
                 cbxFamily.Items.Add(family.Name);
             }
 
-            
+
         }
 
         /// <summary>
@@ -106,21 +106,36 @@ namespace GrcEvo.Forms
         {
             /* Vérifie la saisie */
 
-            EntityCustomer ec = new EntityCustomer();
-            ThirdPartyProvider tpp = new ThirdPartyProvider();
 
-            
-            ec.Civility = cbxCivility.Text;
-            ec.Name = txtName.Text;
-            ec.Blocked = chkBlocked.Checked;
-            
+            /* Prépare les données avant enregistrement */
+            EntityCustomer entityCustomer = new EntityCustomer();
+            ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
 
-            tpp.Create(ec);
+            entityCustomer.Civility = cbxCivility.Text;
+            entityCustomer.Name = txtName.Text;
+            entityCustomer.Blocked = chkBlocked.Checked;
+
+            thirdPartyProvider.Create(entityCustomer);
         }
 
         private void tsbSave_Click(object sender, EventArgs e)
         {
             Save();
+        }
+
+        private void tsbClose_Click(object sender, EventArgs e)
+        {
+            CloseWithConfirmation();
+        }
+
+        private void CloseWithConfirmation()
+        {
+            DialogResult result = MessageBox.Show("Êtes-vous certains de vouloirs fermer la fiche ?", 
+                "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            }
         }
     }
 }

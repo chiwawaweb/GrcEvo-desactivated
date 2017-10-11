@@ -43,6 +43,8 @@
             this.lblFamily = new System.Windows.Forms.Label();
             this.chkBlocked = new System.Windows.Forms.CheckBox();
             this.lblCode = new System.Windows.Forms.Label();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.toolStrip.SuspendLayout();
             this.tabInfos.SuspendLayout();
             this.SuspendLayout();
@@ -51,10 +53,9 @@
             // 
             this.lblThirdPartyCode.AutoSize = true;
             this.lblThirdPartyCode.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThirdPartyCode.Location = new System.Drawing.Point(14, 66);
-            this.lblThirdPartyCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblThirdPartyCode.Location = new System.Drawing.Point(10, 53);
             this.lblThirdPartyCode.Name = "lblThirdPartyCode";
-            this.lblThirdPartyCode.Size = new System.Drawing.Size(69, 23);
+            this.lblThirdPartyCode.Size = new System.Drawing.Size(46, 16);
             this.lblThirdPartyCode.TabIndex = 5;
             this.lblThirdPartyCode.Text = "Code :";
             // 
@@ -62,11 +63,11 @@
             // 
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbSave});
+            this.tsbSave,
+            this.tsbClose});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip.Size = new System.Drawing.Size(1212, 32);
+            this.toolStrip.Size = new System.Drawing.Size(929, 31);
             this.toolStrip.TabIndex = 4;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -75,7 +76,7 @@
             this.tsbSave.Image = ((System.Drawing.Image)(resources.GetObject("tsbSave.Image")));
             this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSave.Name = "tsbSave";
-            this.tsbSave.Size = new System.Drawing.Size(124, 29);
+            this.tsbSave.Size = new System.Drawing.Size(91, 28);
             this.tsbSave.Text = "Enregistrer";
             this.tsbSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
@@ -84,28 +85,31 @@
             this.tabInfos.Controls.Add(this.tabPageAdresse);
             this.tabInfos.Controls.Add(this.tabPage2);
             this.tabInfos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabInfos.Location = new System.Drawing.Point(6, 162);
+            this.tabInfos.Location = new System.Drawing.Point(5, 129);
+            this.tabInfos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabInfos.Name = "tabInfos";
             this.tabInfos.SelectedIndex = 0;
-            this.tabInfos.Size = new System.Drawing.Size(1184, 488);
-            this.tabInfos.TabIndex = 5;
+            this.tabInfos.Size = new System.Drawing.Size(920, 379);
+            this.tabInfos.TabIndex = 4;
             // 
             // tabPageAdresse
             // 
-            this.tabPageAdresse.Location = new System.Drawing.Point(4, 32);
+            this.tabPageAdresse.Location = new System.Drawing.Point(4, 25);
+            this.tabPageAdresse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageAdresse.Name = "tabPageAdresse";
-            this.tabPageAdresse.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageAdresse.Size = new System.Drawing.Size(1176, 452);
+            this.tabPageAdresse.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAdresse.Size = new System.Drawing.Size(912, 350);
             this.tabPageAdresse.TabIndex = 0;
             this.tabPageAdresse.Text = "Adresse";
             this.tabPageAdresse.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(1176, 452);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(912, 350);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Livraison";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -114,10 +118,9 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(333, 114);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(259, 91);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(62, 23);
+            this.lblName.Size = new System.Drawing.Size(43, 16);
             this.lblName.TabIndex = 16;
             this.lblName.Text = "Nom :";
             // 
@@ -125,10 +128,9 @@
             // 
             this.lblCivility.AutoSize = true;
             this.lblCivility.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCivility.Location = new System.Drawing.Point(14, 114);
-            this.lblCivility.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCivility.Location = new System.Drawing.Point(10, 91);
             this.lblCivility.Name = "lblCivility";
-            this.lblCivility.Size = new System.Drawing.Size(78, 23);
+            this.lblCivility.Size = new System.Drawing.Size(53, 16);
             this.lblCivility.TabIndex = 18;
             this.lblCivility.Text = "Civilité :";
             // 
@@ -136,39 +138,38 @@
             // 
             this.cbxCivility.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCivility.FormattingEnabled = true;
-            this.cbxCivility.Location = new System.Drawing.Point(102, 109);
-            this.cbxCivility.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxCivility.Location = new System.Drawing.Point(79, 87);
+            this.cbxCivility.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxCivility.Name = "cbxCivility";
-            this.cbxCivility.Size = new System.Drawing.Size(210, 31);
-            this.cbxCivility.TabIndex = 17;
+            this.cbxCivility.Size = new System.Drawing.Size(164, 24);
+            this.cbxCivility.TabIndex = 2;
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(406, 109);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtName.Location = new System.Drawing.Point(316, 87);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(775, 30);
-            this.txtName.TabIndex = 14;
+            this.txtName.Size = new System.Drawing.Size(604, 22);
+            this.txtName.TabIndex = 3;
             // 
             // cbxFamily
             // 
             this.cbxFamily.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxFamily.FormattingEnabled = true;
-            this.cbxFamily.Location = new System.Drawing.Point(406, 62);
-            this.cbxFamily.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxFamily.Location = new System.Drawing.Point(316, 49);
+            this.cbxFamily.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxFamily.Name = "cbxFamily";
-            this.cbxFamily.Size = new System.Drawing.Size(288, 31);
-            this.cbxFamily.TabIndex = 19;
+            this.cbxFamily.Size = new System.Drawing.Size(224, 24);
+            this.cbxFamily.TabIndex = 1;
             // 
             // lblFamily
             // 
             this.lblFamily.AutoSize = true;
             this.lblFamily.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFamily.Location = new System.Drawing.Point(310, 66);
-            this.lblFamily.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFamily.Location = new System.Drawing.Point(241, 53);
             this.lblFamily.Name = "lblFamily";
-            this.lblFamily.Size = new System.Drawing.Size(84, 23);
+            this.lblFamily.Size = new System.Drawing.Size(58, 16);
             this.lblFamily.TabIndex = 20;
             this.lblFamily.Text = "Famille :";
             // 
@@ -176,10 +177,10 @@
             // 
             this.chkBlocked.AutoSize = true;
             this.chkBlocked.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBlocked.Location = new System.Drawing.Point(1083, 65);
-            this.chkBlocked.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkBlocked.Location = new System.Drawing.Point(852, 52);
+            this.chkBlocked.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBlocked.Name = "chkBlocked";
-            this.chkBlocked.Size = new System.Drawing.Size(96, 27);
+            this.chkBlocked.Size = new System.Drawing.Size(67, 20);
             this.chkBlocked.TabIndex = 22;
             this.chkBlocked.Text = "Bloqué";
             this.chkBlocked.UseVisualStyleBackColor = true;
@@ -191,19 +192,38 @@
             this.lblCode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCode.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCode.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblCode.Location = new System.Drawing.Point(102, 66);
-            this.lblCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblCode.Location = new System.Drawing.Point(79, 53);
+            this.lblCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Padding = new System.Windows.Forms.Padding(3, 3, 3, 2);
-            this.lblCode.Size = new System.Drawing.Size(67, 31);
-            this.lblCode.TabIndex = 23;
+            this.lblCode.Padding = new System.Windows.Forms.Padding(2, 2, 2, 1);
+            this.lblCode.Size = new System.Drawing.Size(42, 21);
+            this.lblCode.TabIndex = 0;
             this.lblCode.Text = "-------";
+            // 
+            // statusStrip
+            // 
+            this.statusStrip.Location = new System.Drawing.Point(0, 516);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip.Size = new System.Drawing.Size(929, 22);
+            this.statusStrip.TabIndex = 24;
+            this.statusStrip.Text = "statusStrip1";
+            // 
+            // tsbClose
+            // 
+            this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
+            this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbClose.Name = "tsbClose";
+            this.tsbClose.Size = new System.Drawing.Size(77, 28);
+            this.tsbClose.Text = "Annuler";
+            this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
             // ThirdPartyEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 672);
+            this.ClientSize = new System.Drawing.Size(929, 538);
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.lblCode);
             this.Controls.Add(this.chkBlocked);
             this.Controls.Add(this.lblFamily);
@@ -215,8 +235,9 @@
             this.Controls.Add(this.tabInfos);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.lblThirdPartyCode);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ThirdPartyEditForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -244,5 +265,7 @@
         private System.Windows.Forms.CheckBox chkBlocked;
         private System.Windows.Forms.ToolStripButton tsbSave;
         private System.Windows.Forms.Label lblCode;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripButton tsbClose;
     }
 }

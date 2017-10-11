@@ -114,10 +114,10 @@ namespace GrcEvo.DAL
                 
                 foreach (var result in nextCodeQuery)
                 {
-                    nextCode = result.NumberCode + 1;
+                    nextCode = result.NumberCode;
                 }
             }
-            return nextCode;
+            return nextCode + 1;
         }
     }
 }

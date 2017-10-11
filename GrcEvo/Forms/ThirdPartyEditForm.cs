@@ -71,7 +71,7 @@ namespace GrcEvo.Forms
             /* Combobox des familles */
             foreach (var family in familyProvider.getThirdPartyFamilyByType(thirdPartyType))
             {
-                cbxFamily.Items.Add(family);
+                cbxFamily.Items.Add(family.Name);
             }
 
             

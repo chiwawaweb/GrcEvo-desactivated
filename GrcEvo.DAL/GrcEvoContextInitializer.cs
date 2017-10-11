@@ -36,18 +36,25 @@ namespace GrcEvo.DAL
             listeSupplier.Add(new EntitySupplier { NumberCode = 792, Civility = "SA" });
 
             List<EntityProspect> listeProspect = new List<EntityProspect>();
-            listeProspect.Add(new EntityProspect { NumberCode = 998, Civility = "Pp1" });
+            listeProspect.Add(new EntityProspect { NumberCode = 998, Civility = "Dr" });
 
-            List<EntityCustomerFamily> listeCustomerFamily = new List<EntityCustomerFamily>();
-            listeCustomerFamily.Add(new EntityCustomerFamily { Name = "Particulier", Abbreviation = "PA"});
-            listeCustomerFamily.Add(new EntityCustomerFamily { Name = "Comité d'entreprise", Abbreviation = "CE"});
+            List<EntityCustomerFamily> listCustomerFamily = new List<EntityCustomerFamily>();
+            listCustomerFamily.Add(new EntityCustomerFamily { Name = "Particulier", Abbreviation = "PA"});
+            listCustomerFamily.Add(new EntityCustomerFamily { Name = "Comité d'entreprise", Abbreviation = "CE"});
+            listCustomerFamily.Add(new EntityCustomerFamily { Name = "Société", Abbreviation = "SO" });
+
+            List<EntityProspectFamily> listProspectFamily = new List<EntityProspectFamily>();
+            listProspectFamily.Add(new EntityProspectFamily { Name = "Particulier", Abbreviation = "PA" });
+            listProspectFamily.Add(new EntityProspectFamily { Name = "Comité d'entreprise", Abbreviation = "CE" });
+            listProspectFamily.Add(new EntityProspectFamily { Name = "Société", Abbreviation = "SO" });
 
             listCivility.ForEach(entity => context.Civilities.Add(entity));
-            listeCustomer.ForEach(entity => context.Customers.Add(entity));
+            //listeCustomer.ForEach(entity => context.Customers.Add(entity));
             listeSupplier.ForEach(entity => context.Suppliers.Add(entity));
             listeProspect.ForEach(entity => context.Prospects.Add(entity));
-            listeCustomerFamily.ForEach(entity => context.CustomerFamilies.Add(entity));
-            
+            listCustomerFamily.ForEach(entity => context.CustomerFamilies.Add(entity));
+            listProspectFamily.ForEach(entity => context.ProspectFamilies.Add(entity));
+
         }
     }
 }

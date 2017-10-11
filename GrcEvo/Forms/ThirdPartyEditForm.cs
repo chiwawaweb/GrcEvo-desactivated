@@ -18,7 +18,10 @@ namespace GrcEvo.Forms
         private string thirdPartyAction;
         private string thirdPartyType;
         private string formTitle;
-        
+
+        ThirdPartyProvider tpp = new ThirdPartyProvider();
+        CivilityProvider cp = new CivilityProvider();
+
         public ThirdPartyEditForm(string type, string action)
         {
             InitializeComponent();
@@ -46,19 +49,45 @@ namespace GrcEvo.Forms
 
             switch (thirdPartyAction)
             {
+                /* Cas d'une création */
                 case "C":
-                    formTitle += " (Création)";
+                    NewThirdParty();
+
                     break;
                 case "U":
-                    formTitle += " (Modification)";
+                    UpdateThirdParty();
                     break;
             }
 
-            ThirdPartyProvider tpp = new ThirdPartyProvider();
-            formTitle += tpp.NextCode(thirdPartyType).ToString();
-
             /* Barre titre du formulaire */
             this.Text = formTitle;
+
+            /* ComboBox des civilités */
+            var Civilites = cp.getAll();
+
+            foreach (var civilite in Civilites)
+            {
+                cbxCivility.Items.Add(civilite.Name, civilite.Abbreviation);
+            }
+
+            
+        }
+
+        /// <summary>
+        /// Chargement de la fiche tiers en mode création
+        /// </summary>
+        private void NewThirdParty()
+        {
+            formTitle += " (Création)";
+            lblCode.Text = thirdPartyType + tpp.NextCode(thirdPartyType).ToString("00000");
+        }
+
+        /// <summary>
+        /// Chargement de la fiche en mode mise à jour
+        /// </summary>
+        private void UpdateThirdParty()
+        {
+            formTitle += " (Modification)";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -66,6 +95,9 @@ namespace GrcEvo.Forms
             Save();
         }
 
+        /// <summary>
+        /// Enregistre la fiche tiers dans la base de données
+        /// </summary>
         private void Save()
         {
             /* Vérifie la saisie */

@@ -16,6 +16,17 @@ namespace GrcEvo.DAL
         /// <param name="context"></param>
         protected override void Seed(GrcEvoContext context)
         {
+            List<EntityCivility> listCivility = new List<EntityCivility>();
+            listCivility.Add(new EntityCivility { Name = "Monsieur", Abbreviation = "M." });
+            listCivility.Add(new EntityCivility { Name = "Madame", Abbreviation = "Mme" });
+            listCivility.Add(new EntityCivility { Name = "Mademoiselle", Abbreviation = "Mlle" });
+            listCivility.Add(new EntityCivility { Name = "Docteur", Abbreviation = "Dr" });
+            listCivility.Add(new EntityCivility { Name = "Maître", Abbreviation = "Me" });
+            listCivility.Add(new EntityCivility { Name = "SA", Abbreviation = "SA" });
+            listCivility.Add(new EntityCivility { Name = "SARL", Abbreviation = "SARL" });
+            listCivility.Add(new EntityCivility { Name = "SCI", Abbreviation = "SCI" });
+
+
             List<EntityCustomer> listeCustomer = new List < EntityCustomer>();
             listeCustomer.Add(new EntityCustomer { NumberCode = 98, Civility = "Mlle" });
             listeCustomer.Add(new EntityCustomer { NumberCode = 99, Civility = "M." });

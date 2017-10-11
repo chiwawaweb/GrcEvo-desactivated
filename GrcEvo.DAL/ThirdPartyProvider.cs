@@ -11,8 +11,6 @@ namespace GrcEvo.DAL
 {
     public class ThirdPartyProvider
     {
-        private int nextCode;
-
         public ThirdPartyProvider()
         {
 
@@ -106,6 +104,7 @@ namespace GrcEvo.DAL
         /// <returns></returns>
         public int NextCode(string prefixCode)
         {
+            int nextCode = 0;
             using (GrcEvoContext context = new GrcEvoContext())
             {
                 var nextCodeQuery = (from EntityThirdParty in context.ThirdParties

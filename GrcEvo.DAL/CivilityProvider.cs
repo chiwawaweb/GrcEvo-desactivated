@@ -27,5 +27,25 @@ namespace GrcEvo.DAL
                 }
             }
         }
+
+        /// <summary>
+        /// Créer une entité de type Civility dans la BDD
+        /// </summary>
+        /// <param name="Civility"></param>
+        public void Create(EntityCivility Civility)
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                try
+                {
+                    context.Civilities.Add(Civility);
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

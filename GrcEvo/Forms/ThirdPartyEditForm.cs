@@ -17,10 +17,11 @@ namespace GrcEvo.Forms
     {
         private string thirdPartyAction;
         private string thirdPartyType;
-        private string formTitle;
+        private string formTitle = "Fiche ";
 
-        ThirdPartyProvider tpp = new ThirdPartyProvider();
-        CivilityProvider cp = new CivilityProvider();
+        ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
+        CivilityProvider civilityProvider = new CivilityProvider();
+        ThirdPartyFamilyProvider familyProvider = new ThirdPartyFamilyProvider();
 
         public ThirdPartyEditForm(string type, string action)
         {
@@ -28,7 +29,6 @@ namespace GrcEvo.Forms
             thirdPartyAction = action;
             thirdPartyType = type;
 
-            formTitle = "Fiche ";
             switch (thirdPartyType)
             {
                 case "CL":
@@ -63,11 +63,15 @@ namespace GrcEvo.Forms
             this.Text = formTitle;
 
             /* ComboBox des civilités */
-            var Civilites = cp.getAll();
-
-            foreach (var civilite in Civilites)
+            foreach (var civility in civilityProvider.getAll())
             {
-                cbxCivility.Items.Add(civilite.Name, civilite.Abbreviation);
+                cbxCivility.Items.Add(civility.Name);
+            }
+
+            /* Combobox des familles */
+            foreach (var family in familyProvider.getThirdPartyFamilyByType(thirdPartyType))
+            {
+                cbxFamily.Items.Add(family);
             }
 
             
@@ -79,7 +83,7 @@ namespace GrcEvo.Forms
         private void NewThirdParty()
         {
             formTitle += " (Création)";
-            lblCode.Text = thirdPartyType + tpp.NextCode(thirdPartyType).ToString("00000");
+            lblCode.Text = thirdPartyType + thirdPartyProvider.NextCode(thirdPartyType).ToString("00000");
         }
 
         /// <summary>

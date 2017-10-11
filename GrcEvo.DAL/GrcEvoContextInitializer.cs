@@ -27,7 +27,7 @@ namespace GrcEvo.DAL
             listCivility.Add(new EntityCivility { Name = "SCI", Abbreviation = "SCI" });
 
 
-            List<EntityCustomer> listeCustomer = new List < EntityCustomer>();
+            List<EntityCustomer> listeCustomer = new List <EntityCustomer>();
             listeCustomer.Add(new EntityCustomer { NumberCode = 98, Civility = "Mlle" });
             listeCustomer.Add(new EntityCustomer { NumberCode = 99, Civility = "M." });
 
@@ -39,9 +39,10 @@ namespace GrcEvo.DAL
             listeProspect.Add(new EntityProspect { NumberCode = 998, Civility = "Pp1" });
 
             List<EntityCustomerFamily> listeCustomerFamily = new List<EntityCustomerFamily>();
-            listeCustomerFamily.Add(new EntityCustomerFamily { Name = "Fam1CL", Abbreviation = "FA1"});
-            listeCustomerFamily.Add(new EntityCustomerFamily { Name = "Fam2CL", Abbreviation = "FA2"});
+            listeCustomerFamily.Add(new EntityCustomerFamily { Name = "Particulier", Abbreviation = "PA"});
+            listeCustomerFamily.Add(new EntityCustomerFamily { Name = "Comité d'entreprise", Abbreviation = "CE"});
 
+            listCivility.ForEach(entity => context.Civilities.Add(entity));
             listeCustomer.ForEach(entity => context.Customers.Add(entity));
             listeSupplier.ForEach(entity => context.Suppliers.Add(entity));
             listeProspect.ForEach(entity => context.Prospects.Add(entity));

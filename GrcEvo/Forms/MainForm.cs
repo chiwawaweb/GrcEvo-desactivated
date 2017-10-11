@@ -21,46 +21,29 @@ namespace GrcEvo.Forms
 
         private void btnAction_Click(object sender, EventArgs e)
         {
-            /* TEMPORAIRE fonctions de test de l'application */
-            Console.WriteLine("TEST GRCEVO");
-            Console.WriteLine("Enregistrement d'un nouvel enregistrement");
-
-            EntityCountry newCountry = new EntityCountry();
-            CountryProvider cp = new CountryProvider();
-            newCountry.Name = "PAYS MERVEILLEUX";
-            newCountry.Abbreviation = "PM";
-            cp.Create(newCountry);
-
-            Console.ReadLine();
-
+            
         }
 
-        private void nouveauToolStripMenuItem2_Click(object sender, EventArgs e)
+        private void OpenThirdPartyList(string type)
         {
-            /* Temp */
-            ThirdPartyEditForm frm = new ThirdPartyEditForm("PP", "C");
-            frm.MdiParent = this.MdiParent;
-            frm.ShowDialog();
-        }
-
-        private void nouveauToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            /* Temp */
-            ThirdPartyEditForm frm = new ThirdPartyEditForm("FR", "C");
-            frm.MdiParent = this.MdiParent;
-            frm.ShowDialog();
+            ThirdParties frm = new ThirdParties(type);
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenCustomerList();
+            OpenThirdPartyList("CL");
         }
 
-        private void OpenCustomerList()
+        private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ThirdParties frm = new ThirdParties("CL");
-            frm.MdiParent = this.MdiParent;
-            frm.ShowDialog();
+            OpenThirdPartyList("FR");
+        }
+
+        private void prospectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenThirdPartyList("PP");
         }
     }
 }

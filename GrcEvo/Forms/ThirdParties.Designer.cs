@@ -32,15 +32,20 @@
             this.dgvThirdParties = new System.Windows.Forms.DataGridView();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThirdParties)).BeginInit();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvThirdParties
             // 
+            this.dgvThirdParties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThirdParties.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThirdParties.Location = new System.Drawing.Point(0, 61);
             this.dgvThirdParties.Name = "dgvThirdParties";
@@ -49,6 +54,7 @@
             // 
             // statusStrip
             // 
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip.Location = new System.Drawing.Point(0, 453);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(809, 22);
@@ -57,27 +63,39 @@
             // 
             // toolStrip
             // 
+            this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbAdd,
             this.tsbClose});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(809, 25);
+            this.toolStrip.Size = new System.Drawing.Size(809, 32);
             this.toolStrip.TabIndex = 2;
             this.toolStrip.Text = "toolStrip1";
+            // 
+            // tsbAdd
+            // 
+            this.tsbAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdd.Image")));
+            this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAdd.Name = "tsbAdd";
+            this.tsbAdd.Size = new System.Drawing.Size(98, 29);
+            this.tsbAdd.Text = "Ajouter";
+            this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
             // tsbClose
             // 
             this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
             this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Size = new System.Drawing.Size(64, 22);
+            this.tsbClose.Size = new System.Drawing.Size(95, 29);
             this.tsbClose.Text = "Fermer";
+            this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(94, 29);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 22);
+            this.textBox1.Size = new System.Drawing.Size(264, 30);
             this.textBox1.TabIndex = 3;
             // 
             // lblSearch
@@ -85,15 +103,26 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.Location = new System.Drawing.Point(13, 33);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(78, 16);
+            this.lblSearch.Size = new System.Drawing.Size(116, 23);
             this.lblSearch.TabIndex = 4;
             this.lblSearch.Text = "Recherche :";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(365, 29);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(156, 27);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Chercher";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
             // ThirdParties
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 475);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.toolStrip);
@@ -122,5 +151,7 @@
         private System.Windows.Forms.ToolStripButton tsbClose;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.ToolStripButton tsbAdd;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

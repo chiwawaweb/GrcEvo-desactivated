@@ -37,16 +37,20 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThirdParties)).BeginInit();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvThirdParties
             // 
-            this.dgvThirdParties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThirdParties.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThirdParties.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Code,
+            this.TpName,
+            this.Adress1});
             this.dgvThirdParties.Location = new System.Drawing.Point(0, 61);
             this.dgvThirdParties.Name = "dgvThirdParties";
             this.dgvThirdParties.Size = new System.Drawing.Size(813, 389);
@@ -69,7 +73,7 @@
             this.tsbClose});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(813, 32);
+            this.toolStrip.Size = new System.Drawing.Size(813, 31);
             this.toolStrip.TabIndex = 2;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -78,7 +82,7 @@
             this.tsbAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdd.Image")));
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(98, 29);
+            this.tsbAdd.Size = new System.Drawing.Size(74, 28);
             this.tsbAdd.Text = "Ajouter";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
@@ -87,7 +91,7 @@
             this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
             this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Size = new System.Drawing.Size(95, 29);
+            this.tsbClose.Size = new System.Drawing.Size(72, 28);
             this.tsbClose.Text = "Fermer";
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
@@ -95,7 +99,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(94, 29);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 30);
+            this.textBox1.Size = new System.Drawing.Size(264, 22);
             this.textBox1.TabIndex = 3;
             // 
             // lblSearch
@@ -103,22 +107,37 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.Location = new System.Drawing.Point(13, 33);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(116, 23);
+            this.lblSearch.Size = new System.Drawing.Size(78, 16);
             this.lblSearch.TabIndex = 4;
             this.lblSearch.Text = "Recherche :";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(365, 29);
+            this.btnSearch.Location = new System.Drawing.Point(365, 27);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(156, 27);
+            this.btnSearch.Size = new System.Drawing.Size(156, 26);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Chercher";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
+            // Code
+            // 
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            // 
+            // TpName
+            // 
+            this.TpName.HeaderText = "Nom";
+            this.TpName.Name = "TpName";
+            // 
+            // Adress1
+            // 
+            this.Adress1.HeaderText = "Adresse";
+            this.Adress1.Name = "Adress1";
+            // 
             // ThirdParties
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 475);
             this.Controls.Add(this.btnSearch);
@@ -154,5 +173,8 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ToolStripButton tsbAdd;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TpName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Adress1;
     }
 }

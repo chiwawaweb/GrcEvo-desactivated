@@ -23,9 +23,11 @@ namespace GrcEvo.Forms
             InitializeComponent();
             _type = type;
 
-            /* A FAIRE : Centrer la fenêtre */
+            /* A FAIRE : Centrer la fenêtre (ou la ramener dans un coin) */
             dgvThirdParties.DataSource = thirdPartyProvider.getThirdPartyByType(type);
-
+            dgvThirdParties.Columns["ID"].Visible = false;
+            dgvThirdParties.Columns["CreatedAt"].Visible = false;
+            
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)

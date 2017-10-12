@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using GrcEvo.DTO;
 using GrcEvo.DAL;
+using System.Data.Entity;
 
 namespace GrcEvo.Library
 {
-    public class ThirdParty : EntityThirdParty
+    public class Fixtures
     {
         
     }

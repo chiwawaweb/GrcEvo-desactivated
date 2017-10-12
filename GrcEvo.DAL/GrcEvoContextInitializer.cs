@@ -26,10 +26,9 @@ namespace GrcEvo.DAL
             listCivility.Add(new EntityCivility { Name = "SARL", Abbreviation = "SARL" });
             listCivility.Add(new EntityCivility { Name = "SCI", Abbreviation = "SCI" });
 
-
             List<EntityCustomer> listeCustomer = new List <EntityCustomer>();
-            listeCustomer.Add(new EntityCustomer { NumberCode = 98, Civility = "Mlle" });
-            listeCustomer.Add(new EntityCustomer { NumberCode = 99, Civility = "M." });
+            listeCustomer.Add(new EntityCustomer { NumberCode = 98, Civility = "Mlle", Adress1 = "RUE DES PRES" });
+            listeCustomer.Add(new EntityCustomer { NumberCode = 99, Civility = "M.", Adress1 = "RUE DES MARCHANDS" });
 
             List<EntitySupplier> listeSupplier = new List<EntitySupplier>();
             listeSupplier.Add(new EntitySupplier { NumberCode = 498, Civility = "SARL" });

@@ -37,9 +37,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adress1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThirdParties)).BeginInit();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -47,10 +44,6 @@
             // dgvThirdParties
             // 
             this.dgvThirdParties.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThirdParties.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Code,
-            this.TpName,
-            this.Adress1});
             this.dgvThirdParties.Location = new System.Drawing.Point(0, 61);
             this.dgvThirdParties.Name = "dgvThirdParties";
             this.dgvThirdParties.Size = new System.Drawing.Size(813, 389);
@@ -120,21 +113,6 @@
             this.btnSearch.Text = "Chercher";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // Code
-            // 
-            this.Code.HeaderText = "Code";
-            this.Code.Name = "Code";
-            // 
-            // TpName
-            // 
-            this.TpName.HeaderText = "Nom";
-            this.TpName.Name = "TpName";
-            // 
-            // Adress1
-            // 
-            this.Adress1.HeaderText = "Adresse";
-            this.Adress1.Name = "Adress1";
-            // 
             // ThirdParties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -173,8 +151,5 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ToolStripButton tsbAdd;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TpName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Adress1;
     }
 }

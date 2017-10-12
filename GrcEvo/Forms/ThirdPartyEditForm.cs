@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GrcEvo.DTO;
 using GrcEvo.DAL;
-
+using System.Data.Entity;
 namespace GrcEvo.Forms
 {
     public partial class ThirdPartyEditForm : Form
@@ -103,11 +103,14 @@ namespace GrcEvo.Forms
 
             /* Prépare les données avant enregistrement */
             EntityCustomer entityCustomer = new EntityCustomer();
+            //EntityThirdParty entityThirdParty = new EntityThirdParty();
             ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
 
+            entityCustomer.NumberCode = thirdPartyProvider.NextCode(thirdPartyType);
             entityCustomer.Civility = cbxCivility.Text;
             entityCustomer.Name = txtName.Text;
             entityCustomer.Blocked = chkBlocked.Checked;
+            
 
             thirdPartyProvider.Create(entityCustomer);
         }
@@ -125,7 +128,7 @@ namespace GrcEvo.Forms
 
         private void CloseWithConfirmation()
         {
-            DialogResult result = MessageBox.Show("Êtes-vous certains de vouloirs fermer la fiche ?", 
+            DialogResult result = MessageBox.Show("Êtes-vous certains de vouloir fermer la fiche ? Toute modification non enregistrée sera perdue.", 
                 "Confirmation", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {

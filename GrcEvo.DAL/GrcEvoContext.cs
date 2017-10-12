@@ -14,7 +14,7 @@ namespace GrcEvo.DAL
     {
         public GrcEvoContext() : base("GrcEvo")
         {
-            //Database.SetInitializer<GrcEvoContext>(new GrcEvoContextInitializer());
+            Database.SetInitializer<GrcEvoContext>(new GrcEvoContextInitializer());
         }
 
         public DbSet<EntityThirdParty> ThirdParties { get; set; }

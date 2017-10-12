@@ -24,16 +24,11 @@ namespace GrcEvo.DTO
         public string FaxNumber { get; set; }
         public string Email { get; set; }
         public string Web { get; set; }
+        public string VatNumber { get; set; }
         public string Note { get; set; }
+        public bool Blocked { get; set; }
         public string CreatedAt { get; set; }
         public string UpdatedAt { get; set; }
-
-        /*
-        public override string ToString()
-        {
-            return String.Concat("Je suis un tiers ", PrefixCode, " Genre ", Civility, " de code ", NumberCode, " et ID ", ID);
-        }
-        */
     }
 
 

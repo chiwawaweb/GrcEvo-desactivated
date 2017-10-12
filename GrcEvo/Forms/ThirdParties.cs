@@ -17,17 +17,21 @@ namespace GrcEvo.Forms
         private string _type;
 
         ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
-
+        
         public ThirdParties(string type)
         {
             InitializeComponent();
             _type = type;
 
-            /* A FAIRE : Centrer la fenêtre (ou la ramener dans un coin) */
             dgvThirdParties.DataSource = thirdPartyProvider.getThirdPartyByType(type);
             dgvThirdParties.Columns["ID"].Visible = false;
             dgvThirdParties.Columns["CreatedAt"].Visible = false;
-            
+            dgvThirdParties.Columns["Civility"].HeaderText = "Civilité";
+            dgvThirdParties.Columns["Name"].HeaderText = "Nom";
+            //dgvThirdParties.Columns["Blocked"].HeaderText = "Bloqué";
+
+
+
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)

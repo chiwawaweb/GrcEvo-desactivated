@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GrcEvo.DTO;
 using GrcEvo.DAL;
+using System.Data.Entity;
 
 namespace GrcEvo.Forms
 {
@@ -21,14 +22,15 @@ namespace GrcEvo.Forms
 
         private void btnAction_Click(object sender, EventArgs e)
         {
-            
+            Library.Fixtures fixtures = new Library.Fixtures();
+            MessageBox.Show("ok");
         }
 
         private void OpenThirdPartyList(string type)
         {
             ThirdParties frm = new ThirdParties(type);
-            frm.MdiParent = this;
-            frm.Show();
+            //frm.MdiParent = this;
+            frm.ShowDialog();
         }
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)

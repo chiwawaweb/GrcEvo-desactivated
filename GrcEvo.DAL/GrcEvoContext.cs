@@ -10,11 +10,11 @@ using System.Data.Entity.Core.Objects;
 
 namespace GrcEvo.DAL
 {
-    class GrcEvoContext : DbContext
+    public class GrcEvoContext : DbContext
     {
         public GrcEvoContext() : base("GrcEvo")
         {
-            Database.SetInitializer<GrcEvoContext>(new GrcEvoContextInitializer());
+            //Database.SetInitializer<GrcEvoContext>(new GrcEvoContextInitializer());
         }
 
         public DbSet<EntityThirdParty> ThirdParties { get; set; }

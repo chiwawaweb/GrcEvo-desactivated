@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace GrcEvo.DAL
 {
-    class GrcEvoContextInitializer : DropCreateDatabaseAlways<GrcEvoContext>
+    public class GrcEvoContextInitializer : DropCreateDatabaseAlways<GrcEvoContext>
     {
         /// <summary>
         /// Permet d'alimenter la base de données avec un jeu de données lors de sa construction
@@ -27,8 +27,8 @@ namespace GrcEvo.DAL
             listCivility.Add(new EntityCivility { Name = "SCI", Abbreviation = "SCI" });
 
             List<EntityCustomer> listeCustomer = new List <EntityCustomer>();
-            listeCustomer.Add(new EntityCustomer { NumberCode = 98, Civility = "Mlle", Adress1 = "RUE DES PRES" });
-            listeCustomer.Add(new EntityCustomer { NumberCode = 99, Civility = "M.", Adress1 = "RUE DES MARCHANDS" });
+            listeCustomer.Add(new EntityCustomer { NumberCode = 91, Civility = "Mlle", Name="BROCHARD SYLVIE", Adress1 = "RUE DES PRES" });
+            listeCustomer.Add(new EntityCustomer { NumberCode = 95, Civility = "M.", Name = "DUMONT ANTOINE", Adress1 = "RUE DES MARCHANDS" });
 
             List<EntitySupplier> listeSupplier = new List<EntitySupplier>();
             listeSupplier.Add(new EntitySupplier { NumberCode = 498, Civility = "SARL" });

@@ -93,11 +93,6 @@ namespace GrcEvo.Forms
             formTitle += " (Modification)";
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            Save();
-        }
-
         /// <summary>
         /// Enregistre la fiche tiers dans la base de données
         /// </summary>
@@ -120,6 +115,7 @@ namespace GrcEvo.Forms
         private void tsbSave_Click(object sender, EventArgs e)
         {
             Save();
+            Close();
         }
 
         private void tsbClose_Click(object sender, EventArgs e)

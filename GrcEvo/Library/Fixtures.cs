@@ -9,8 +9,12 @@ using System.Data.Entity;
 
 namespace GrcEvo.Library
 {
-    public class Fixtures
+    public class Fixtures : DbContext
     {
-        
+        public Fixtures()
+        {
+            Database.SetInitializer(new GrcEvoContextInitializer());
+        }
+
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GrcEvo.DTO;
+using GrcEvo.DAL;
 
 namespace GrcEvo.Forms
 {
@@ -14,12 +16,16 @@ namespace GrcEvo.Forms
     {
         private string _type;
 
+        ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
+
         public ThirdParties(string type)
         {
             InitializeComponent();
             _type = type;
 
             /* A FAIRE : Centrer la fenêtre */
+            dgvThirdParties.DataSource = thirdPartyProvider.getThirdPartyByType(type);
+
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)

@@ -45,5 +45,10 @@ namespace GrcEvo.Forms
         {
             OpenThirdPartyList("PP");
         }
+
+        private void tsbCustomers_Click(object sender, EventArgs e)
+        {
+            OpenThirdPartyList("CL");
+        }
     }
 }

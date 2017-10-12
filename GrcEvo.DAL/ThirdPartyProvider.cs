@@ -119,5 +119,23 @@ namespace GrcEvo.DAL
             }
             return nextCode + 1;
         }
+
+        /// <summary>
+        /// Recupère les entités dont le type est passé en paramètre
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns>L'entité si elle existe, sinon NULL</returns>
+        public List<EntityThirdParty> getThirdPartyByType(string type)
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                var thirdPartiesQuery = (from EntityThirdParty in context.ThirdParties
+                                               where EntityThirdParty.PrefixCode == type
+                                               orderby EntityThirdParty.ID ascending
+                                               select EntityThirdParty);
+
+                return thirdPartiesQuery.ToList();
+            }
+        }
     }
 }

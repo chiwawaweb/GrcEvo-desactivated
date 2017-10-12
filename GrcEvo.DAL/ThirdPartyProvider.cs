@@ -137,5 +137,20 @@ namespace GrcEvo.DAL
                 return thirdPartiesQuery.ToList();
             }
         }
+
+        public int Count()
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                try
+                {
+                    return context.ThirdParties.Count();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

@@ -18,6 +18,8 @@ namespace GrcEvo.Forms
         public MainForm()
         {
             InitializeComponent();
+            ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
+            tssInfos.Text = "Nombre de tiers dans la base : " + thirdPartyProvider.Count().ToString();
         }
 
         private void btnAction_Click(object sender, EventArgs e)
@@ -29,7 +31,6 @@ namespace GrcEvo.Forms
         private void OpenThirdPartyList(string type)
         {
             ThirdParties frm = new ThirdParties(type);
-            //frm.MdiParent = this;
             frm.ShowDialog();
         }
 

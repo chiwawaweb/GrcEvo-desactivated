@@ -102,17 +102,16 @@ namespace GrcEvo.Forms
 
 
             /* Prépare les données avant enregistrement */
-            EntityCustomer entityCustomer = new EntityCustomer();
-            //EntityThirdParty entityThirdParty = new EntityThirdParty();
+            EntityThirdParty entityThirdParty = new EntityThirdParty();
             ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
 
-            entityCustomer.NumberCode = thirdPartyProvider.NextCode(thirdPartyType);
-            entityCustomer.Civility = cbxCivility.Text;
-            entityCustomer.Name = txtName.Text;
-            entityCustomer.Blocked = chkBlocked.Checked;
+            entityThirdParty.NumberCode = thirdPartyProvider.NextCode(thirdPartyType);
+            entityThirdParty.Civility = cbxCivility.Text;
+            entityThirdParty.Name = txtName.Text;
+            entityThirdParty.Blocked = chkBlocked.Checked;
             
 
-            thirdPartyProvider.Create(entityCustomer);
+            thirdPartyProvider.Create(entityThirdParty);
         }
 
         private void tsbSave_Click(object sender, EventArgs e)

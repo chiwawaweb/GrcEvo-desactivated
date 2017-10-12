@@ -19,7 +19,7 @@ namespace GrcEvo.Forms
         {
             InitializeComponent();
             ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
-            tssInfos.Text = "Nombre de tiers dans la base : " + thirdPartyProvider.Count().ToString();
+            tssInfos.Text = "Nombre de tiers dans la base : " + thirdPartyProvider.CountAll().ToString();
         }
 
         private void btnAction_Click(object sender, EventArgs e)

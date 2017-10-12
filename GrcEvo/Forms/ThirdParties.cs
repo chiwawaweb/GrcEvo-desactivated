@@ -28,7 +28,7 @@ namespace GrcEvo.Forms
             dgvThirdParties.Columns["CreatedAt"].Visible = false;
             dgvThirdParties.Columns["Civility"].HeaderText = "Civilité";
             dgvThirdParties.Columns["Name"].HeaderText = "Nom";
-            //dgvThirdParties.Columns["Blocked"].HeaderText = "Bloqué";
+            dgvThirdParties.Columns["Blocked"].HeaderText = "Bloqué";
 
 
 

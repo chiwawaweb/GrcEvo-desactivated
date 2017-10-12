@@ -138,7 +138,7 @@ namespace GrcEvo.DAL
             }
         }
 
-        public int Count()
+        public int CountAll()
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {

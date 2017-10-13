@@ -52,15 +52,18 @@
             this.dgvThirdParties.Name = "dgvThirdParties";
             this.dgvThirdParties.ReadOnly = true;
             this.dgvThirdParties.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThirdParties.Size = new System.Drawing.Size(813, 389);
+            this.dgvThirdParties.ShowCellErrors = false;
+            this.dgvThirdParties.ShowRowErrors = false;
+            this.dgvThirdParties.Size = new System.Drawing.Size(1199, 389);
             this.dgvThirdParties.TabIndex = 0;
             // 
             // statusStrip
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip.Location = new System.Drawing.Point(0, 453);
+            this.statusStrip.Location = new System.Drawing.Point(0, 447);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(813, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1199, 28);
+            this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -72,7 +75,7 @@
             this.tsbClose});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(813, 32);
+            this.toolStrip.Size = new System.Drawing.Size(1199, 32);
             this.toolStrip.TabIndex = 2;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -123,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 475);
+            this.ClientSize = new System.Drawing.Size(1199, 475);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtSearch);

@@ -19,6 +19,9 @@ namespace GrcEvo.Forms
         public ThirdPartiesForm(string type)
         {
             InitializeComponent();
+
+            this.Size = new Size (1080,600);
+            
             _type = type;
             RefreshData();
         }
@@ -32,16 +35,46 @@ namespace GrcEvo.Forms
             dgvThirdParties.Columns.Clear();
 
             /* Mise en forme Datagridview */
-            /* Ajout des colonnes */
-            dgvThirdParties.Columns.Add("Code","Code");
-            dgvThirdParties.Columns.Add("Name", "Nom");
-            dgvThirdParties.Columns.Add("Adress", "Adresse");
-            dgvThirdParties.Columns.Add("City", "Ville");
-            dgvThirdParties.Columns.Add("Country", "Pays");
+            dgvThirdParties.Size = new Size(1064, 478);
+            DataGridViewTextBoxColumn codeColumn = new DataGridViewTextBoxColumn();
+            codeColumn.Name = "Code";
+            codeColumn.HeaderText = "Code";
+            codeColumn.Width = 80;
+            codeColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            codeColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            
+
+            DataGridViewTextBoxColumn nameColumn = new DataGridViewTextBoxColumn();
+            nameColumn.Name = "Name";
+            nameColumn.HeaderText = "Nom";
+            nameColumn.Width = 250;
+
+            DataGridViewTextBoxColumn adressColumn = new DataGridViewTextBoxColumn();
+            adressColumn.Name = "Adress";
+            adressColumn.HeaderText = "Adresse";
+            adressColumn.Width = 250;
+
+            DataGridViewTextBoxColumn cityColumn = new DataGridViewTextBoxColumn();
+            cityColumn.Name = "City";
+            cityColumn.HeaderText = "Ville";
+            cityColumn.Width = 220;
+
+            DataGridViewTextBoxColumn countryColumn = new DataGridViewTextBoxColumn();
+            countryColumn.Name = "Country";
+            countryColumn.HeaderText = "Pays";
+            countryColumn.Width = 130;
+
             DataGridViewCheckBoxColumn blockedColumn = new DataGridViewCheckBoxColumn();
             blockedColumn.Name = "Blocked";
             blockedColumn.HeaderText = "Bloqué";
-            blockedColumn.Width = 100;
+            blockedColumn.Width = 90;
+
+            /* Création des colonnes */
+            dgvThirdParties.Columns.Add(codeColumn);
+            dgvThirdParties.Columns.Add(nameColumn);
+            dgvThirdParties.Columns.Add(adressColumn);
+            dgvThirdParties.Columns.Add(cityColumn);
+            dgvThirdParties.Columns.Add(countryColumn);
             dgvThirdParties.Columns.Add(blockedColumn);
 
             /* Largeur des colonnes */

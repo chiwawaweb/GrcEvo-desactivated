@@ -18,19 +18,23 @@ namespace GrcEvo.Forms
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void RefreshData()
+        {
             ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
-            tssInfos.Text = "Nombre de tiers dans la base : " + thirdPartyProvider.CountAll().ToString();
+            /* temporaire */
+            tssInfos.Text = "Nombre de tiers dans la base : " + thirdPartyProvider.CountCL().ToString();
         }
 
         private void btnAction_Click(object sender, EventArgs e)
         {
-            Library.Fixtures fixtures = new Library.Fixtures();
-            MessageBox.Show("ok");
+            RefreshData();
         }
 
         private void OpenThirdPartyList(string type)
         {
-            ThirdParties frm = new ThirdParties(type);
+            ThirdPartiesForm frm = new ThirdPartiesForm(type);
             frm.ShowDialog();
         }
 
@@ -52,6 +56,12 @@ namespace GrcEvo.Forms
         private void tsbCustomers_Click(object sender, EventArgs e)
         {
             OpenThirdPartyList("CL");
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            /* temporaire */
+            RefreshData();
         }
     }
 }

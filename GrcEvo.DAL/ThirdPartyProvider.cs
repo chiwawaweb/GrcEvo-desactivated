@@ -152,5 +152,18 @@ namespace GrcEvo.DAL
                 }
             }
         }
+
+        public int CountCL()
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                var thirdPartiesQuery = (from EntityThirdParty in context.ThirdParties
+                                         where EntityThirdParty.PrefixCode == "CL"
+                                         orderby EntityThirdParty.ID ascending
+                                         select EntityThirdParty);
+
+                return thirdPartiesQuery.Count();
+            }
+        }
     }
 }

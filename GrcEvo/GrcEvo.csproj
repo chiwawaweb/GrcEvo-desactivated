@@ -55,11 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\ThirdParties.cs">
+    <Compile Include="Forms\ThirdPartiesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ThirdParties.Designer.cs">
-      <DependentUpon>ThirdParties.cs</DependentUpon>
+    <Compile Include="Forms\ThirdPartiesForm.Designer.cs">
+      <DependentUpon>ThirdPartiesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ThirdPartyEditForm.cs">
       <SubType>Form</SubType>
@@ -76,8 +76,8 @@
     <Compile Include="Library\Fixtures.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\ThirdParties.resx">
-      <DependentUpon>ThirdParties.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ThirdPartiesForm.resx">
+      <DependentUpon>ThirdPartiesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThirdPartyEditForm.resx">
       <DependentUpon>ThirdPartyEditForm.cs</DependentUpon>

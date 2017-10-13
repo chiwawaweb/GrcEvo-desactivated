@@ -17,13 +17,17 @@ namespace GrcEvo.Forms
         private string thirdPartyAction;
         private string thirdPartyType;
         private string formTitle = "Fiche ";
+        ThirdPartiesForm _owner;
 
         ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
         CivilityProvider civilityProvider = new CivilityProvider();
         ThirdPartyFamilyProvider familyProvider = new ThirdPartyFamilyProvider();
 
-        public ThirdPartyEditForm(string type, string action)
+        public ThirdPartyEditForm(ThirdPartiesForm owner, string type, string action)
         {
+            _owner = owner;
+            FormClosed += new FormClosedEventHandler(ThirdPartyEditForm_FormClosed);
+
             InitializeComponent();
             thirdPartyAction = action;
             thirdPartyType = type;
@@ -104,7 +108,7 @@ namespace GrcEvo.Forms
             /* Prépare les données avant enregistrement */
             EntityThirdParty entityThirdParty = new EntityThirdParty();
             ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
-
+            entityThirdParty.PrefixCode = thirdPartyType;
             entityThirdParty.NumberCode = thirdPartyProvider.NextCode(thirdPartyType);
             entityThirdParty.Civility = cbxCivility.Text;
             entityThirdParty.Name = txtName.Text;
@@ -133,6 +137,11 @@ namespace GrcEvo.Forms
             {
                 Close();
             }
+        }
+
+        private void ThirdPartyEditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _owner.RefreshData();
         }
     }
 }

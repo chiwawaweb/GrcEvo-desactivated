@@ -12,31 +12,34 @@ using GrcEvo.DAL;
 
 namespace GrcEvo.Forms
 {
-    public partial class ThirdParties : Form
+    public partial class ThirdPartiesForm : Form
     {
         private string _type;
 
-        ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
         
-        public ThirdParties(string type)
+        
+        public ThirdPartiesForm(string type)
         {
             InitializeComponent();
             _type = type;
+            RefreshData();
+        }
 
-            dgvThirdParties.DataSource = thirdPartyProvider.getThirdPartyByType(type);
+        public void RefreshData()
+        {
+            ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
+
+            dgvThirdParties.DataSource = thirdPartyProvider.getThirdPartyByType(_type);
             dgvThirdParties.Columns["ID"].Visible = false;
             dgvThirdParties.Columns["CreatedAt"].Visible = false;
             dgvThirdParties.Columns["Civility"].HeaderText = "Civilité";
             dgvThirdParties.Columns["Name"].HeaderText = "Nom";
             dgvThirdParties.Columns["Blocked"].HeaderText = "Bloqué";
-
-
-
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
         {
-            ThirdPartyEditForm frm = new ThirdPartyEditForm(_type,"C");
+            ThirdPartyEditForm frm = new ThirdPartyEditForm(this, _type, "C");
             frm.ShowDialog();
         }
 
@@ -45,6 +48,14 @@ namespace GrcEvo.Forms
             Close();
         }
 
+        private void ThirdPartiesForm_Enter(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
     }
 }

@@ -243,6 +243,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Fiche tiers";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ThirdPartyEditForm_FormClosed);
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
             this.tabInfos.ResumeLayout(false);

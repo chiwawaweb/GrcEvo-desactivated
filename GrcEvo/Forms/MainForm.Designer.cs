@@ -41,10 +41,10 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.tssInfos = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnAction = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbCustomers = new System.Windows.Forms.ToolStripButton();
-            this.tssInfos = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -147,6 +147,12 @@
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
             // 
+            // tssInfos
+            // 
+            this.tssInfos.Name = "tssInfos";
+            this.tssInfos.Size = new System.Drawing.Size(19, 25);
+            this.tssInfos.Text = "-";
+            // 
             // btnAction
             // 
             this.btnAction.Location = new System.Drawing.Point(1125, 875);
@@ -178,12 +184,6 @@
             this.tsbCustomers.Text = "Clients";
             this.tsbCustomers.Click += new System.EventHandler(this.tsbCustomers_Click);
             // 
-            // tssInfos
-            // 
-            this.tssInfos.Name = "tssInfos";
-            this.tssInfos.Size = new System.Drawing.Size(19, 25);
-            this.tssInfos.Text = "-";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -199,6 +199,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GRC Evo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);

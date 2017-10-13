@@ -27,8 +27,8 @@ namespace GrcEvo.DAL
             listCivility.Add(new EntityCivility { Name = "SCI", Abbreviation = "SCI" });
 
             List<EntityThirdParty> listThirdParty = new List <EntityThirdParty>();
-            listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 91, Civility = "Mlle", Name="BROCHARD SYLVIE", Adress1 = "RUE DES PRES" });
-            listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 95, Civility = "M.", Name = "DUMONT ANTOINE", Adress1 = "RUE DES MARCHANDS" });
+            listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 91, Civility = "Mlle", Name="BROCHARD SYLVIE", Adress1 = "RUE DES PRES", Adress2 = "lig2", Adress3 = "lig3", PostalCode="57650", City="FONTOY'R", Country="FRANCE" });
+            listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 95, Civility = "M.", Name = "DUMONT ANTOINE", Adress1 = "RUE DES MARCHANDS", Blocked=true });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "PP", NumberCode = 107, Civility = "SA", Name = "SOCIETE GENERALE", Adress1 = "RUE DU PARC" });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "PP", NumberCode = 108, Civility = "Mme", Name = "ARMAND GINETTE", Adress1 = "AVENUE JOFFRE" });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "FR", NumberCode = 543, Civility = "SARL", Name = "ETOILES ET CIE", Adress1 = "RUE DES MARCHANDS" });

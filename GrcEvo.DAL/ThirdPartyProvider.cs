@@ -100,15 +100,15 @@ namespace GrcEvo.DAL
         /// <summary>
         /// Renvoie le prochain code du tiers selon son préfixe
         /// </summary>
-        /// /// <param name="prefixCode">Préfixe du tiers (CL, FR, PP,...)</param>
+        /// /// <param name="type">Type de tiers (CL, FR, PP)</param>
         /// <returns></returns>
-        public int NextCode(string prefixCode)
+        public int NextCode(string type)
         {
             int nextCode = 0;
             using (GrcEvoContext context = new GrcEvoContext())
             {
                 var nextCodeQuery = (from EntityThirdParty in context.ThirdParties
-                                   where EntityThirdParty.PrefixCode == prefixCode
+                                   where EntityThirdParty.PrefixCode == type
                                    orderby EntityThirdParty.NumberCode descending
                                    select EntityThirdParty).Take(1);
                 
@@ -121,9 +121,9 @@ namespace GrcEvo.DAL
         }
 
         /// <summary>
-        /// Recupère les entités dont le type est passé en paramètre
+        /// Recupère les entités dont le type est passé en paramètre.
         /// </summary>
-        /// <param name="type"></param>
+        /// <param name="type">Type de tiers (CL, FR, PP)</param>
         /// <returns>L'entité si elle existe, sinon NULL</returns>
         public List<EntityThirdParty> getThirdPartyByType(string type)
         {
@@ -138,6 +138,10 @@ namespace GrcEvo.DAL
             }
         }
 
+        /// <summary>
+        /// Compte tous les tiers de la base.
+        /// </summary>
+        /// <returns></returns>
         public int CountAll()
         {
             using (GrcEvoContext context = new GrcEvoContext())
@@ -152,13 +156,17 @@ namespace GrcEvo.DAL
                 }
             }
         }
-
-        public int CountCL()
+        /// <summary>
+        /// Compte le nombre de tiers en fonction du type.
+        /// </summary>
+        /// <param name="type">Type de tiers (CL, FR, PP)</param>
+        /// <returns></returns>
+        public int Count(string type)
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
                 var thirdPartiesQuery = (from EntityThirdParty in context.ThirdParties
-                                         where EntityThirdParty.PrefixCode == "CL"
+                                         where EntityThirdParty.PrefixCode == type
                                          orderby EntityThirdParty.ID ascending
                                          select EntityThirdParty);
 

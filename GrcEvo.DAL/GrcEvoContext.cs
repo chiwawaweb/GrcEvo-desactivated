@@ -16,7 +16,6 @@ namespace GrcEvo.DAL
         {
             Database.SetInitializer<GrcEvoContext>(new GrcEvoContextInitializer());
         }
-
         public DbSet<EntityThirdParty> ThirdParties { get; set; }
         public DbSet<EntityCountry> Countries { get; set; }
         public DbSet<EntityCivility> Civilities { get; set; }

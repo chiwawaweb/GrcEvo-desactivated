@@ -37,7 +37,10 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.tsbUpdate = new System.Windows.Forms.ToolStripButton();
+            this.tssNbThirdParties = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThirdParties)).BeginInit();
+            this.statusStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,9 +63,11 @@
             // statusStrip
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip.Location = new System.Drawing.Point(0, 447);
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssNbThirdParties});
+            this.statusStrip.Location = new System.Drawing.Point(0, 445);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1199, 28);
+            this.statusStrip.Size = new System.Drawing.Size(1199, 30);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
@@ -72,6 +77,7 @@
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbAdd,
+            this.tsbUpdate,
             this.tsbClose});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
@@ -122,6 +128,21 @@
             this.btnSearch.Text = "Chercher";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
+            // tsbUpdate
+            // 
+            this.tsbUpdate.Image = ((System.Drawing.Image)(resources.GetObject("tsbUpdate.Image")));
+            this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbUpdate.Name = "tsbUpdate";
+            this.tsbUpdate.Size = new System.Drawing.Size(107, 29);
+            this.tsbUpdate.Text = "Modifier";
+            this.tsbUpdate.Click += new System.EventHandler(this.tsbUpdate_Click);
+            // 
+            // tssNbThirdParties
+            // 
+            this.tssNbThirdParties.Name = "tssNbThirdParties";
+            this.tssNbThirdParties.Size = new System.Drawing.Size(19, 25);
+            this.tssNbThirdParties.Text = "-";
+            // 
             // ThirdPartiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -144,6 +165,8 @@
             this.Text = "Tiers";
             this.Enter += new System.EventHandler(this.ThirdPartiesForm_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThirdParties)).EndInit();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -161,5 +184,7 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ToolStripButton tsbAdd;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ToolStripButton tsbUpdate;
+        private System.Windows.Forms.ToolStripStatusLabel tssNbThirdParties;
     }
 }

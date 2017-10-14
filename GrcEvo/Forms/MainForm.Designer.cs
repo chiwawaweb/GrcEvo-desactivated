@@ -144,6 +144,7 @@
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
             this.statusStrip.Size = new System.Drawing.Size(1284, 30);
+            this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -161,6 +162,7 @@
             this.btnAction.TabIndex = 2;
             this.btnAction.Text = "ACTION";
             this.btnAction.UseVisualStyleBackColor = true;
+            this.btnAction.Visible = false;
             this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
             // 
             // toolStrip1
@@ -170,17 +172,16 @@
             this.tsbCustomers});
             this.toolStrip1.Location = new System.Drawing.Point(0, 33);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1284, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1284, 32);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tsbCustomers
             // 
-            this.tsbCustomers.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsbCustomers.Image = ((System.Drawing.Image)(resources.GetObject("tsbCustomers.Image")));
             this.tsbCustomers.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCustomers.Name = "tsbCustomers";
-            this.tsbCustomers.Size = new System.Drawing.Size(28, 28);
+            this.tsbCustomers.Size = new System.Drawing.Size(92, 29);
             this.tsbCustomers.Text = "Clients";
             this.tsbCustomers.Click += new System.EventHandler(this.tsbCustomers_Click);
             // 

@@ -83,7 +83,6 @@ namespace GrcEvo.Forms
             foreach (var family in familyProvider.getThirdPartyFamilyByType(thirdPartyType))
             {
                 cbxFamily.Items.Add(family.Name);
-                cbxFamily.ValueMember = family.ID.ToString();
             }
 
             /* Combobox des pays */
@@ -115,6 +114,7 @@ namespace GrcEvo.Forms
             lblCode.Text = thirdPartyProvider.getThirdPartyById(_id).PrefixCode + thirdPartyNumberCode.ToString("00000");
 
             cbxCivility.Text = thirdPartyProvider.getThirdPartyById(_id).Civility;
+            cbxFamily.Text = thirdPartyProvider.getThirdPartyById(_id).Family;
             txtName.Text = thirdPartyProvider.getThirdPartyById(_id).Name;
             chkBlocked.Checked = thirdPartyProvider.getThirdPartyById(_id).Blocked;
             txtAdress1.Text = thirdPartyProvider.getThirdPartyById(_id).Adress1;
@@ -131,6 +131,8 @@ namespace GrcEvo.Forms
         private void Save()
         {
             /* Vérifie la saisie */
+            string family = cbxFamily.Text.ToUpper().Trim();
+            string civility = cbxCivility.Text.ToUpper().Trim();
             string name = txtName.Text.ToUpper().Trim();
             string adress1 = txtAdress1.Text.ToUpper().Trim();
             string adress2 = txtAdress2.Text.ToUpper().Trim();
@@ -157,8 +159,8 @@ namespace GrcEvo.Forms
                     EntityThirdParty entityThirdParty = new EntityThirdParty();
                     entityThirdParty.PrefixCode = thirdPartyType;
                     entityThirdParty.NumberCode = thirdPartyProvider.NextCode(thirdPartyType);
-                    //cbxFamily.SelectedValue;
-                    entityThirdParty.Civility = cbxCivility.Text;
+                    entityThirdParty.Family = family;
+                    entityThirdParty.Civility = civility;
                     entityThirdParty.Name = name;
                     entityThirdParty.Blocked = chkBlocked.Checked;
                     entityThirdParty.Adress1 = adress1;
@@ -177,6 +179,7 @@ namespace GrcEvo.Forms
                 {
                     /* Mise à jour de la fiche */
                     EntityThirdParty entityThirdParty = thirdPartyProvider.getThirdPartyById(_id);
+                    entityThirdParty.Family = cbxFamily.Text;
                     entityThirdParty.Civility = cbxCivility.Text;
                     entityThirdParty.Name = name;
                     entityThirdParty.Blocked = chkBlocked.Checked;

@@ -27,7 +27,7 @@ namespace GrcEvo.DAL
             listCivility.Add(new EntityCivility { Name = "SCI", Abbreviation = "SCI" });
 
             List<EntityThirdParty> listThirdParty = new List<EntityThirdParty>();
-            listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 91, Civility = "Mlle", Name="BROCHARD SYLVIE", Adress1 = "RUE DES PRES", Adress2 = "lig2", Adress3 = "lig3", PostalCode="57650", City="FONTOY'R", Country="FRANCE" });
+            listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 91, Civility = "Mlle", Name="BROCHARD SYLVIE", Adress1 = "RUE DES PRES", Adress2 = "CHEZ M. PIERRET", Adress3 = "LIEU DES LES MOUETTES", PostalCode="57650", City="FONTOY", Country="FRANCE" });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 95, Civility = "M.", Name = "DUMONT ANTOINE", Adress1 = "RUE DES MARCHANDS", Blocked=true });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "PP", NumberCode = 107, Civility = "SA", Name = "SOCIETE GENERALE", Adress1 = "RUE DU PARC" });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "PP", NumberCode = 108, Civility = "Mme", Name = "ARMAND GINETTE", Adress1 = "AVENUE JOFFRE" });
@@ -41,14 +41,14 @@ namespace GrcEvo.DAL
             listCountry.Add(new EntityCountry { Name = "ALLEMAGNE", Abbreviation = "DE" });
 
             List<EntityThirdPartyFamily> listThirdPartyFamily = new List<EntityThirdPartyFamily>();
-            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Particulier", Abbreviation = "PA", Type = "CL" });
-            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Comité d'entreprise", Abbreviation = "CE", Type = "CL" });
-            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Société", Abbreviation = "SO", Type = "CL" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "PARTICULIER", Abbreviation = "PA", Type = "CL" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "COMITE D'ENTREPRISE", Abbreviation = "CE", Type = "CL" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "SOCIETE", Abbreviation = "SO", Type = "CL" });
             listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Entreprise", Abbreviation = "EN", Type = "FR" });
-            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Association", Abbreviation = "AS", Type = "FR" });
-            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Particulier", Abbreviation = "PA", Type = "PP" });
-            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Comité d'entreprise", Abbreviation = "CE", Type = "PP" });
-            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Société", Abbreviation = "SO", Type = "PP" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "ASSOCIATION", Abbreviation = "AS", Type = "FR" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "PARTICULIER", Abbreviation = "PA", Type = "PP" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "COMITE D'ENTREPRISE", Abbreviation = "CE", Type = "PP" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "SOCIETE", Abbreviation = "SO", Type = "PP" });
 
             listCivility.ForEach(entity => context.Civilities.Add(entity));
             listThirdParty.ForEach(entity => context.ThirdParties.Add(entity));

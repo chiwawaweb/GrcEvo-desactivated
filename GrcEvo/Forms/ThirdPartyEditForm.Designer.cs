@@ -276,6 +276,7 @@
             this.cbxFamily.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxFamily.Name = "cbxFamily";
             this.cbxFamily.Size = new System.Drawing.Size(224, 24);
+            this.cbxFamily.Sorted = true;
             this.cbxFamily.TabIndex = 0;
             // 
             // lblFamily

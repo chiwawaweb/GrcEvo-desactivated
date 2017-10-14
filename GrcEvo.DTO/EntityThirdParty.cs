@@ -11,6 +11,7 @@ namespace GrcEvo.DTO
     {
         public int ID { get; set; }
         public string PrefixCode { get; set; }
+        public string Family { get; set; }
         public int NumberCode { get; set; }
         public string Civility { get; set; }
         public string Name { get; set; }

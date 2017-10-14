@@ -163,10 +163,49 @@ namespace GrcEvo.Forms
         private void tsbUpdate_Click(object sender, EventArgs e)
         {
             //idClient selon la ligne sélectionnée
-            int userId = Int32.Parse(dgvThirdParties.CurrentRow.Cells[0].Value.ToString());
+            int ID = Int32.Parse(dgvThirdParties.CurrentRow.Cells[0].Value.ToString());
 
-            ThirdPartyEditForm thirdPartyEditForm = new ThirdPartyEditForm(this, "", "U", userId);
+            ThirdPartyEditForm thirdPartyEditForm = new ThirdPartyEditForm(this, "", "U", ID);
             thirdPartyEditForm.ShowDialog();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            List<EntityThirdParty> list;
+            list = thirdPartyProvider.SearchByName(txtSearch.Text, _type);
+
+            dgvThirdParties.Rows.Clear();
+            dgvThirdParties.Columns.Clear();
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                int number = dgvThirdParties.Rows.Add();
+
+                string Code = list[i].PrefixCode + list[i].NumberCode.ToString("00000");
+                string Name = list[i].Name;
+                string Adress1 = list[i].Adress1;
+                string Adress2 = list[i].Adress2;
+                string Adress3 = list[i].Adress3;
+                string PostalCode = list[i].PostalCode;
+                string City = list[i].City;
+                string Country = list[i].Country;
+                bool Blocked = list[i].Blocked;
+                int ID = list[i].ID;
+
+                dgvThirdParties.Rows[number].Cells[0].Value = ID;
+                dgvThirdParties.Rows[number].Cells[1].Value = Code;
+                dgvThirdParties.Rows[number].Cells[2].Value = Name;
+                dgvThirdParties.Rows[number].Cells[3].Value = (Adress1 + " " + Adress2 + " " + Adress3).Trim();
+                dgvThirdParties.Rows[number].Cells[4].Value = (PostalCode + " " + City).Trim();
+                dgvThirdParties.Rows[number].Cells[5].Value = Country;
+                dgvThirdParties.Rows[number].Cells[6].Value = Blocked;
+
+
+                /* Mise à jour barre de statut */
+                tssNbThirdParties.Text = "Nombre de " + thirdPartyLabel + " trouvés : " + thirdPartyProvider.Count(_type).ToString();
+
+
+            }
         }
     }
 }

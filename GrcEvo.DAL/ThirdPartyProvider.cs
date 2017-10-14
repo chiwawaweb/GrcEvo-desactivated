@@ -173,5 +173,22 @@ namespace GrcEvo.DAL
                 return thirdPartiesQuery.Count();
             }
         }
+
+        /// <summary>
+        /// Recherche les tiers en fonction du nom.
+        /// </summary>
+        /// <returns>La Liste des entités .</returns>
+        public List<EntityThirdParty> SearchByName(string search, string type)
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                var thirdPartiesQuery = (from EntityThirdParty in context.ThirdParties
+                                         where EntityThirdParty.Name == search && EntityThirdParty.PrefixCode == type
+                                         orderby EntityThirdParty.Name ascending
+                                         select EntityThirdParty);
+
+                return thirdPartiesQuery.ToList();
+            }
+        }
     }
 }

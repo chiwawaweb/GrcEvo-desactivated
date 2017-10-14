@@ -35,7 +35,17 @@
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.tabInfos = new System.Windows.Forms.TabControl();
             this.tpgAdress = new System.Windows.Forms.TabPage();
+            this.lblCountry = new System.Windows.Forms.Label();
+            this.lblPCCity = new System.Windows.Forms.Label();
+            this.cbxCountry = new System.Windows.Forms.ComboBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtPostalCode = new System.Windows.Forms.TextBox();
+            this.lblAdress = new System.Windows.Forms.Label();
+            this.txtAdress3 = new System.Windows.Forms.TextBox();
+            this.txtAdress2 = new System.Windows.Forms.TextBox();
+            this.txtAdress1 = new System.Windows.Forms.TextBox();
             this.tpgDelivery = new System.Windows.Forms.TabPage();
+            this.lblComingSoon = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblCivility = new System.Windows.Forms.Label();
             this.cbxCivility = new System.Windows.Forms.ComboBox();
@@ -47,16 +57,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.tssCreatedAt = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssUpdatedAt = new System.Windows.Forms.ToolStripStatusLabel();
-            this.txtAdress1 = new System.Windows.Forms.TextBox();
-            this.txtAdress2 = new System.Windows.Forms.TextBox();
-            this.txtAdress3 = new System.Windows.Forms.TextBox();
-            this.lblAdress = new System.Windows.Forms.Label();
-            this.txtPostalCode = new System.Windows.Forms.TextBox();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.cbxCountry = new System.Windows.Forms.ComboBox();
-            this.lblPCCity = new System.Windows.Forms.Label();
-            this.lblCountry = new System.Windows.Forms.Label();
-            this.lblComingSoon = new System.Windows.Forms.Label();
             this.toolStrip.SuspendLayout();
             this.tabInfos.SuspendLayout();
             this.tpgAdress.SuspendLayout();
@@ -70,7 +70,7 @@
             this.lblThirdPartyCode.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThirdPartyCode.Location = new System.Drawing.Point(10, 53);
             this.lblThirdPartyCode.Name = "lblThirdPartyCode";
-            this.lblThirdPartyCode.Size = new System.Drawing.Size(69, 23);
+            this.lblThirdPartyCode.Size = new System.Drawing.Size(46, 16);
             this.lblThirdPartyCode.TabIndex = 5;
             this.lblThirdPartyCode.Text = "Code :";
             // 
@@ -82,7 +82,7 @@
             this.tsbClose});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(929, 32);
+            this.toolStrip.Size = new System.Drawing.Size(929, 31);
             this.toolStrip.TabIndex = 4;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -91,7 +91,7 @@
             this.tsbSave.Image = ((System.Drawing.Image)(resources.GetObject("tsbSave.Image")));
             this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSave.Name = "tsbSave";
-            this.tsbSave.Size = new System.Drawing.Size(124, 29);
+            this.tsbSave.Size = new System.Drawing.Size(91, 28);
             this.tsbSave.Text = "Enregistrer";
             this.tsbSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
@@ -100,7 +100,7 @@
             this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
             this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Size = new System.Drawing.Size(101, 29);
+            this.tsbClose.Size = new System.Drawing.Size(77, 28);
             this.tsbClose.Text = "Annuler";
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
@@ -127,34 +127,115 @@
             this.tpgAdress.Controls.Add(this.txtAdress3);
             this.tpgAdress.Controls.Add(this.txtAdress2);
             this.tpgAdress.Controls.Add(this.txtAdress1);
-            this.tpgAdress.Location = new System.Drawing.Point(4, 32);
+            this.tpgAdress.Location = new System.Drawing.Point(4, 25);
             this.tpgAdress.Margin = new System.Windows.Forms.Padding(2);
             this.tpgAdress.Name = "tpgAdress";
             this.tpgAdress.Padding = new System.Windows.Forms.Padding(2);
-            this.tpgAdress.Size = new System.Drawing.Size(912, 343);
+            this.tpgAdress.Size = new System.Drawing.Size(912, 350);
             this.tpgAdress.TabIndex = 0;
             this.tpgAdress.Text = "Adresse";
             this.tpgAdress.UseVisualStyleBackColor = true;
             // 
+            // lblCountry
+            // 
+            this.lblCountry.AutoSize = true;
+            this.lblCountry.Location = new System.Drawing.Point(17, 167);
+            this.lblCountry.Name = "lblCountry";
+            this.lblCountry.Size = new System.Drawing.Size(46, 16);
+            this.lblCountry.TabIndex = 10;
+            this.lblCountry.Text = "Pays :";
+            // 
+            // lblPCCity
+            // 
+            this.lblPCCity.AutoSize = true;
+            this.lblPCCity.Location = new System.Drawing.Point(17, 139);
+            this.lblPCCity.Name = "lblPCCity";
+            this.lblPCCity.Size = new System.Drawing.Size(71, 16);
+            this.lblPCCity.TabIndex = 9;
+            this.lblPCCity.Text = "CP / Ville :";
+            // 
+            // cbxCountry
+            // 
+            this.cbxCountry.FormattingEnabled = true;
+            this.cbxCountry.Location = new System.Drawing.Point(125, 164);
+            this.cbxCountry.Name = "cbxCountry";
+            this.cbxCountry.Size = new System.Drawing.Size(355, 24);
+            this.cbxCountry.TabIndex = 5;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(195, 136);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(285, 22);
+            this.txtCity.TabIndex = 4;
+            // 
+            // txtPostalCode
+            // 
+            this.txtPostalCode.Location = new System.Drawing.Point(125, 136);
+            this.txtPostalCode.Name = "txtPostalCode";
+            this.txtPostalCode.Size = new System.Drawing.Size(64, 22);
+            this.txtPostalCode.TabIndex = 3;
+            // 
+            // lblAdress
+            // 
+            this.lblAdress.AutoSize = true;
+            this.lblAdress.Location = new System.Drawing.Point(17, 39);
+            this.lblAdress.Name = "lblAdress";
+            this.lblAdress.Size = new System.Drawing.Size(64, 16);
+            this.lblAdress.TabIndex = 3;
+            this.lblAdress.Text = "Adresse :";
+            // 
+            // txtAdress3
+            // 
+            this.txtAdress3.Location = new System.Drawing.Point(125, 108);
+            this.txtAdress3.Name = "txtAdress3";
+            this.txtAdress3.Size = new System.Drawing.Size(355, 22);
+            this.txtAdress3.TabIndex = 2;
+            // 
+            // txtAdress2
+            // 
+            this.txtAdress2.Location = new System.Drawing.Point(125, 72);
+            this.txtAdress2.Name = "txtAdress2";
+            this.txtAdress2.Size = new System.Drawing.Size(355, 22);
+            this.txtAdress2.TabIndex = 1;
+            // 
+            // txtAdress1
+            // 
+            this.txtAdress1.Location = new System.Drawing.Point(125, 36);
+            this.txtAdress1.Name = "txtAdress1";
+            this.txtAdress1.Size = new System.Drawing.Size(355, 22);
+            this.txtAdress1.TabIndex = 0;
+            // 
             // tpgDelivery
             // 
             this.tpgDelivery.Controls.Add(this.lblComingSoon);
-            this.tpgDelivery.Location = new System.Drawing.Point(4, 32);
+            this.tpgDelivery.Location = new System.Drawing.Point(4, 25);
             this.tpgDelivery.Margin = new System.Windows.Forms.Padding(2);
             this.tpgDelivery.Name = "tpgDelivery";
             this.tpgDelivery.Padding = new System.Windows.Forms.Padding(2);
-            this.tpgDelivery.Size = new System.Drawing.Size(912, 343);
+            this.tpgDelivery.Size = new System.Drawing.Size(912, 350);
             this.tpgDelivery.TabIndex = 1;
             this.tpgDelivery.Text = "Livraison";
             this.tpgDelivery.UseVisualStyleBackColor = true;
+            // 
+            // lblComingSoon
+            // 
+            this.lblComingSoon.AutoSize = true;
+            this.lblComingSoon.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComingSoon.ForeColor = System.Drawing.Color.Gray;
+            this.lblComingSoon.Location = new System.Drawing.Point(261, 166);
+            this.lblComingSoon.Name = "lblComingSoon";
+            this.lblComingSoon.Size = new System.Drawing.Size(230, 26);
+            this.lblComingSoon.TabIndex = 0;
+            this.lblComingSoon.Text = "Fonctionnalité à venir";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(259, 91);
+            this.lblName.Location = new System.Drawing.Point(267, 91);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(62, 23);
+            this.lblName.Size = new System.Drawing.Size(43, 16);
             this.lblName.TabIndex = 16;
             this.lblName.Text = "Nom :";
             // 
@@ -164,7 +245,7 @@
             this.lblCivility.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCivility.Location = new System.Drawing.Point(10, 91);
             this.lblCivility.Name = "lblCivility";
-            this.lblCivility.Size = new System.Drawing.Size(78, 23);
+            this.lblCivility.Size = new System.Drawing.Size(53, 16);
             this.lblCivility.TabIndex = 18;
             this.lblCivility.Text = "Civilité :";
             // 
@@ -175,7 +256,7 @@
             this.cbxCivility.Location = new System.Drawing.Point(79, 87);
             this.cbxCivility.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxCivility.Name = "cbxCivility";
-            this.cbxCivility.Size = new System.Drawing.Size(164, 31);
+            this.cbxCivility.Size = new System.Drawing.Size(164, 24);
             this.cbxCivility.TabIndex = 1;
             // 
             // txtName
@@ -184,7 +265,7 @@
             this.txtName.Location = new System.Drawing.Point(316, 87);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(604, 30);
+            this.txtName.Size = new System.Drawing.Size(604, 22);
             this.txtName.TabIndex = 2;
             // 
             // cbxFamily
@@ -194,16 +275,16 @@
             this.cbxFamily.Location = new System.Drawing.Point(316, 49);
             this.cbxFamily.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxFamily.Name = "cbxFamily";
-            this.cbxFamily.Size = new System.Drawing.Size(224, 31);
+            this.cbxFamily.Size = new System.Drawing.Size(224, 24);
             this.cbxFamily.TabIndex = 0;
             // 
             // lblFamily
             // 
             this.lblFamily.AutoSize = true;
             this.lblFamily.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFamily.Location = new System.Drawing.Point(241, 53);
+            this.lblFamily.Location = new System.Drawing.Point(252, 53);
             this.lblFamily.Name = "lblFamily";
-            this.lblFamily.Size = new System.Drawing.Size(84, 23);
+            this.lblFamily.Size = new System.Drawing.Size(58, 16);
             this.lblFamily.TabIndex = 20;
             this.lblFamily.Text = "Famille :";
             // 
@@ -214,7 +295,7 @@
             this.chkBlocked.Location = new System.Drawing.Point(852, 52);
             this.chkBlocked.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBlocked.Name = "chkBlocked";
-            this.chkBlocked.Size = new System.Drawing.Size(96, 27);
+            this.chkBlocked.Size = new System.Drawing.Size(67, 20);
             this.chkBlocked.TabIndex = 22;
             this.chkBlocked.TabStop = false;
             this.chkBlocked.Text = "Bloqué";
@@ -231,7 +312,7 @@
             this.lblCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCode.Name = "lblCode";
             this.lblCode.Padding = new System.Windows.Forms.Padding(2, 2, 2, 1);
-            this.lblCode.Size = new System.Drawing.Size(65, 29);
+            this.lblCode.Size = new System.Drawing.Size(42, 21);
             this.lblCode.TabIndex = 0;
             this.lblCode.Text = "-------";
             // 
@@ -241,10 +322,10 @@
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssCreatedAt,
             this.tssUpdatedAt});
-            this.statusStrip.Location = new System.Drawing.Point(0, 508);
+            this.statusStrip.Location = new System.Drawing.Point(0, 516);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip.Size = new System.Drawing.Size(929, 30);
+            this.statusStrip.Size = new System.Drawing.Size(929, 22);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 24;
             this.statusStrip.Text = "statusStrip1";
@@ -253,100 +334,19 @@
             // 
             this.tssCreatedAt.Enabled = false;
             this.tssCreatedAt.Name = "tssCreatedAt";
-            this.tssCreatedAt.Size = new System.Drawing.Size(87, 25);
+            this.tssCreatedAt.Size = new System.Drawing.Size(58, 17);
             this.tssCreatedAt.Text = "Création :";
             // 
             // tssUpdatedAt
             // 
             this.tssUpdatedAt.Enabled = false;
             this.tssUpdatedAt.Name = "tssUpdatedAt";
-            this.tssUpdatedAt.Size = new System.Drawing.Size(108, 25);
+            this.tssUpdatedAt.Size = new System.Drawing.Size(71, 17);
             this.tssUpdatedAt.Text = "Mise à jour :";
-            // 
-            // txtAdress1
-            // 
-            this.txtAdress1.Location = new System.Drawing.Point(125, 36);
-            this.txtAdress1.Name = "txtAdress1";
-            this.txtAdress1.Size = new System.Drawing.Size(406, 30);
-            this.txtAdress1.TabIndex = 0;
-            // 
-            // txtAdress2
-            // 
-            this.txtAdress2.Location = new System.Drawing.Point(125, 72);
-            this.txtAdress2.Name = "txtAdress2";
-            this.txtAdress2.Size = new System.Drawing.Size(406, 30);
-            this.txtAdress2.TabIndex = 1;
-            // 
-            // txtAdress3
-            // 
-            this.txtAdress3.Location = new System.Drawing.Point(125, 108);
-            this.txtAdress3.Name = "txtAdress3";
-            this.txtAdress3.Size = new System.Drawing.Size(406, 30);
-            this.txtAdress3.TabIndex = 2;
-            // 
-            // lblAdress
-            // 
-            this.lblAdress.AutoSize = true;
-            this.lblAdress.Location = new System.Drawing.Point(16, 45);
-            this.lblAdress.Name = "lblAdress";
-            this.lblAdress.Size = new System.Drawing.Size(95, 23);
-            this.lblAdress.TabIndex = 3;
-            this.lblAdress.Text = "Adresse :";
-            // 
-            // txtPostalCode
-            // 
-            this.txtPostalCode.Location = new System.Drawing.Point(125, 144);
-            this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(109, 30);
-            this.txtPostalCode.TabIndex = 3;
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(254, 144);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(277, 30);
-            this.txtCity.TabIndex = 4;
-            // 
-            // cbxCountry
-            // 
-            this.cbxCountry.FormattingEnabled = true;
-            this.cbxCountry.Location = new System.Drawing.Point(125, 181);
-            this.cbxCountry.Name = "cbxCountry";
-            this.cbxCountry.Size = new System.Drawing.Size(406, 31);
-            this.cbxCountry.TabIndex = 5;
-            // 
-            // lblPCCity
-            // 
-            this.lblPCCity.AutoSize = true;
-            this.lblPCCity.Location = new System.Drawing.Point(17, 151);
-            this.lblPCCity.Name = "lblPCCity";
-            this.lblPCCity.Size = new System.Drawing.Size(103, 23);
-            this.lblPCCity.TabIndex = 9;
-            this.lblPCCity.Text = "CP / Ville :";
-            // 
-            // lblCountry
-            // 
-            this.lblCountry.AutoSize = true;
-            this.lblCountry.Location = new System.Drawing.Point(17, 184);
-            this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(66, 23);
-            this.lblCountry.TabIndex = 10;
-            this.lblCountry.Text = "Pays :";
-            // 
-            // lblComingSoon
-            // 
-            this.lblComingSoon.AutoSize = true;
-            this.lblComingSoon.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComingSoon.ForeColor = System.Drawing.Color.Gray;
-            this.lblComingSoon.Location = new System.Drawing.Point(261, 166);
-            this.lblComingSoon.Name = "lblComingSoon";
-            this.lblComingSoon.Size = new System.Drawing.Size(351, 37);
-            this.lblComingSoon.TabIndex = 0;
-            this.lblComingSoon.Text = "Fonctionnalité à venir";
             // 
             // ThirdPartyEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 538);
             this.Controls.Add(this.statusStrip);

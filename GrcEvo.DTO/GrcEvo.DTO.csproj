@@ -42,9 +42,6 @@
   <ItemGroup>
     <Compile Include="EntityCivility.cs" />
     <Compile Include="EntityCountry.cs" />
-    <Compile Include="EntityCustomerFamily.cs" />
-    <Compile Include="EntityProspectFamily.cs" />
-    <Compile Include="EntitySupplierFamily.cs" />
     <Compile Include="EntityThirdPartyFamily.cs" />
     <Compile Include="EntityThirdParty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

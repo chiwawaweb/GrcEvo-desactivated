@@ -40,27 +40,21 @@ namespace GrcEvo.DAL
             listCountry.Add(new EntityCountry { Name = "LUXEMBOURG", Abbreviation = "LU" });
             listCountry.Add(new EntityCountry { Name = "ALLEMAGNE", Abbreviation = "DE" });
 
-
-            List<EntityCustomerFamily> listCustomerFamily = new List<EntityCustomerFamily>();
-            listCustomerFamily.Add(new EntityCustomerFamily { Name = "Particulier", Abbreviation = "PA"});
-            listCustomerFamily.Add(new EntityCustomerFamily { Name = "Comité d'entreprise", Abbreviation = "CE"});
-            listCustomerFamily.Add(new EntityCustomerFamily { Name = "Société", Abbreviation = "SO" });
-
-            List<EntitySupplierFamily> listSupplierFamily = new List<EntitySupplierFamily>();
-            listSupplierFamily.Add(new EntitySupplierFamily { Name = "Entreprise", Abbreviation = "EN" });
-            listSupplierFamily.Add(new EntitySupplierFamily { Name = "Association", Abbreviation = "AS" });
-
-            List<EntityProspectFamily> listProspectFamily = new List<EntityProspectFamily>();
-            listProspectFamily.Add(new EntityProspectFamily { Name = "Particulier", Abbreviation = "PA" });
-            listProspectFamily.Add(new EntityProspectFamily { Name = "Comité d'entreprise", Abbreviation = "CE" });
-            listProspectFamily.Add(new EntityProspectFamily { Name = "Société", Abbreviation = "SO" });
+            List<EntityThirdPartyFamily> listThirdPartyFamily = new List<EntityThirdPartyFamily>();
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Particulier", Abbreviation = "PA", Type = "CL" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Comité d'entreprise", Abbreviation = "CE", Type = "CL" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Société", Abbreviation = "SO", Type = "CL" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Entreprise", Abbreviation = "EN", Type = "FR" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Association", Abbreviation = "AS", Type = "FR" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Particulier", Abbreviation = "PA", Type = "PP" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Comité d'entreprise", Abbreviation = "CE", Type = "PP" });
+            listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "Société", Abbreviation = "SO", Type = "PP" });
 
             listCivility.ForEach(entity => context.Civilities.Add(entity));
             listThirdParty.ForEach(entity => context.ThirdParties.Add(entity));
             listCountry.ForEach(entity => context.Countries.Add(entity));
-            listCustomerFamily.ForEach(entity => context.CustomerFamilies.Add(entity));
-            listSupplierFamily.ForEach(entity => context.SupplierFamilies.Add(entity));
-            listProspectFamily.ForEach(entity => context.ProspectFamilies.Add(entity));
+            listThirdPartyFamily.ForEach(entity => context.ThirdPartyFamilies.Add(entity));
+            
         }
     }
 }

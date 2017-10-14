@@ -83,6 +83,7 @@ namespace GrcEvo.Forms
             foreach (var family in familyProvider.getThirdPartyFamilyByType(thirdPartyType))
             {
                 cbxFamily.Items.Add(family.Name);
+                cbxFamily.ValueMember = family.ID.ToString();
             }
 
             /* Combobox des pays */
@@ -112,6 +113,7 @@ namespace GrcEvo.Forms
             
             formTitle += " (Modification)";
             lblCode.Text = thirdPartyProvider.getThirdPartyById(_id).PrefixCode + thirdPartyNumberCode.ToString("00000");
+
             cbxCivility.Text = thirdPartyProvider.getThirdPartyById(_id).Civility;
             txtName.Text = thirdPartyProvider.getThirdPartyById(_id).Name;
             chkBlocked.Checked = thirdPartyProvider.getThirdPartyById(_id).Blocked;
@@ -136,6 +138,8 @@ namespace GrcEvo.Forms
             string postalCode = txtPostalCode.Text.ToUpper().Trim();
             string city = txtCity.Text.ToUpper().Trim();
             string country = cbxCountry.Text.ToUpper().Trim();
+            string createdAt = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            string updatedAt = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
 
             bool errors = false;
             
@@ -153,6 +157,7 @@ namespace GrcEvo.Forms
                     EntityThirdParty entityThirdParty = new EntityThirdParty();
                     entityThirdParty.PrefixCode = thirdPartyType;
                     entityThirdParty.NumberCode = thirdPartyProvider.NextCode(thirdPartyType);
+                    //cbxFamily.SelectedValue;
                     entityThirdParty.Civility = cbxCivility.Text;
                     entityThirdParty.Name = name;
                     entityThirdParty.Blocked = chkBlocked.Checked;
@@ -162,6 +167,7 @@ namespace GrcEvo.Forms
                     entityThirdParty.PostalCode = postalCode;
                     entityThirdParty.City = city;
                     entityThirdParty.Country = country;
+                    entityThirdParty.CreatedAt = createdAt;
 
                     /* Création de l'enregistrement */
                     thirdPartyProvider.Create(entityThirdParty);
@@ -180,6 +186,7 @@ namespace GrcEvo.Forms
                     entityThirdParty.PostalCode = postalCode;
                     entityThirdParty.City = city;
                     entityThirdParty.Country = country;
+                    entityThirdParty.UpdatedAt = updatedAt;
                     
                     /* Mise à jour de l'enregistrement */
                     thirdPartyProvider.Update(entityThirdParty);

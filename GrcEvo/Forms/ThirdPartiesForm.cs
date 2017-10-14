@@ -63,38 +63,38 @@ namespace GrcEvo.Forms
 
             DataGridViewTextBoxColumn codeColumn = new DataGridViewTextBoxColumn();
             codeColumn.Name = "Code";
-            codeColumn.HeaderText = "Code";
+            codeColumn.HeaderText = "CODE";
             codeColumn.Width = 80;
             codeColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             codeColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn nameColumn = new DataGridViewTextBoxColumn();
             nameColumn.Name = "Name";
-            nameColumn.HeaderText = "Nom";
+            nameColumn.HeaderText = "NOM";
             nameColumn.Width = 250;
             nameColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn adressColumn = new DataGridViewTextBoxColumn();
             adressColumn.Name = "Adress";
-            adressColumn.HeaderText = "Adresse";
+            adressColumn.HeaderText = "ADRESSE";
             adressColumn.Width = 250;
             adressColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn cityColumn = new DataGridViewTextBoxColumn();
             cityColumn.Name = "City";
-            cityColumn.HeaderText = "Ville";
+            cityColumn.HeaderText = "VILLE";
             cityColumn.Width = 220;
             cityColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewTextBoxColumn countryColumn = new DataGridViewTextBoxColumn();
             countryColumn.Name = "Country";
-            countryColumn.HeaderText = "Pays";
+            countryColumn.HeaderText = "PAYS";
             countryColumn.Width = 130;
             countryColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             DataGridViewCheckBoxColumn blockedColumn = new DataGridViewCheckBoxColumn();
             blockedColumn.Name = "Blocked";
-            blockedColumn.HeaderText = "Bloqué";
+            blockedColumn.HeaderText = "BLOQUÉ";
             blockedColumn.Width = 90;
             blockedColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 

@@ -50,24 +50,25 @@
             this.dgvThirdParties.AllowUserToDeleteRows = false;
             this.dgvThirdParties.AllowUserToResizeRows = false;
             this.dgvThirdParties.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThirdParties.Location = new System.Drawing.Point(0, 61);
+            this.dgvThirdParties.Location = new System.Drawing.Point(0, 91);
             this.dgvThirdParties.MultiSelect = false;
             this.dgvThirdParties.Name = "dgvThirdParties";
             this.dgvThirdParties.ReadOnly = true;
             this.dgvThirdParties.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThirdParties.ShowCellErrors = false;
             this.dgvThirdParties.ShowRowErrors = false;
-            this.dgvThirdParties.Size = new System.Drawing.Size(1199, 389);
+            this.dgvThirdParties.Size = new System.Drawing.Size(1199, 359);
             this.dgvThirdParties.TabIndex = 0;
             // 
             // statusStrip
             // 
+            this.statusStrip.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssNbThirdParties});
-            this.statusStrip.Location = new System.Drawing.Point(0, 445);
+            this.statusStrip.Location = new System.Drawing.Point(0, 448);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1199, 30);
+            this.statusStrip.Size = new System.Drawing.Size(1199, 27);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
@@ -75,11 +76,12 @@
             // tssNbThirdParties
             // 
             this.tssNbThirdParties.Name = "tssNbThirdParties";
-            this.tssNbThirdParties.Size = new System.Drawing.Size(19, 25);
+            this.tssNbThirdParties.Size = new System.Drawing.Size(20, 22);
             this.tssNbThirdParties.Text = "-";
             // 
             // toolStrip
             // 
+            this.toolStrip.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbAdd,
@@ -87,17 +89,17 @@
             this.tsbClose});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(1199, 32);
+            this.toolStrip.Size = new System.Drawing.Size(1199, 31);
             this.toolStrip.TabIndex = 2;
-            this.toolStrip.Text = "toolStrip1";
+            this.toolStrip.Text = "toolStrip";
             // 
             // tsbAdd
             // 
             this.tsbAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdd.Image")));
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(98, 29);
-            this.tsbAdd.Text = "Ajouter";
+            this.tsbAdd.Size = new System.Drawing.Size(108, 28);
+            this.tsbAdd.Text = "AJOUTER";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
             // tsbUpdate
@@ -105,8 +107,8 @@
             this.tsbUpdate.Image = ((System.Drawing.Image)(resources.GetObject("tsbUpdate.Image")));
             this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbUpdate.Name = "tsbUpdate";
-            this.tsbUpdate.Size = new System.Drawing.Size(107, 29);
-            this.tsbUpdate.Text = "Modifier";
+            this.tsbUpdate.Size = new System.Drawing.Size(118, 28);
+            this.tsbUpdate.Text = "MODIFIER";
             this.tsbUpdate.Click += new System.EventHandler(this.tsbUpdate_Click);
             // 
             // tsbClose
@@ -114,33 +116,33 @@
             this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
             this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Size = new System.Drawing.Size(95, 29);
-            this.tsbClose.Text = "Fermer";
+            this.tsbClose.Size = new System.Drawing.Size(98, 28);
+            this.tsbClose.Text = "FERMER";
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(94, 29);
+            this.txtSearch.Location = new System.Drawing.Point(132, 43);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(264, 30);
+            this.txtSearch.Size = new System.Drawing.Size(264, 31);
             this.txtSearch.TabIndex = 3;
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(13, 33);
+            this.lblSearch.Location = new System.Drawing.Point(13, 47);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(116, 23);
+            this.lblSearch.Size = new System.Drawing.Size(109, 23);
             this.lblSearch.TabIndex = 4;
-            this.lblSearch.Text = "Recherche :";
+            this.lblSearch.Text = "RECHERCHE";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(365, 27);
+            this.btnSearch.Location = new System.Drawing.Point(403, 41);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(156, 26);
+            this.btnSearch.Size = new System.Drawing.Size(156, 33);
             this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "Chercher";
+            this.btnSearch.Text = "CHERCHER";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -149,13 +151,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 475);
+            this.ControlBox = false;
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.dgvThirdParties);
-            this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;

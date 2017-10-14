@@ -52,6 +52,7 @@
             // 
             // menuStrip
             // 
+            this.menuStrip.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
@@ -59,22 +60,22 @@
             this.toolStripMenuItem1});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1284, 33);
+            this.menuStrip.Size = new System.Drawing.Size(1284, 32);
             this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "menuStrip1";
+            this.menuStrip.Text = "menuStrip";
             // 
             // fichierToolStripMenuItem
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quitterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(92, 28);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(162, 30);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -85,27 +86,27 @@
             this.supplierToolStripMenuItem,
             this.prospectToolStripMenuItem});
             this.listesToolStripMenuItem.Name = "listesToolStripMenuItem";
-            this.listesToolStripMenuItem.Size = new System.Drawing.Size(67, 29);
+            this.listesToolStripMenuItem.Size = new System.Drawing.Size(82, 28);
             this.listesToolStripMenuItem.Text = "Listes";
             // 
             // customerToolStripMenuItem
             // 
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(222, 30);
             this.customerToolStripMenuItem.Text = "Clients";
             this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
             // 
             // supplierToolStripMenuItem
             // 
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
-            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
+            this.supplierToolStripMenuItem.Size = new System.Drawing.Size(222, 30);
             this.supplierToolStripMenuItem.Text = "Fournisseurs ";
             this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
             // 
             // prospectToolStripMenuItem
             // 
             this.prospectToolStripMenuItem.Name = "prospectToolStripMenuItem";
-            this.prospectToolStripMenuItem.Size = new System.Drawing.Size(200, 30);
+            this.prospectToolStripMenuItem.Size = new System.Drawing.Size(222, 30);
             this.prospectToolStripMenuItem.Text = "Prospects";
             this.prospectToolStripMenuItem.Click += new System.EventHandler(this.prospectToolStripMenuItem_Click);
             // 
@@ -116,35 +117,36 @@
             this.toolStripMenuItem2,
             this.aProposToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 29);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 28);
             this.toolStripMenuItem1.Text = "?";
             // 
             // aideToolStripMenuItem
             // 
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
             this.aideToolStripMenuItem.Text = "Aide ?";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(199, 6);
             // 
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
             this.aProposToolStripMenuItem.Text = "A propos...";
             // 
             // statusStrip
             // 
+            this.statusStrip.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssInfos});
-            this.statusStrip.Location = new System.Drawing.Point(0, 975);
+            this.statusStrip.Location = new System.Drawing.Point(0, 978);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1284, 30);
+            this.statusStrip.Size = new System.Drawing.Size(1284, 27);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
@@ -152,7 +154,7 @@
             // tssInfos
             // 
             this.tssInfos.Name = "tssInfos";
-            this.tssInfos.Size = new System.Drawing.Size(19, 25);
+            this.tssInfos.Size = new System.Drawing.Size(20, 22);
             this.tssInfos.Text = "-";
             // 
             // btnAction
@@ -168,23 +170,24 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbCustomers});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 33);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 32);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1284, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(1284, 31);
             this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Text = "toolStrip";
             // 
             // tsbCustomers
             // 
             this.tsbCustomers.Image = ((System.Drawing.Image)(resources.GetObject("tsbCustomers.Image")));
             this.tsbCustomers.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCustomers.Name = "tsbCustomers";
-            this.tsbCustomers.Size = new System.Drawing.Size(92, 29);
-            this.tsbCustomers.Text = "Clients";
+            this.tsbCustomers.Size = new System.Drawing.Size(108, 28);
+            this.tsbCustomers.Text = "CLIENTS";
             this.tsbCustomers.Click += new System.EventHandler(this.tsbCustomers_Click);
             // 
             // MainForm

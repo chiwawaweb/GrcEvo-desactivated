@@ -216,12 +216,9 @@ namespace GrcEvo.Forms
 
         private void CloseWithConfirmation()
         {
-            DialogResult result = MessageBox.Show("Êtes-vous certains de vouloir fermer la fiche ? Toute modification non enregistrée sera perdue.", 
-                "Confirmation", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                Close();
-            }
+            
+            Close();
+            
         }
 
         private void ThirdPartyEditForm_FormClosed(object sender, FormClosedEventArgs e)

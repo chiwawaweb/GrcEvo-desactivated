@@ -26,7 +26,7 @@ namespace GrcEvo.DAL
             listCivility.Add(new EntityCivility { Name = "SARL", Abbreviation = "SARL" });
             listCivility.Add(new EntityCivility { Name = "SCI", Abbreviation = "SCI" });
 
-            List<EntityThirdParty> listThirdParty = new List <EntityThirdParty>();
+            List<EntityThirdParty> listThirdParty = new List<EntityThirdParty>();
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 91, Civility = "Mlle", Name="BROCHARD SYLVIE", Adress1 = "RUE DES PRES", Adress2 = "lig2", Adress3 = "lig3", PostalCode="57650", City="FONTOY'R", Country="FRANCE" });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 95, Civility = "M.", Name = "DUMONT ANTOINE", Adress1 = "RUE DES MARCHANDS", Blocked=true });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "PP", NumberCode = 107, Civility = "SA", Name = "SOCIETE GENERALE", Adress1 = "RUE DU PARC" });
@@ -34,14 +34,13 @@ namespace GrcEvo.DAL
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "FR", NumberCode = 543, Civility = "SARL", Name = "ETOILES ET CIE", Adress1 = "RUE DES MARCHANDS" });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "FR", NumberCode = 547, Name = "TROIS FLEURS", Adress1 = "BD RASPAIL" });
 
-            /*
-            List<EntitySupplier> listeSupplier = new List<EntitySupplier>();
-            listeSupplier.Add(new EntitySupplier { NumberCode = 498, Civility = "SARL" });
-            listeSupplier.Add(new EntitySupplier { NumberCode = 792, Civility = "SA" });
+            List<EntityCountry> listCountry = new List<EntityCountry>();
+            listCountry.Add(new EntityCountry { Name = "FRANCE", Abbreviation = "FR" });
+            listCountry.Add(new EntityCountry { Name = "BELGIQUE", Abbreviation = "BE" });
+            listCountry.Add(new EntityCountry { Name = "LUXEMBOURG", Abbreviation = "LU" });
+            listCountry.Add(new EntityCountry { Name = "ALLEMAGNE", Abbreviation = "DE" });
 
-            List<EntityProspect> listeProspect = new List<EntityProspect>();
-            listeProspect.Add(new EntityProspect { NumberCode = 998, Civility = "Dr" });
-            */
+
             List<EntityCustomerFamily> listCustomerFamily = new List<EntityCustomerFamily>();
             listCustomerFamily.Add(new EntityCustomerFamily { Name = "Particulier", Abbreviation = "PA"});
             listCustomerFamily.Add(new EntityCustomerFamily { Name = "Comité d'entreprise", Abbreviation = "CE"});
@@ -58,14 +57,10 @@ namespace GrcEvo.DAL
 
             listCivility.ForEach(entity => context.Civilities.Add(entity));
             listThirdParty.ForEach(entity => context.ThirdParties.Add(entity));
-            /*
-            listeSupplier.ForEach(entity => context.Suppliers.Add(entity));
-            listeProspect.ForEach(entity => context.Prospects.Add(entity));
-            */
+            listCountry.ForEach(entity => context.Countries.Add(entity));
             listCustomerFamily.ForEach(entity => context.CustomerFamilies.Add(entity));
             listSupplierFamily.ForEach(entity => context.SupplierFamilies.Add(entity));
             listProspectFamily.ForEach(entity => context.ProspectFamilies.Add(entity));
-
         }
     }
 }

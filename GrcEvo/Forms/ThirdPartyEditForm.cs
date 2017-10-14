@@ -19,13 +19,13 @@ namespace GrcEvo.Forms
         private string formTitle = "Fiche ";
         private int _id;
         private int thirdPartyNumberCode;
-        private EntityThirdParty entityThirdParty;
 
         ThirdPartiesForm _owner;
         
         ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
         CivilityProvider civilityProvider = new CivilityProvider();
         ThirdPartyFamilyProvider familyProvider = new ThirdPartyFamilyProvider();
+        CountryProvider countryProvider = new CountryProvider();
 
         public ThirdPartyEditForm(ThirdPartiesForm owner, string type, string action, int ID = 0)
         {
@@ -83,6 +83,12 @@ namespace GrcEvo.Forms
             foreach (var family in familyProvider.getThirdPartyFamilyByType(thirdPartyType))
             {
                 cbxFamily.Items.Add(family.Name);
+            }
+
+            /* Combobox des pays */
+            foreach (var country in countryProvider.getAll())
+            {
+                cbxCountry.Items.Add(country.Name);
             }
 
 

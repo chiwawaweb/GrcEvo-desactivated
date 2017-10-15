@@ -60,7 +60,7 @@
             this.toolStripMenuItem1});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1284, 32);
+            this.menuStrip.Size = new System.Drawing.Size(1284, 30);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -69,7 +69,7 @@
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quitterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(92, 28);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(92, 26);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // quitterToolStripMenuItem
@@ -86,7 +86,7 @@
             this.supplierToolStripMenuItem,
             this.prospectToolStripMenuItem});
             this.listesToolStripMenuItem.Name = "listesToolStripMenuItem";
-            this.listesToolStripMenuItem.Size = new System.Drawing.Size(82, 28);
+            this.listesToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
             this.listesToolStripMenuItem.Text = "Listes";
             // 
             // customerToolStripMenuItem
@@ -117,7 +117,7 @@
             this.toolStripMenuItem2,
             this.aProposToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 28);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 26);
             this.toolStripMenuItem1.Text = "?";
             // 
             // aideToolStripMenuItem
@@ -170,11 +170,11 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbCustomers});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 32);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip1.Size = new System.Drawing.Size(1284, 31);
@@ -186,7 +186,7 @@
             this.tsbCustomers.Image = ((System.Drawing.Image)(resources.GetObject("tsbCustomers.Image")));
             this.tsbCustomers.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCustomers.Name = "tsbCustomers";
-            this.tsbCustomers.Size = new System.Drawing.Size(108, 28);
+            this.tsbCustomers.Size = new System.Drawing.Size(115, 28);
             this.tsbCustomers.Text = "CLIENTS";
             this.tsbCustomers.Click += new System.EventHandler(this.tsbCustomers_Click);
             // 

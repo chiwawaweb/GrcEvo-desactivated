@@ -43,7 +43,6 @@ namespace GrcEvo.Forms
                     break;
             }
             this.Text = formTitle + thirdPartyLabel;
-
             
             RefreshData();
         }
@@ -98,8 +97,6 @@ namespace GrcEvo.Forms
             blockedColumn.Width = 90;
             blockedColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-
-
             /* Création des colonnes */
             dgvThirdParties.Columns.Add(idColumn);
             dgvThirdParties.Columns.Add(codeColumn);
@@ -134,12 +131,9 @@ namespace GrcEvo.Forms
                 dgvThirdParties.Rows[number].Cells[4].Value = (PostalCode + " " + City).Trim();
                 dgvThirdParties.Rows[number].Cells[5].Value = Country;
                 dgvThirdParties.Rows[number].Cells[6].Value = Blocked;
-                
-
+               
                 /* Mise à jour barre de statut */
                 tssNbThirdParties.Text = "Nombre de " + thirdPartyLabel + " trouvés : " + thirdPartyProvider.Count(_type).ToString();
-
-
             }
 
         }
@@ -173,9 +167,59 @@ namespace GrcEvo.Forms
         {
             List<EntityThirdParty> list;
             list = thirdPartyProvider.SearchByName(txtSearch.Text, _type);
-
+            
             dgvThirdParties.Rows.Clear();
             dgvThirdParties.Columns.Clear();
+
+            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn();
+            idColumn.Name = "ID";
+            idColumn.Visible = false;
+
+            DataGridViewTextBoxColumn codeColumn = new DataGridViewTextBoxColumn();
+            codeColumn.Name = "Code";
+            codeColumn.HeaderText = "CODE";
+            codeColumn.Width = 80;
+            codeColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            codeColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn nameColumn = new DataGridViewTextBoxColumn();
+            nameColumn.Name = "Name";
+            nameColumn.HeaderText = "NOM";
+            nameColumn.Width = 250;
+            nameColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn adressColumn = new DataGridViewTextBoxColumn();
+            adressColumn.Name = "Adress";
+            adressColumn.HeaderText = "ADRESSE";
+            adressColumn.Width = 250;
+            adressColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn cityColumn = new DataGridViewTextBoxColumn();
+            cityColumn.Name = "City";
+            cityColumn.HeaderText = "VILLE";
+            cityColumn.Width = 220;
+            cityColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn countryColumn = new DataGridViewTextBoxColumn();
+            countryColumn.Name = "Country";
+            countryColumn.HeaderText = "PAYS";
+            countryColumn.Width = 130;
+            countryColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewCheckBoxColumn blockedColumn = new DataGridViewCheckBoxColumn();
+            blockedColumn.Name = "Blocked";
+            blockedColumn.HeaderText = "BLOQUÉ";
+            blockedColumn.Width = 90;
+            blockedColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            /* Création des colonnes */
+            dgvThirdParties.Columns.Add(idColumn);
+            dgvThirdParties.Columns.Add(codeColumn);
+            dgvThirdParties.Columns.Add(nameColumn);
+            dgvThirdParties.Columns.Add(adressColumn);
+            dgvThirdParties.Columns.Add(cityColumn);
+            dgvThirdParties.Columns.Add(countryColumn);
+            dgvThirdParties.Columns.Add(blockedColumn);
 
             for (int i = 0; i < list.Count; i++)
             {
@@ -201,8 +245,7 @@ namespace GrcEvo.Forms
                 dgvThirdParties.Rows[number].Cells[6].Value = Blocked;
 
 
-                /* Mise à jour barre de statut */
-                tssNbThirdParties.Text = "Nombre de " + thirdPartyLabel + " trouvés : " + thirdPartyProvider.Count(_type).ToString();
+                
 
 
             }

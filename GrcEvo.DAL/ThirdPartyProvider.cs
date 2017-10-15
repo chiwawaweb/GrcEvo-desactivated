@@ -183,7 +183,7 @@ namespace GrcEvo.DAL
             using (GrcEvoContext context = new GrcEvoContext())
             {
                 var thirdPartiesQuery = (from EntityThirdParty in context.ThirdParties
-                                         where EntityThirdParty.Name == search && EntityThirdParty.PrefixCode == type
+                                         where EntityThirdParty.Name.Contains(search) && EntityThirdParty.PrefixCode == type
                                          orderby EntityThirdParty.Name ascending
                                          select EntityThirdParty);
 

@@ -23,8 +23,12 @@ namespace GrcEvo.Forms
         private void RefreshData()
         {
             ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
+            ItemProvider itemProvider = new ItemProvider();
             /* temporaire */
-            tssInfos.Text = "Nombre de tiers dans la base : " + thirdPartyProvider.CountAll().ToString();
+            tssInfos.Text = "Clients : " + thirdPartyProvider.Count("CL").ToString();
+            tssInfos.Text += " | Fournisseurs : " + thirdPartyProvider.Count("FR").ToString();
+            tssInfos.Text += " | Prospects : " + thirdPartyProvider.Count("PP").ToString();
+            tssInfos.Text += " | Articles : " + itemProvider.CountAll().ToString();
         }
 
         private void btnAction_Click(object sender, EventArgs e)

@@ -106,20 +106,20 @@ namespace GrcEvo.DAL
         /// <returns></returns>
         public int NextCode(string type)
         {
-            int nextCode = 0;
+            int lastCode = 0;
             using (GrcEvoContext context = new GrcEvoContext())
             {
-                var nextCodeQuery = (from EntityThirdParty in context.ThirdParties
-                                   where EntityThirdParty.PrefixCode == type
-                                   orderby EntityThirdParty.NumberCode descending
-                                   select EntityThirdParty).Take(1);
+                var query = (from t in context.ThirdParties
+                                   where t.PrefixCode == type
+                                   orderby t.NumberCode descending
+                                   select t).Take(1);
                 
-                foreach (var result in nextCodeQuery)
+                foreach (var result in query)
                 {
-                    nextCode = result.NumberCode;
+                    lastCode = result.NumberCode;
                 }
             }
-            return nextCode + 1;
+            return lastCode + 1;
         }
 
         /// <summary>
@@ -131,12 +131,11 @@ namespace GrcEvo.DAL
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
-                var thirdPartiesQuery = (from EntityThirdParty in context.ThirdParties
-                                               where EntityThirdParty.PrefixCode == type
-                                               orderby EntityThirdParty.ID ascending
-                                               select EntityThirdParty);
-
-                return thirdPartiesQuery.ToList();
+                var result = (from t in context.ThirdParties
+                                               where t.PrefixCode == type
+                                               orderby t.ID ascending
+                                               select t);
+                return result.ToList();
             }
         }
 
@@ -158,6 +157,7 @@ namespace GrcEvo.DAL
                 }
             }
         }
+
         /// <summary>
         /// Compte le nombre de tiers en fonction du type.
         /// </summary>
@@ -167,12 +167,11 @@ namespace GrcEvo.DAL
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
-                var thirdPartiesQuery = (from EntityThirdParty in context.ThirdParties
-                                         where EntityThirdParty.PrefixCode == type
-                                         orderby EntityThirdParty.ID ascending
-                                         select EntityThirdParty);
-
-                return thirdPartiesQuery.Count();
+                var result = (from t in context.ThirdParties
+                                         where t.PrefixCode == type
+                                         orderby t.ID ascending
+                                         select t);
+                return result.Count();
             }
         }
 
@@ -186,15 +185,12 @@ namespace GrcEvo.DAL
 
             using (GrcEvoContext context = new GrcEvoContext())
             {
-                var thirdPartiesQuery = (from EntityThirdParty in context.ThirdParties
-                                         where EntityThirdParty.Name.ToUpper().Contains(filter) && EntityThirdParty.PrefixCode == type
-                                         orderby EntityThirdParty.Name ascending
-                                         select EntityThirdParty);
-
-                return thirdPartiesQuery.ToList();
+                var result = (from t in context.ThirdParties
+                                         where t.Name.ToUpper().Contains(filter) && t.PrefixCode == type
+                                         orderby t.Name ascending
+                                         select t);
+                return result.ToList();
             }
         }
-
-        
     }
 }

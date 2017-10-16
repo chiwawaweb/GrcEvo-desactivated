@@ -43,12 +43,12 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.tssInfos = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnAction = new System.Windows.Forms.Button();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.tsbCustomers = new System.Windows.Forms.ToolStripButton();
             this.tsbItems = new System.Windows.Forms.ToolStripButton();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -144,10 +144,10 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssInfos});
-            this.statusStrip.Location = new System.Drawing.Point(0, 978);
+            this.statusStrip.Location = new System.Drawing.Point(0, 977);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1284, 27);
+            this.statusStrip.Size = new System.Drawing.Size(1284, 28);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
@@ -155,7 +155,7 @@
             // tssInfos
             // 
             this.tssInfos.Name = "tssInfos";
-            this.tssInfos.Size = new System.Drawing.Size(20, 22);
+            this.tssInfos.Size = new System.Drawing.Size(20, 23);
             this.tssInfos.Text = "-";
             // 
             // btnAction
@@ -169,19 +169,19 @@
             this.btnAction.Visible = false;
             this.btnAction.Click += new System.EventHandler(this.btnAction_Click);
             // 
-            // toolStrip1
+            // toolStrip
             // 
-            this.toolStrip1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStrip.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbCustomers,
             this.tsbItems});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1284, 31);
-            this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "toolStrip";
+            this.toolStrip.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip.Name = "toolStrip";
+            this.toolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip.Size = new System.Drawing.Size(1284, 31);
+            this.toolStrip.TabIndex = 4;
+            this.toolStrip.Text = "toolStrip";
             // 
             // tsbCustomers
             // 
@@ -206,7 +206,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 1005);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.btnAction);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
@@ -221,8 +221,8 @@
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,7 +243,7 @@
         private System.Windows.Forms.ToolStripMenuItem customerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supplierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prospectToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton tsbCustomers;
         private System.Windows.Forms.ToolStripStatusLabel tssInfos;
         private System.Windows.Forms.ToolStripButton tsbItems;

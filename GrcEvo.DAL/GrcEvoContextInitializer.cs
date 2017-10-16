@@ -39,6 +39,7 @@ namespace GrcEvo.DAL
             listCountry.Add(new EntityCountry { Name = "BELGIQUE", Abbreviation = "BE" });
             listCountry.Add(new EntityCountry { Name = "LUXEMBOURG", Abbreviation = "LU" });
             listCountry.Add(new EntityCountry { Name = "ALLEMAGNE", Abbreviation = "DE" });
+            listCountry.Add(new EntityCountry { Name = "MONACO", Abbreviation = "DE" });
 
             List<EntityThirdPartyFamily> listThirdPartyFamily = new List<EntityThirdPartyFamily>();
             listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "PARTICULIER", Abbreviation = "PA", Type = "CL" });
@@ -51,12 +52,14 @@ namespace GrcEvo.DAL
             listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "SOCIETE", Abbreviation = "SO", Type = "PP" });
 
             List<EntityItem> listItem = new List<EntityItem>();
-            listItem.Add(new EntityItem { PrefixCode = "AR", NumberCode = 101, Family = "CHEMISE", ShortDescription = "CHEMISE HOMME LYS T.44", Stock = 7 });
-            listItem.Add(new EntityItem { PrefixCode = "AR", NumberCode = 102, Family = "CHEMISE", ShortDescription = "CHEMISE HOMME LYS T.42", Stock = 12 });
-            listItem.Add(new EntityItem { PrefixCode = "AR", NumberCode = 104, Family = "CRAVATTE", ShortDescription = "CRAVATTE BLEU/NOIRS", Stock = 3 });
-            listItem.Add(new EntityItem { PrefixCode = "AR", NumberCode = 108, Family = "BOUTON", ShortDescription = "BOUTONS MANCHETTE OR CHEVAL", Stock = 9 });
+            listItem.Add(new EntityItem { Type = "BIEN", PrefixCode = "AR", NumberCode = 101, Family = "CHEMISE", ShortDescription = "CHEMISE HOMME LYS T.44", Stock = 7 });
+            listItem.Add(new EntityItem { Type = "BIEN", PrefixCode = "AR", NumberCode = 102, Family = "CHEMISE", ShortDescription = "CHEMISE HOMME LYS T.42", Stock = 12 });
+            listItem.Add(new EntityItem { Type = "BIEN", PrefixCode = "AR", NumberCode = 104, Family = "CRAVATTE", ShortDescription = "CRAVATTE BLEU/NOIRS", Stock = 3 });
+            listItem.Add(new EntityItem { Type = "BIEN", PrefixCode = "AR", NumberCode = 108, Family = "BOUTON", ShortDescription = "BOUTONS MANCHETTE OR CHEVAL", Stock = 9 });
+            listItem.Add(new EntityItem { Type = "SERVICE", PrefixCode = "AR", NumberCode = 109, Family = "TRANSPORT", ShortDescription = "COLISSIMO SUIVI" });
+            listItem.Add(new EntityItem { Type = "SERVICE", PrefixCode = "AR", NumberCode = 111, Family = "MAIN D'OEUVRE", ShortDescription = "INTERVENTION 15 MIN." });
 
-
+            /* Remplissage des tables */
             listCivility.ForEach(entity => context.Civilities.Add(entity));
             listThirdParty.ForEach(entity => context.ThirdParties.Add(entity));
             listCountry.ForEach(entity => context.Countries.Add(entity));

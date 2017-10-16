@@ -61,7 +61,6 @@
             this.dgvItems.Size = new System.Drawing.Size(599, 248);
             this.dgvItems.TabIndex = 0;
             this.dgvItems.TabStop = false;
-            this.dgvItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellContentClick);
             // 
             // statusStrip1
             // 
@@ -92,7 +91,7 @@
             this.tsbAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdd.Image")));
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(84, 28);
+            this.tsbAdd.Size = new System.Drawing.Size(108, 28);
             this.tsbAdd.Text = "AJOUTER";
             // 
             // tsbUpdate
@@ -100,7 +99,7 @@
             this.tsbUpdate.Image = ((System.Drawing.Image)(resources.GetObject("tsbUpdate.Image")));
             this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbUpdate.Name = "tsbUpdate";
-            this.tsbUpdate.Size = new System.Drawing.Size(91, 28);
+            this.tsbUpdate.Size = new System.Drawing.Size(118, 28);
             this.tsbUpdate.Text = "MODIFIER";
             // 
             // tsbClose
@@ -108,7 +107,7 @@
             this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
             this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Size = new System.Drawing.Size(77, 28);
+            this.tsbClose.Size = new System.Drawing.Size(98, 28);
             this.tsbClose.Text = "FERMER";
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
@@ -117,7 +116,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 17);
+            this.label1.Size = new System.Drawing.Size(109, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "RECHERCHE";
             // 
@@ -125,7 +124,7 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(109, 45);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(304, 23);
+            this.txtSearch.Size = new System.Drawing.Size(304, 31);
             this.txtSearch.TabIndex = 0;
             // 
             // btnSearch
@@ -137,6 +136,7 @@
             this.btnSearch.TabStop = false;
             this.btnSearch.Text = "CHERCHER";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnReset
             // 
@@ -147,11 +147,12 @@
             this.btnReset.TabStop = false;
             this.btnReset.Text = "X";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // ItemsForm
             // 
             this.AcceptButton = this.btnSearch;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 354);
             this.Controls.Add(this.btnReset);

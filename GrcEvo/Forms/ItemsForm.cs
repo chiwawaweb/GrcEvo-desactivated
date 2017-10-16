@@ -38,6 +38,12 @@ namespace GrcEvo.Forms
             idColumn.Name = "ID";
             idColumn.Visible = false;
 
+            DataGridViewTextBoxColumn typeColumn = new DataGridViewTextBoxColumn();
+            typeColumn.Name = "Type";
+            typeColumn.HeaderText = "TYPE";
+            typeColumn.Width = 80;
+            typeColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             DataGridViewTextBoxColumn codeColumn = new DataGridViewTextBoxColumn();
             codeColumn.Name = "Code";
             codeColumn.HeaderText = "CODE";
@@ -56,7 +62,6 @@ namespace GrcEvo.Forms
             brandColumn.HeaderText = "MARQUE";
             brandColumn.Width = 150;
             brandColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
 
             DataGridViewTextBoxColumn shortDescriptionColumn = new DataGridViewTextBoxColumn();
             shortDescriptionColumn.Name = "ShortDescription";
@@ -79,7 +84,9 @@ namespace GrcEvo.Forms
 
             /* Création des colonnes */
             dgvItems.Columns.Add(idColumn);
+            
             dgvItems.Columns.Add(codeColumn);
+            dgvItems.Columns.Add(typeColumn);
             dgvItems.Columns.Add(familyColumn);
             dgvItems.Columns.Add(brandColumn);
             dgvItems.Columns.Add(shortDescriptionColumn);
@@ -91,6 +98,7 @@ namespace GrcEvo.Forms
                 int number = dgvItems.Rows.Add();
 
                 int id = list[i].ID;
+                string type = list[i].Type;
                 string code = list[i].PrefixCode + list[i].NumberCode.ToString("00000");
                 string family = list[i].Family;
                 string brand = list[i].Brand;
@@ -100,11 +108,12 @@ namespace GrcEvo.Forms
 
                 dgvItems.Rows[number].Cells[0].Value = id;
                 dgvItems.Rows[number].Cells[1].Value = code;
-                dgvItems.Rows[number].Cells[2].Value = family;
-                dgvItems.Rows[number].Cells[3].Value = brand;
-                dgvItems.Rows[number].Cells[4].Value = shortDescription;
-                dgvItems.Rows[number].Cells[5].Value = stock;
-                dgvItems.Rows[number].Cells[6].Value = blocked;
+                dgvItems.Rows[number].Cells[2].Value = type;
+                dgvItems.Rows[number].Cells[3].Value = family;
+                dgvItems.Rows[number].Cells[4].Value = brand;
+                dgvItems.Rows[number].Cells[5].Value = shortDescription;
+                dgvItems.Rows[number].Cells[6].Value = stock;
+                dgvItems.Rows[number].Cells[7].Value = blocked;
             }
         }
 
@@ -116,17 +125,33 @@ namespace GrcEvo.Forms
             CreateTable(list);
         }
 
-
-
-
-        private void dgvItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void tsbClose_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            List<EntityItem> list;
+            list = itemProvider.SearchByDescription(txtSearch.Text);
+
+            CreateTable(list);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            ResetSearch();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void ResetSearch()
+        {
+            RefreshData();
+            txtSearch.Text = "";
+            txtSearch.Focus();
+        }
+        
     }
 }

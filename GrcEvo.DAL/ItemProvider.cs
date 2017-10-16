@@ -12,7 +12,6 @@ namespace GrcEvo.DAL
     {
         Utils utils = new Utils();
 
-
         public ItemProvider()
         {
 
@@ -55,6 +54,43 @@ namespace GrcEvo.DAL
                 {
                     throw;
                 }
+            }
+        }
+
+        /// <summary>
+        /// Compte tous les articles de la base.
+        /// </summary>
+        /// <returns></returns>
+        public int CountAll()
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                try
+                {
+                    return context.Items.Count();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Recherche les articles en fonction de la description.
+        /// </summary>
+        /// <returns>La Liste des entités .</returns>
+        public List<EntityItem> SearchByDescription(string search)
+        {
+            string filter = utils.RemoveDiacritics(search).ToUpper();
+
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                var result = (from t in context.Items
+                              where t.ShortDescription.ToUpper().Contains(filter)
+                              orderby t.ShortDescription ascending
+                              select t);
+                return result.ToList();
             }
         }
     }

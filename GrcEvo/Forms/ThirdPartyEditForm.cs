@@ -28,26 +28,8 @@ namespace GrcEvo.Forms
         CivilityProvider civilityProvider = new CivilityProvider();
         ThirdPartyFamilyProvider familyProvider = new ThirdPartyFamilyProvider();
         CountryProvider countryProvider = new CountryProvider();
+        Utils utils = new Utils();
 
-        /* 
-         * A DEPLACER 
-         */
-        /*
-        static string RemoveDiacritics(String s)
-        {
-            String normalizedString = s.Normalize(NormalizationForm.FormD);
-            StringBuilder stringBuilder = new StringBuilder();
-
-            for (int i = 0; i < normalizedString.Length; i++)
-            {
-                Char c = normalizedString[i];
-                if (CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
-                    stringBuilder.Append(c);
-            }
-            Console.WriteLine(stringBuilder.ToString());
-            return stringBuilder.ToString();
-        }
-        */
         public ThirdPartyEditForm(ThirdPartiesForm owner, string type, string action, int ID = 0)
         {
             _owner = owner;
@@ -111,8 +93,6 @@ namespace GrcEvo.Forms
             {
                 cbxCountry.Items.Add(country.Name);
             }
-
-
         }
 
         /// <summary>
@@ -180,16 +160,16 @@ namespace GrcEvo.Forms
                     EntityThirdParty entityThirdParty = new EntityThirdParty();
                     entityThirdParty.PrefixCode = thirdPartyType;
                     entityThirdParty.NumberCode = thirdPartyProvider.NextCode(thirdPartyType);
-                    entityThirdParty.Family = family;
-                    entityThirdParty.Civility = civility;
-                    entityThirdParty.Name = Program.RemoveDiacritics(name);
+                    entityThirdParty.Family = utils.RemoveDiacritics(family);
+                    entityThirdParty.Civility = utils.RemoveDiacritics(civility);
+                    entityThirdParty.Name = utils.RemoveDiacritics(name);
                     entityThirdParty.Blocked = chkBlocked.Checked;
-                    entityThirdParty.Adress1 = adress1;
-                    entityThirdParty.Adress2 = adress2;
-                    entityThirdParty.Adress3 = adress3;
-                    entityThirdParty.PostalCode = postalCode;
-                    entityThirdParty.City = city;
-                    entityThirdParty.Country = country;
+                    entityThirdParty.Adress1 = utils.RemoveDiacritics(adress1);
+                    entityThirdParty.Adress2 = utils.RemoveDiacritics(adress2);
+                    entityThirdParty.Adress3 = utils.RemoveDiacritics(adress3);
+                    entityThirdParty.PostalCode = utils.RemoveDiacritics(postalCode);
+                    entityThirdParty.City = utils.RemoveDiacritics(city);
+                    entityThirdParty.Country = utils.RemoveDiacritics(country);
                     entityThirdParty.CreatedAt = createdAt;
 
                     /* Création de l'enregistrement */
@@ -200,16 +180,16 @@ namespace GrcEvo.Forms
                 {
                     /* Mise à jour de la fiche */
                     EntityThirdParty entityThirdParty = thirdPartyProvider.getThirdPartyById(_id);
-                    entityThirdParty.Family = cbxFamily.Text;
-                    entityThirdParty.Civility = cbxCivility.Text;
-                    entityThirdParty.Name = name;
+                    entityThirdParty.Family = utils.RemoveDiacritics(family);
+                    entityThirdParty.Civility = utils.RemoveDiacritics(civility);
+                    entityThirdParty.Name = utils.RemoveDiacritics(name);
                     entityThirdParty.Blocked = chkBlocked.Checked;
-                    entityThirdParty.Adress1 = adress1;
-                    entityThirdParty.Adress2 = adress2;
-                    entityThirdParty.Adress3 = adress3;
-                    entityThirdParty.PostalCode = postalCode;
-                    entityThirdParty.City = city;
-                    entityThirdParty.Country = country;
+                    entityThirdParty.Adress1 = utils.RemoveDiacritics(adress1);
+                    entityThirdParty.Adress2 = utils.RemoveDiacritics(adress2);
+                    entityThirdParty.Adress3 = utils.RemoveDiacritics(adress3);
+                    entityThirdParty.PostalCode = utils.RemoveDiacritics(postalCode);
+                    entityThirdParty.City = utils.RemoveDiacritics(city);
+                    entityThirdParty.Country = utils.RemoveDiacritics(country);
                     entityThirdParty.UpdatedAt = updatedAt;
                     
                     /* Mise à jour de l'enregistrement */

@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using GrcEvo.DTO;
 using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
-using System.Globalization;
 
 namespace GrcEvo.DAL
 {
     public class ThirdPartyProvider
     {
+        Utils utils = new Utils();
+
         public ThirdPartyProvider()
         {
 
@@ -181,8 +182,7 @@ namespace GrcEvo.DAL
         /// <returns>La Liste des entités .</returns>
         public List<EntityThirdParty> SearchByName(string search, string type)
         {
-            
-            string filter = RemoveDiacritics(search).ToUpper();
+            string filter = utils.RemoveDiacritics(search).ToUpper();
 
             using (GrcEvoContext context = new GrcEvoContext())
             {

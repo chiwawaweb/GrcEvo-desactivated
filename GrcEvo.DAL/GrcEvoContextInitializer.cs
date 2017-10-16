@@ -27,7 +27,7 @@ namespace GrcEvo.DAL
             listCivility.Add(new EntityCivility { Name = "SCI" });
 
             List<EntityThirdParty> listThirdParty = new List<EntityThirdParty>();
-            listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 91, Civility = "MLLE", Name="BROCHARD SYLVIE", Adress1 = "RUE DES PRES", Adress2 = "CHEZ M. PIERRET", Adress3 = "LIEU DES LES MOUETTES", PostalCode="57650", City="FONTOY", Country="FRANCE" });
+            listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 91, Civility = "MLLE", Name="BROCHARD SYLVIE", Adress1 = "RUE DES PRES", Adress2 = "CHEZ M. PIERRET", Adress3 = "LIEU DIT LES MOUETTES", PostalCode="57650", City="FONTOY", Country="FRANCE" });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "CL", NumberCode = 95, Civility = "M.", Name = "DUMONT ANTOINE", Adress1 = "RUE DES MARCHANDS", Blocked=true });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "PP", NumberCode = 107, Civility = "SA", Name = "SOCIETE GENERALE", Adress1 = "RUE DU PARC" });
             listThirdParty.Add(new EntityThirdParty { PrefixCode = "PP", NumberCode = 108, Civility = "MME", Name = "ARMAND GINETTE", Adress1 = "AVENUE JOFFRE" });
@@ -54,7 +54,6 @@ namespace GrcEvo.DAL
             listThirdParty.ForEach(entity => context.ThirdParties.Add(entity));
             listCountry.ForEach(entity => context.Countries.Add(entity));
             listThirdPartyFamily.ForEach(entity => context.ThirdPartyFamilies.Add(entity));
-            
         }
     }
 }

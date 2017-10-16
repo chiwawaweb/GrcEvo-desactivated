@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityItem.cs" />
     <Compile Include="EntityCivility.cs" />
     <Compile Include="EntityCountry.cs" />
+    <Compile Include="EntityItemFamily.cs" />
     <Compile Include="EntityThirdPartyFamily.cs" />
     <Compile Include="EntityThirdParty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

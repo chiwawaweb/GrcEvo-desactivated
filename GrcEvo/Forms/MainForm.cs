@@ -38,6 +38,12 @@ namespace GrcEvo.Forms
             frm.ShowDialog();
         }
 
+        private void OpenItemList()
+        {
+            ItemsForm frm = new ItemsForm();
+            frm.ShowDialog();
+        }
+    
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenThirdPartyList("CL");
@@ -67,6 +73,11 @@ namespace GrcEvo.Forms
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tsbItems_Click(object sender, EventArgs e)
+        {
+            OpenItemList();
         }
     }
 }

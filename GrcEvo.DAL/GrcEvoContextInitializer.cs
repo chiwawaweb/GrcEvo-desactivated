@@ -50,10 +50,19 @@ namespace GrcEvo.DAL
             listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "COMITE D'ENTREPRISE", Abbreviation = "CE", Type = "PP" });
             listThirdPartyFamily.Add(new EntityThirdPartyFamily { Name = "SOCIETE", Abbreviation = "SO", Type = "PP" });
 
+            List<EntityItem> listItem = new List<EntityItem>();
+            listItem.Add(new EntityItem { PrefixCode = "AR", NumberCode = 101, Family = "CHEMISE", ShortDescription = "CHEMISE HOMME LYS T.44", Stock = 7 });
+            listItem.Add(new EntityItem { PrefixCode = "AR", NumberCode = 101, Family = "CHEMISE", ShortDescription = "CHEMISE HOMME LYS T.42", Stock = 12 });
+            listItem.Add(new EntityItem { PrefixCode = "AR", NumberCode = 101, Family = "CRAVATTE", ShortDescription = "CRAVATTE BLEU/NOIRS", Stock = 3 });
+            listItem.Add(new EntityItem { PrefixCode = "AR", NumberCode = 101, Family = "BOUTON", ShortDescription = "BOUTONS MANCHETTE OR CHEVAL", Stock = 9 });
+
+
             listCivility.ForEach(entity => context.Civilities.Add(entity));
             listThirdParty.ForEach(entity => context.ThirdParties.Add(entity));
             listCountry.ForEach(entity => context.Countries.Add(entity));
             listThirdPartyFamily.ForEach(entity => context.ThirdPartyFamilies.Add(entity));
+            listItem.ForEach(entity => context.Items.Add(entity));
+            
         }
     }
 }

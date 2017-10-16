@@ -20,5 +20,7 @@ namespace GrcEvo.DAL
         public DbSet<EntityCountry> Countries { get; set; }
         public DbSet<EntityCivility> Civilities { get; set; }
         public DbSet<EntityThirdPartyFamily> ThirdPartyFamilies { get; set; }
+        public DbSet<EntityItem> Items { get; set; }
+        public DbSet<EntityItemFamily> ItemFamilies { get; set; }
     }
 }

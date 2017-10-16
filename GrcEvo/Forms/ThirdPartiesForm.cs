@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GrcEvo.DTO;
 using GrcEvo.DAL;
-using GrcEvo.Library;
 
 namespace GrcEvo.Forms
 {
@@ -114,25 +113,24 @@ namespace GrcEvo.Forms
             {
                 int number = dgvThirdParties.Rows.Add();
 
-                string Code = list[i].PrefixCode + list[i].NumberCode.ToString("00000");
-                string Name = list[i].Name;
+                int id = list[i].ID;
+                string code = list[i].PrefixCode + list[i].NumberCode.ToString("00000");
+                string name = list[i].Name;
+                string adress1 = list[i].Adress1;
+                string adress2 = list[i].Adress2;
+                string adress3 = list[i].Adress3;
+                string postalCode = list[i].PostalCode;
+                string city = list[i].City;
+                string country = list[i].Country;
+                bool blocked = list[i].Blocked;
 
-                string Adress1 = list[i].Adress1;
-                string Adress2 = list[i].Adress2;
-                string Adress3 = list[i].Adress3;
-                string PostalCode = list[i].PostalCode;
-                string City = list[i].City;
-                string Country = list[i].Country;
-                bool Blocked = list[i].Blocked;
-                int ID = list[i].ID;
-
-                dgvThirdParties.Rows[number].Cells[0].Value = ID;
-                dgvThirdParties.Rows[number].Cells[1].Value = Code;
-                dgvThirdParties.Rows[number].Cells[2].Value = Name;
-                dgvThirdParties.Rows[number].Cells[3].Value = (Adress1 + " " + Adress2 + " " + Adress3).Trim();
-                dgvThirdParties.Rows[number].Cells[4].Value = (PostalCode + " " + City).Trim();
-                dgvThirdParties.Rows[number].Cells[5].Value = Country;
-                dgvThirdParties.Rows[number].Cells[6].Value = Blocked;
+                dgvThirdParties.Rows[number].Cells[0].Value = id;
+                dgvThirdParties.Rows[number].Cells[1].Value = code;
+                dgvThirdParties.Rows[number].Cells[2].Value = name;
+                dgvThirdParties.Rows[number].Cells[3].Value = (adress1 + " " + adress2 + " " + adress3).Trim();
+                dgvThirdParties.Rows[number].Cells[4].Value = (postalCode + " " + city).Trim();
+                dgvThirdParties.Rows[number].Cells[5].Value = country;
+                dgvThirdParties.Rows[number].Cells[6].Value = blocked;
             }
         }
 

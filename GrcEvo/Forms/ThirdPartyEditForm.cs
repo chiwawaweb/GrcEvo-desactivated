@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using GrcEvo.DTO;
 using GrcEvo.DAL;
 using System.Data.Entity;
+using System.Globalization;
+
 namespace GrcEvo.Forms
 {
     public partial class ThirdPartyEditForm : Form
@@ -27,6 +29,25 @@ namespace GrcEvo.Forms
         ThirdPartyFamilyProvider familyProvider = new ThirdPartyFamilyProvider();
         CountryProvider countryProvider = new CountryProvider();
 
+        /* 
+         * A DEPLACER 
+         */
+        /*
+        static string RemoveDiacritics(String s)
+        {
+            String normalizedString = s.Normalize(NormalizationForm.FormD);
+            StringBuilder stringBuilder = new StringBuilder();
+
+            for (int i = 0; i < normalizedString.Length; i++)
+            {
+                Char c = normalizedString[i];
+                if (CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
+                    stringBuilder.Append(c);
+            }
+            Console.WriteLine(stringBuilder.ToString());
+            return stringBuilder.ToString();
+        }
+        */
         public ThirdPartyEditForm(ThirdPartiesForm owner, string type, string action, int ID = 0)
         {
             _owner = owner;
@@ -161,7 +182,7 @@ namespace GrcEvo.Forms
                     entityThirdParty.NumberCode = thirdPartyProvider.NextCode(thirdPartyType);
                     entityThirdParty.Family = family;
                     entityThirdParty.Civility = civility;
-                    entityThirdParty.Name = name;
+                    entityThirdParty.Name = Program.RemoveDiacritics(name);
                     entityThirdParty.Blocked = chkBlocked.Checked;
                     entityThirdParty.Adress1 = adress1;
                     entityThirdParty.Adress2 = adress2;

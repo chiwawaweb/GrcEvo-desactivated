@@ -245,10 +245,14 @@ namespace GrcEvo.Forms
                 dgvThirdParties.Rows[number].Cells[6].Value = Blocked;
 
 
-                
-
-
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            RefreshData();
+            txtSearch.Text = "";
+            txtSearch.Focus();
         }
     }
 }

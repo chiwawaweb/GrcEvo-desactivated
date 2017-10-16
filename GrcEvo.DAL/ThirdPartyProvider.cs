@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GrcEvo.DTO;
 using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
+using System.Globalization;
 
 namespace GrcEvo.DAL
 {
@@ -15,7 +16,7 @@ namespace GrcEvo.DAL
         {
 
         }
-
+        
         /// <summary>
         /// Recupère la liste de toutes les entités
         /// </summary>
@@ -180,15 +181,20 @@ namespace GrcEvo.DAL
         /// <returns>La Liste des entités .</returns>
         public List<EntityThirdParty> SearchByName(string search, string type)
         {
+            
+            string filter = RemoveDiacritics(search).ToUpper();
+
             using (GrcEvoContext context = new GrcEvoContext())
             {
                 var thirdPartiesQuery = (from EntityThirdParty in context.ThirdParties
-                                         where EntityThirdParty.Name.Contains(search) && EntityThirdParty.PrefixCode == type
+                                         where EntityThirdParty.Name.ToUpper().Contains(filter) && EntityThirdParty.PrefixCode == type
                                          orderby EntityThirdParty.Name ascending
                                          select EntityThirdParty);
 
                 return thirdPartiesQuery.ToList();
             }
         }
+
+        
     }
 }

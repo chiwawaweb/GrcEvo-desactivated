@@ -39,6 +39,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThirdParties)).BeginInit();
             this.statusStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
@@ -59,6 +60,7 @@
             this.dgvThirdParties.ShowRowErrors = false;
             this.dgvThirdParties.Size = new System.Drawing.Size(1199, 359);
             this.dgvThirdParties.TabIndex = 0;
+            this.dgvThirdParties.TabStop = false;
             // 
             // statusStrip
             // 
@@ -125,7 +127,7 @@
             this.txtSearch.Location = new System.Drawing.Point(132, 43);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(264, 31);
-            this.txtSearch.TabIndex = 3;
+            this.txtSearch.TabIndex = 0;
             // 
             // lblSearch
             // 
@@ -141,10 +143,21 @@
             this.btnSearch.Location = new System.Drawing.Point(403, 41);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(156, 33);
-            this.btnSearch.TabIndex = 5;
+            this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "CHERCHER";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(1075, 41);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(112, 33);
+            this.btnReset.TabIndex = 2;
+            this.btnReset.TabStop = false;
+            this.btnReset.Text = "EFFACER";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // ThirdPartiesForm
             // 
@@ -153,6 +166,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 475);
             this.ControlBox = false;
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtSearch);
@@ -192,5 +206,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ToolStripButton tsbUpdate;
         private System.Windows.Forms.ToolStripStatusLabel tssNbThirdParties;
+        private System.Windows.Forms.Button btnReset;
     }
 }

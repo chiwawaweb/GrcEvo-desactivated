@@ -35,6 +35,8 @@ namespace GrcEvo.Forms
 
             itemAction = action;
 
+           
+
             switch (itemAction)
             {
                 /* Cas d'une création */
@@ -45,7 +47,7 @@ namespace GrcEvo.Forms
                     break;
                 /* Cas d'une modification */
                 case "U":
-                    itemNumberCode = itemProvider.getItemById(_id).NumberCode;
+                    itemNumberCode = itemProvider.GetItemById(_id).NumberCode;
                     LoadItem();
                     break;
             }
@@ -53,15 +55,25 @@ namespace GrcEvo.Forms
             /* Barre titre du formulaire */
             this.Text = formTitle;
 
+            /* ComboBox des Type */
+            cbxType.Items.Add("BIEN");
+            cbxType.Items.Add("SERVICE");
+
             /* ComboBox des marques */
             List<string> Brands = new List<string>(itemProvider.GetBrands());
-
             foreach (var brand in Brands)
             {
                 cbxBrand.Items.Add(brand);
             }
-            
-    
+
+            /* ComboBox des familles */
+            List<string> Families = new List<string>(itemProvider.GetFamilies());
+            foreach (var family in Families)
+            {
+                cbxFamily.Items.Add(family);
+            }
+
+
         }
 
         private void ItemEditForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -85,7 +97,7 @@ namespace GrcEvo.Forms
         }
 
         /// <summary>
-        /// Chargement de la fiche tiers en mode création
+        /// Chargement de la fiche article en mode création.
         /// </summary>
         private void NewItem()
         {
@@ -94,12 +106,19 @@ namespace GrcEvo.Forms
             lblCode.Text = "AR" + itemNumberCode.ToString("00000");
         }
 
+        /// <summary>
+        /// Chargement de la fiche article en mode modification.
+        /// </summary>
         private void LoadItem()
         {
             formTitle += " (Modification)";
-            lblCode.Text = itemProvider.getItemById(_id).PrefixCode + itemNumberCode.ToString("00000");
-
-            txtShortDescription.Text = itemProvider.getItemById(_id).ShortDescription;
+            lblCode.Text = itemProvider.GetItemById(_id).PrefixCode + itemNumberCode.ToString("00000");
+            cbxType.Text = itemProvider.GetItemById(_id).Type;
+            cbxFamily.Text = itemProvider.GetItemById(_id).Family;
+            chkBlocked.Checked = itemProvider.GetItemById(_id).Blocked;
+            cbxBrand.Text = itemProvider.GetItemById(_id).Brand;
+            txtShortDescription.Text = itemProvider.GetItemById(_id).ShortDescription;
+            txtEan.Text = itemProvider.GetItemById(_id).Ean;
         }
     }
 }

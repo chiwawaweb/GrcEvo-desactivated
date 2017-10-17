@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="EntityInvoice.cs" />
     <Compile Include="EntityItem.cs" />
-    <Compile Include="EntityCivility.cs" />
     <Compile Include="EntityCountry.cs" />
     <Compile Include="EntityItemFamily.cs" />
     <Compile Include="EntityOrder.cs" />

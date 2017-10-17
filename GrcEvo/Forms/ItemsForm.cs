@@ -120,7 +120,7 @@ namespace GrcEvo.Forms
         public void RefreshData()
         {
             List<EntityItem> list;
-            list = itemProvider.getAll();
+            list = itemProvider.GetAll();
 
             CreateTable(list);
         }

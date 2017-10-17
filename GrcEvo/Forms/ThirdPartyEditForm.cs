@@ -25,7 +25,6 @@ namespace GrcEvo.Forms
         ThirdPartiesForm _owner;
         
         ThirdPartyProvider thirdPartyProvider = new ThirdPartyProvider();
-        CivilityProvider civilityProvider = new CivilityProvider();
         ThirdPartyFamilyProvider familyProvider = new ThirdPartyFamilyProvider();
         CountryProvider countryProvider = new CountryProvider();
         Utils utils = new Utils();
@@ -69,8 +68,8 @@ namespace GrcEvo.Forms
                     break;
                 /* Cas d'une modification */
                 case "U":
-                    thirdPartyType = thirdPartyProvider.getThirdPartyById(_id).PrefixCode;
-                    thirdPartyNumberCode = thirdPartyProvider.getThirdPartyById(_id).NumberCode;
+                    thirdPartyType = thirdPartyProvider.GetThirdPartyById(_id).PrefixCode;
+                    thirdPartyNumberCode = thirdPartyProvider.GetThirdPartyById(_id).NumberCode;
                     LoadThirdParty();
                     break;
             }
@@ -79,9 +78,10 @@ namespace GrcEvo.Forms
             this.Text = formTitle;
 
             /* ComboBox des civilités */
-            foreach (var civility in civilityProvider.GetAll())
+            List<string> Civilities = new List<string>(thirdPartyProvider.GetCivilities());
+            foreach (var civility in Civilities)
             {
-                cbxCivility.Items.Add(civility.Name);
+                cbxCivility.Items.Add(civility);
             }
 
             /* Combobox des familles */
@@ -114,18 +114,18 @@ namespace GrcEvo.Forms
         {
             
             formTitle += " (Modification)";
-            lblCode.Text = thirdPartyProvider.getThirdPartyById(_id).PrefixCode + thirdPartyNumberCode.ToString("00000");
+            lblCode.Text = thirdPartyProvider.GetThirdPartyById(_id).PrefixCode + thirdPartyNumberCode.ToString("00000");
 
-            cbxCivility.Text = thirdPartyProvider.getThirdPartyById(_id).Civility;
-            cbxFamily.Text = thirdPartyProvider.getThirdPartyById(_id).Family;
-            txtName.Text = thirdPartyProvider.getThirdPartyById(_id).Name;
-            chkBlocked.Checked = thirdPartyProvider.getThirdPartyById(_id).Blocked;
-            txtAdress1.Text = thirdPartyProvider.getThirdPartyById(_id).Adress1;
-            txtAdress2.Text = thirdPartyProvider.getThirdPartyById(_id).Adress2;
-            txtAdress3.Text = thirdPartyProvider.getThirdPartyById(_id).Adress3;
-            txtPostalCode.Text = thirdPartyProvider.getThirdPartyById(_id).PostalCode;
-            txtCity.Text = thirdPartyProvider.getThirdPartyById(_id).City;
-            cbxCountry.Text = thirdPartyProvider.getThirdPartyById(_id).Country;
+            cbxCivility.Text = thirdPartyProvider.GetThirdPartyById(_id).Civility;
+            cbxFamily.Text = thirdPartyProvider.GetThirdPartyById(_id).Family;
+            txtName.Text = thirdPartyProvider.GetThirdPartyById(_id).Name;
+            chkBlocked.Checked = thirdPartyProvider.GetThirdPartyById(_id).Blocked;
+            txtAdress1.Text = thirdPartyProvider.GetThirdPartyById(_id).Adress1;
+            txtAdress2.Text = thirdPartyProvider.GetThirdPartyById(_id).Adress2;
+            txtAdress3.Text = thirdPartyProvider.GetThirdPartyById(_id).Adress3;
+            txtPostalCode.Text = thirdPartyProvider.GetThirdPartyById(_id).PostalCode;
+            txtCity.Text = thirdPartyProvider.GetThirdPartyById(_id).City;
+            cbxCountry.Text = thirdPartyProvider.GetThirdPartyById(_id).Country;
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace GrcEvo.Forms
                 else if (thirdPartyAction=="U")
                 {
                     /* Mise à jour de la fiche */
-                    EntityThirdParty entityThirdParty = thirdPartyProvider.getThirdPartyById(_id);
+                    EntityThirdParty entityThirdParty = thirdPartyProvider.GetThirdPartyById(_id);
                     entityThirdParty.Family = utils.RemoveDiacritics(family);
                     entityThirdParty.Civility = utils.RemoveDiacritics(civility);
                     entityThirdParty.Name = utils.RemoveDiacritics(name);

@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CivilityProvider.cs" />
     <Compile Include="CountryProvider.cs" />
     <Compile Include="GrcEvoContext.cs" />
     <Compile Include="GrcEvoContextInitializer.cs" />

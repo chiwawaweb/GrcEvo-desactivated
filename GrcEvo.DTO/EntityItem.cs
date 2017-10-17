@@ -18,6 +18,8 @@ namespace GrcEvo.DTO
         public string ShortDescription { get; set; }
         public string Ean { get; set; }
         public string PackagingUnit { get; set; }
+        public double PriceSaleET { get; set; }
+        public double PricePurchaseET { get; set; }
         public double VatRate { get; set; }
         public bool InStock { get; set; }
         public double Stock { get; set; }

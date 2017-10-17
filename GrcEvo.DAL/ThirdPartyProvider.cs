@@ -21,7 +21,7 @@ namespace GrcEvo.DAL
         /// Recupère la liste de toutes les entités
         /// </summary>
         /// <returns>La Liste de toutes les entités</returns>
-        public List<EntityThirdParty> getAll()
+        public List<EntityThirdParty> GetAll()
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
@@ -83,7 +83,7 @@ namespace GrcEvo.DAL
         /// </summary>
         /// <param name="ID">ID(clé primaire) de l'entité à retrouver.</param>
         /// <returns>L'entité si elle existe, sinon NULL</returns>
-        public EntityThirdParty getThirdPartyById(int ID)
+        public EntityThirdParty GetThirdPartyById(int ID)
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
@@ -189,6 +189,21 @@ namespace GrcEvo.DAL
                                          orderby t.Name ascending
                                          select t);
                 return result.ToList();
+            }
+        }
+
+        /// <summary>
+        /// Recupère les civilités des différents tiers de la base
+        /// </summary>
+        public List<string> GetCivilities()
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                var result = (from thirdParty in context.ThirdParties
+                              group thirdParty by thirdParty.Civility into ThirdPartyGroup
+                              orderby ThirdPartyGroup.Key
+                              select ThirdPartyGroup.Key).ToList();
+                return result;
             }
         }
     }

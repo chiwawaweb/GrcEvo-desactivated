@@ -21,7 +21,7 @@ namespace GrcEvo.DAL
         /// Recupère la liste de toutes les entités
         /// </summary>
         /// <returns>La Liste de toutes les entités</returns>
-        public List<EntityItem> getAll()
+        public List<EntityItem> GetAll()
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
@@ -119,7 +119,7 @@ namespace GrcEvo.DAL
         /// </summary>
         /// <param name="ID">ID(clé primaire) de l'entité à retrouver.</param>
         /// <returns>L'entité si elle existe, sinon NULL</returns>
-        public EntityItem getItemById(int ID)
+        public EntityItem GetItemById(int ID)
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
@@ -141,27 +141,11 @@ namespace GrcEvo.DAL
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {
-                var query = (
-                    from item in context.Items
-                    group item by item.Brand into itemGroup
-                    select new { FirstLetter = itemGroup.Key, Names = itemGroup }).
-                        OrderBy(letter => letter.FirstLetter);
-
-                foreach (var contact in query)
-                {
-                    Console.WriteLine("Last names that start with the letter '{0}':",
-                        contact.FirstLetter);
-                    foreach (var name in contact.Names)
-                    {
-                        Console.WriteLine(name.Brand);
-                    }
-                }
-
-                /*var result = (from item in context.Items
+                var result = (from item in context.Items
                                group item by item.Brand into ItemGroup
-                               //orderby ItemGroup.Key
-                               select ItemGroup.Key).ToList();*/
-                return null;
+                               orderby ItemGroup.Key
+                               select ItemGroup.Key).ToList();
+                return result;
             }
         }
     }

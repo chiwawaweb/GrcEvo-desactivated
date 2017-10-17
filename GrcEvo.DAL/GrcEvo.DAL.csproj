@@ -51,6 +51,7 @@
     <Compile Include="CountryProvider.cs" />
     <Compile Include="GrcEvoContext.cs" />
     <Compile Include="GrcEvoContextInitializer.cs" />
+    <Compile Include="ItemFamilyProvider.cs" />
     <Compile Include="ItemProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThirdPartyFamilyProvider.cs" />

@@ -144,7 +144,7 @@ namespace GrcEvo.Forms
         }
 
         /// <summary>
-        /// 
+        /// Remise à zéro de la recherche.
         /// </summary>
         private void ResetSearch()
         {
@@ -152,6 +152,32 @@ namespace GrcEvo.Forms
             txtSearch.Text = "";
             txtSearch.Focus();
         }
-        
+
+        private void tsbUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateItem();
+        }
+
+        private void UpdateItem()
+        {
+            /* Vérifie si la Datagridview comporte au moins une ligne */
+            if (dgvItems.RowCount > 0)
+            {
+                int ID = Int32.Parse(dgvItems.CurrentRow.Cells[0].Value.ToString());
+                ItemEditForm itemEditForm = new ItemEditForm(this, "U", ID);
+                itemEditForm.ShowDialog();
+            }
+        }
+
+        private void tsbAdd_Click(object sender, EventArgs e)
+        {
+            CreateItem();
+        }
+
+        private void CreateItem()
+        {
+            ItemEditForm frm = new ItemEditForm(this, "C");
+            frm.ShowDialog();
+        }
     }
 }

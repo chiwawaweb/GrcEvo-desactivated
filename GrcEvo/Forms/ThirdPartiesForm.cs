@@ -144,8 +144,7 @@ namespace GrcEvo.Forms
 
         private void tsbAdd_Click(object sender, EventArgs e)
         {
-            ThirdPartyEditForm frm = new ThirdPartyEditForm(this, _type, "C");
-            frm.ShowDialog();
+            CreateThirdParty();
         }
 
         private void tsbClose_Click(object sender, EventArgs e)
@@ -184,6 +183,12 @@ namespace GrcEvo.Forms
             RefreshData();
             txtSearch.Text = "";
             txtSearch.Focus();
+        }
+
+        private void CreateThirdParty()
+        {
+            ThirdPartyEditForm frm = new ThirdPartyEditForm(this, _type, "C");
+            frm.ShowDialog();
         }
 
         private void UpdateThirdParty()

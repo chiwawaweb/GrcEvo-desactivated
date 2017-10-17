@@ -59,6 +59,7 @@
             this.lblPriceSaleET = new System.Windows.Forms.Label();
             this.txtPricePurchaseET = new System.Windows.Forms.TextBox();
             this.lblPricePurchaseET = new System.Windows.Forms.Label();
+            this.lblProjectCode = new System.Windows.Forms.Label();
             this.toolStrip.SuspendLayout();
             this.tabItem.SuspendLayout();
             this.SuspendLayout();
@@ -66,12 +67,13 @@
             // toolStrip
             // 
             this.toolStrip.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbSave,
             this.tsbClose});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(782, 25);
+            this.toolStrip.Size = new System.Drawing.Size(782, 31);
             this.toolStrip.TabIndex = 0;
             // 
             // tsbSave
@@ -80,7 +82,7 @@
             this.tsbSave.Image = ((System.Drawing.Image)(resources.GetObject("tsbSave.Image")));
             this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSave.Name = "tsbSave";
-            this.tsbSave.Size = new System.Drawing.Size(104, 22);
+            this.tsbSave.Size = new System.Drawing.Size(148, 28);
             this.tsbSave.Text = "ENREGISTRER";
             this.tsbSave.Click += new System.EventHandler(this.tsbSave_Click);
             // 
@@ -90,12 +92,13 @@
             this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
             this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Size = new System.Drawing.Size(76, 22);
+            this.tsbClose.Size = new System.Drawing.Size(108, 28);
             this.tsbClose.Text = "ANNULER";
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
             // statusStrip
             // 
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip.Location = new System.Drawing.Point(0, 431);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(782, 22);
@@ -107,7 +110,7 @@
             this.lblItemCode.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblItemCode.Location = new System.Drawing.Point(13, 49);
             this.lblItemCode.Name = "lblItemCode";
-            this.lblItemCode.Size = new System.Drawing.Size(40, 17);
+            this.lblItemCode.Size = new System.Drawing.Size(54, 23);
             this.lblItemCode.TabIndex = 2;
             this.lblItemCode.Text = "CODE";
             // 
@@ -118,7 +121,7 @@
             this.lblCode.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblCode.Location = new System.Drawing.Point(67, 49);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(56, 17);
+            this.lblCode.Size = new System.Drawing.Size(76, 23);
             this.lblCode.TabIndex = 3;
             this.lblCode.Text = "------";
             // 
@@ -128,7 +131,7 @@
             this.lblFamily.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblFamily.Location = new System.Drawing.Point(364, 49);
             this.lblFamily.Name = "lblFamily";
-            this.lblFamily.Size = new System.Drawing.Size(64, 17);
+            this.lblFamily.Size = new System.Drawing.Size(87, 23);
             this.lblFamily.TabIndex = 4;
             this.lblFamily.Text = "FAMILLE";
             // 
@@ -138,7 +141,7 @@
             this.cbxFamily.FormattingEnabled = true;
             this.cbxFamily.Location = new System.Drawing.Point(434, 47);
             this.cbxFamily.Name = "cbxFamily";
-            this.cbxFamily.Size = new System.Drawing.Size(121, 23);
+            this.cbxFamily.Size = new System.Drawing.Size(121, 31);
             this.cbxFamily.TabIndex = 1;
             // 
             // cbxBrand
@@ -147,7 +150,7 @@
             this.cbxBrand.FormattingEnabled = true;
             this.cbxBrand.Location = new System.Drawing.Point(75, 87);
             this.cbxBrand.Name = "cbxBrand";
-            this.cbxBrand.Size = new System.Drawing.Size(121, 23);
+            this.cbxBrand.Size = new System.Drawing.Size(121, 31);
             this.cbxBrand.TabIndex = 2;
             // 
             // lblBrand
@@ -156,7 +159,7 @@
             this.lblBrand.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblBrand.Location = new System.Drawing.Point(13, 89);
             this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(56, 17);
+            this.lblBrand.Size = new System.Drawing.Size(76, 23);
             this.lblBrand.TabIndex = 6;
             this.lblBrand.Text = "MARQUE";
             // 
@@ -166,7 +169,7 @@
             this.cbxType.FormattingEnabled = true;
             this.cbxType.Location = new System.Drawing.Point(216, 47);
             this.cbxType.Name = "cbxType";
-            this.cbxType.Size = new System.Drawing.Size(121, 23);
+            this.cbxType.Size = new System.Drawing.Size(121, 31);
             this.cbxType.TabIndex = 0;
             // 
             // lblType
@@ -175,7 +178,7 @@
             this.lblType.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblType.Location = new System.Drawing.Point(170, 49);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(40, 17);
+            this.lblType.Size = new System.Drawing.Size(54, 23);
             this.lblType.TabIndex = 8;
             this.lblType.Text = "TYPE";
             // 
@@ -185,7 +188,7 @@
             this.lblShortDescription.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblShortDescription.Location = new System.Drawing.Point(217, 88);
             this.lblShortDescription.Name = "lblShortDescription";
-            this.lblShortDescription.Size = new System.Drawing.Size(64, 17);
+            this.lblShortDescription.Size = new System.Drawing.Size(87, 23);
             this.lblShortDescription.TabIndex = 10;
             this.lblShortDescription.Text = "LIBELLE";
             // 
@@ -193,7 +196,7 @@
             // 
             this.txtShortDescription.Location = new System.Drawing.Point(319, 86);
             this.txtShortDescription.Name = "txtShortDescription";
-            this.txtShortDescription.Size = new System.Drawing.Size(442, 23);
+            this.txtShortDescription.Size = new System.Drawing.Size(442, 31);
             this.txtShortDescription.TabIndex = 3;
             // 
             // lblEan
@@ -202,7 +205,7 @@
             this.lblEan.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblEan.Location = new System.Drawing.Point(13, 140);
             this.lblEan.Name = "lblEan";
-            this.lblEan.Size = new System.Drawing.Size(32, 17);
+            this.lblEan.Size = new System.Drawing.Size(43, 23);
             this.lblEan.TabIndex = 12;
             this.lblEan.Text = "EAN";
             // 
@@ -210,7 +213,7 @@
             // 
             this.txtEan.Location = new System.Drawing.Point(59, 137);
             this.txtEan.Name = "txtEan";
-            this.txtEan.Size = new System.Drawing.Size(137, 23);
+            this.txtEan.Size = new System.Drawing.Size(137, 31);
             this.txtEan.TabIndex = 4;
             // 
             // lblVatRate
@@ -219,7 +222,7 @@
             this.lblVatRate.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblVatRate.Location = new System.Drawing.Point(13, 172);
             this.lblVatRate.Name = "lblVatRate";
-            this.lblVatRate.Size = new System.Drawing.Size(32, 17);
+            this.lblVatRate.Size = new System.Drawing.Size(43, 23);
             this.lblVatRate.TabIndex = 14;
             this.lblVatRate.Text = "TVA";
             // 
@@ -229,7 +232,7 @@
             this.cbxVatRate.FormattingEnabled = true;
             this.cbxVatRate.Location = new System.Drawing.Point(59, 169);
             this.cbxVatRate.Name = "cbxVatRate";
-            this.cbxVatRate.Size = new System.Drawing.Size(64, 23);
+            this.cbxVatRate.Size = new System.Drawing.Size(64, 31);
             this.cbxVatRate.TabIndex = 5;
             // 
             // lblLongDescription
@@ -238,7 +241,7 @@
             this.lblLongDescription.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblLongDescription.Location = new System.Drawing.Point(217, 137);
             this.lblLongDescription.Name = "lblLongDescription";
-            this.lblLongDescription.Size = new System.Drawing.Size(96, 17);
+            this.lblLongDescription.Size = new System.Drawing.Size(131, 23);
             this.lblLongDescription.TabIndex = 16;
             this.lblLongDescription.Text = "DESCRIPTION";
             // 
@@ -256,8 +259,9 @@
             // 
             this.txtStock.Location = new System.Drawing.Point(70, 209);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(42, 23);
+            this.txtStock.Size = new System.Drawing.Size(42, 31);
             this.txtStock.TabIndex = 18;
+            this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblStock
             // 
@@ -265,7 +269,7 @@
             this.lblStock.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblStock.Location = new System.Drawing.Point(13, 212);
             this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(48, 17);
+            this.lblStock.Size = new System.Drawing.Size(65, 23);
             this.lblStock.TabIndex = 19;
             this.lblStock.Text = "STOCK";
             // 
@@ -274,7 +278,7 @@
             this.chkBlocked.AutoSize = true;
             this.chkBlocked.Location = new System.Drawing.Point(686, 47);
             this.chkBlocked.Name = "chkBlocked";
-            this.chkBlocked.Size = new System.Drawing.Size(75, 21);
+            this.chkBlocked.Size = new System.Drawing.Size(102, 27);
             this.chkBlocked.TabIndex = 20;
             this.chkBlocked.Text = "BLOQUÉ";
             this.chkBlocked.UseVisualStyleBackColor = true;
@@ -291,20 +295,20 @@
             // 
             // tabPageSales
             // 
-            this.tabPageSales.Location = new System.Drawing.Point(4, 24);
+            this.tabPageSales.Location = new System.Drawing.Point(4, 32);
             this.tabPageSales.Name = "tabPageSales";
             this.tabPageSales.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSales.Size = new System.Drawing.Size(749, 156);
+            this.tabPageSales.Size = new System.Drawing.Size(749, 148);
             this.tabPageSales.TabIndex = 0;
             this.tabPageSales.Text = "VENTES";
             this.tabPageSales.UseVisualStyleBackColor = true;
             // 
             // tabPagePurchases
             // 
-            this.tabPagePurchases.Location = new System.Drawing.Point(4, 24);
+            this.tabPagePurchases.Location = new System.Drawing.Point(4, 32);
             this.tabPagePurchases.Name = "tabPagePurchases";
             this.tabPagePurchases.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePurchases.Size = new System.Drawing.Size(749, 156);
+            this.tabPagePurchases.Size = new System.Drawing.Size(749, 148);
             this.tabPagePurchases.TabIndex = 1;
             this.tabPagePurchases.Text = "ACHATS";
             this.tabPagePurchases.UseVisualStyleBackColor = true;
@@ -313,8 +317,9 @@
             // 
             this.txtPriceSaleET.Location = new System.Drawing.Point(198, 212);
             this.txtPriceSaleET.Name = "txtPriceSaleET";
-            this.txtPriceSaleET.Size = new System.Drawing.Size(42, 23);
+            this.txtPriceSaleET.Size = new System.Drawing.Size(88, 31);
             this.txtPriceSaleET.TabIndex = 22;
+            this.txtPriceSaleET.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblPriceSaleET
             // 
@@ -322,7 +327,7 @@
             this.lblPriceSaleET.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblPriceSaleET.Location = new System.Drawing.Point(132, 215);
             this.lblPriceSaleET.Name = "lblPriceSaleET";
-            this.lblPriceSaleET.Size = new System.Drawing.Size(64, 17);
+            this.lblPriceSaleET.Size = new System.Drawing.Size(87, 23);
             this.lblPriceSaleET.TabIndex = 23;
             this.lblPriceSaleET.Text = "P.V. HT";
             // 
@@ -330,8 +335,9 @@
             // 
             this.txtPricePurchaseET.Location = new System.Drawing.Point(198, 189);
             this.txtPricePurchaseET.Name = "txtPricePurchaseET";
-            this.txtPricePurchaseET.Size = new System.Drawing.Size(42, 23);
+            this.txtPricePurchaseET.Size = new System.Drawing.Size(88, 31);
             this.txtPricePurchaseET.TabIndex = 24;
+            this.txtPricePurchaseET.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblPricePurchaseET
             // 
@@ -339,16 +345,27 @@
             this.lblPricePurchaseET.Font = new System.Drawing.Font("Consolas", 10F);
             this.lblPricePurchaseET.Location = new System.Drawing.Point(132, 192);
             this.lblPricePurchaseET.Name = "lblPricePurchaseET";
-            this.lblPricePurchaseET.Size = new System.Drawing.Size(64, 17);
+            this.lblPricePurchaseET.Size = new System.Drawing.Size(87, 23);
             this.lblPricePurchaseET.TabIndex = 25;
             this.lblPricePurchaseET.Text = "P.A. HT";
             // 
+            // lblProjectCode
+            // 
+            this.lblProjectCode.AutoSize = true;
+            this.lblProjectCode.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProjectCode.Location = new System.Drawing.Point(7, 67);
+            this.lblProjectCode.Name = "lblProjectCode";
+            this.lblProjectCode.Size = new System.Drawing.Size(72, 19);
+            this.lblProjectCode.TabIndex = 26;
+            this.lblProjectCode.Text = "(prévu)";
+            // 
             // ItemEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
             this.ControlBox = false;
+            this.Controls.Add(this.lblProjectCode);
             this.Controls.Add(this.txtPricePurchaseET);
             this.Controls.Add(this.lblPricePurchaseET);
             this.Controls.Add(this.txtPriceSaleET);
@@ -422,5 +439,6 @@
         private System.Windows.Forms.Label lblPriceSaleET;
         private System.Windows.Forms.TextBox txtPricePurchaseET;
         private System.Windows.Forms.Label lblPricePurchaseET;
+        private System.Windows.Forms.Label lblProjectCode;
     }
 }

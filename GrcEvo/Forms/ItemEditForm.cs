@@ -48,6 +48,7 @@ namespace GrcEvo.Forms
                 /* Cas d'une modification */
                 case "U":
                     itemNumberCode = itemProvider.GetItemById(_id).NumberCode;
+                    lblProjectCode.Visible = false;
                     LoadItem();
                     break;
             }
@@ -119,6 +120,9 @@ namespace GrcEvo.Forms
             cbxBrand.Text = itemProvider.GetItemById(_id).Brand;
             txtShortDescription.Text = itemProvider.GetItemById(_id).ShortDescription;
             txtEan.Text = itemProvider.GetItemById(_id).Ean;
+            txtStock.Text = itemProvider.GetItemById(_id).Stock.ToString();
+            txtPricePurchaseET.Text = itemProvider.GetItemById(_id).PricePurchaseET.ToString("0.00");
+            txtPriceSaleET.Text = itemProvider.GetItemById(_id).PriceSaleET.ToString("0.00");
         }
     }
 }

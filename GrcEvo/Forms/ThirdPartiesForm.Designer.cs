@@ -68,9 +68,9 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssNbThirdParties});
-            this.statusStrip.Location = new System.Drawing.Point(0, 453);
+            this.statusStrip.Location = new System.Drawing.Point(0, 448);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1199, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1199, 27);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
@@ -78,7 +78,7 @@
             // tssNbThirdParties
             // 
             this.tssNbThirdParties.Name = "tssNbThirdParties";
-            this.tssNbThirdParties.Size = new System.Drawing.Size(14, 17);
+            this.tssNbThirdParties.Size = new System.Drawing.Size(20, 22);
             this.tssNbThirdParties.Text = "-";
             // 
             // toolStrip
@@ -100,7 +100,7 @@
             this.tsbAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdd.Image")));
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
-            this.tsbAdd.Size = new System.Drawing.Size(84, 28);
+            this.tsbAdd.Size = new System.Drawing.Size(108, 28);
             this.tsbAdd.Text = "AJOUTER";
             this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
@@ -109,7 +109,7 @@
             this.tsbUpdate.Image = ((System.Drawing.Image)(resources.GetObject("tsbUpdate.Image")));
             this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbUpdate.Name = "tsbUpdate";
-            this.tsbUpdate.Size = new System.Drawing.Size(100, 28);
+            this.tsbUpdate.Size = new System.Drawing.Size(118, 28);
             this.tsbUpdate.Text = "MODIFIER";
             this.tsbUpdate.Click += new System.EventHandler(this.tsbUpdate_Click);
             // 
@@ -118,7 +118,7 @@
             this.tsbClose.Image = ((System.Drawing.Image)(resources.GetObject("tsbClose.Image")));
             this.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClose.Name = "tsbClose";
-            this.tsbClose.Size = new System.Drawing.Size(84, 28);
+            this.tsbClose.Size = new System.Drawing.Size(98, 28);
             this.tsbClose.Text = "FERMER";
             this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
             // 
@@ -126,7 +126,7 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(132, 43);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(264, 23);
+            this.txtSearch.Size = new System.Drawing.Size(264, 31);
             this.txtSearch.TabIndex = 0;
             // 
             // lblSearch
@@ -134,7 +134,7 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.Location = new System.Drawing.Point(13, 47);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(80, 17);
+            this.lblSearch.Size = new System.Drawing.Size(109, 23);
             this.lblSearch.TabIndex = 4;
             this.lblSearch.Text = "RECHERCHE";
             // 
@@ -162,10 +162,9 @@
             // ThirdPartiesForm
             // 
             this.AcceptButton = this.btnSearch;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 475);
-            this.ControlBox = false;
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearch);

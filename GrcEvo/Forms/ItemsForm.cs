@@ -133,7 +133,7 @@ namespace GrcEvo.Forms
         private void btnSearch_Click(object sender, EventArgs e)
         {
             List<EntityItem> list;
-            list = itemProvider.SearchByDescription(txtSearch.Text);
+            list = itemProvider.SearchByCriteria(txtSearch.Text);
 
             CreateTable(list);
         }

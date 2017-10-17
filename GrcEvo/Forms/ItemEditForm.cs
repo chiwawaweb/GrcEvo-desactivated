@@ -58,10 +58,10 @@ namespace GrcEvo.Forms
 
             foreach (var brand in Brands)
             {
-                cbxBrand.Items.Add("TOTO");
+                cbxBrand.Items.Add(brand);
             }
             
-
+    
         }
 
         private void ItemEditForm_FormClosed(object sender, FormClosedEventArgs e)

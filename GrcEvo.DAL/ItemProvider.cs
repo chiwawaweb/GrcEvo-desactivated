@@ -144,8 +144,8 @@ namespace GrcEvo.DAL
                 var query = (
                     from item in context.Items
                     group item by item.Brand into itemGroup
-                    select new { FirstLetter = itemGroup.Key, Names = itemGroup }).
-                        OrderBy(letter => letter.FirstLetter);
+                    select new { FirstLetter = itemGroup.Key, Names = itemGroup }).ToList();
+                      
 
                 foreach (var contact in query)
                 {
@@ -161,7 +161,7 @@ namespace GrcEvo.DAL
                                group item by item.Brand into ItemGroup
                                //orderby ItemGroup.Key
                                select ItemGroup.Key).ToList();*/
-                return null;
+                return query;
             }
         }
     }

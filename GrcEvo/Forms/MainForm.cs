@@ -18,6 +18,23 @@ namespace GrcEvo.Forms
         public MainForm()
         {
             InitializeComponent();
+
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                var query = (
+                    from item in context.Items
+                    group item by item.Brand into itemGroup
+                    select new { FirstLetter = itemGroup.Key, Names = itemGroup });
+
+
+                foreach (var brand in query)
+                {
+                    Console.WriteLine("Last names that start with the letter '{0}':", brand.FirstLetter);
+                    
+                }
+
+               
+            }
         }
 
         private void RefreshData()

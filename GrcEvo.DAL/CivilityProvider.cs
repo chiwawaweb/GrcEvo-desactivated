@@ -13,7 +13,7 @@ namespace GrcEvo.DAL
         /// Recupère la liste de toutes les entités
         /// </summary>
         /// <returns>La Liste de toutes les entités</returns>
-        public List<EntityCivility> getAll()
+        public List<EntityCivility> GetAll()
         {
             using (GrcEvoContext context = new GrcEvoContext())
             {

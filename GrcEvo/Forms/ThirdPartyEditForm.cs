@@ -37,6 +37,7 @@ namespace GrcEvo.Forms
             FormClosed += new FormClosedEventHandler(ThirdPartyEditForm_FormClosed);
 
             InitializeComponent();
+
             thirdPartyAction = action;
             thirdPartyType = type;
 
@@ -66,10 +67,11 @@ namespace GrcEvo.Forms
                     NewThirdParty();
 
                     break;
+                /* Cas d'une modification */
                 case "U":
                     thirdPartyType = thirdPartyProvider.getThirdPartyById(_id).PrefixCode;
                     thirdPartyNumberCode = thirdPartyProvider.getThirdPartyById(_id).NumberCode;
-                    UpdateThirdParty();
+                    LoadThirdParty();
                     break;
             }
 
@@ -77,7 +79,7 @@ namespace GrcEvo.Forms
             this.Text = formTitle;
 
             /* ComboBox des civilités */
-            foreach (var civility in civilityProvider.getAll())
+            foreach (var civility in civilityProvider.GetAll())
             {
                 cbxCivility.Items.Add(civility.Name);
             }
@@ -108,7 +110,7 @@ namespace GrcEvo.Forms
         /// <summary>
         /// Chargement de la fiche en mode mise à jour
         /// </summary>
-        private void UpdateThirdParty()
+        private void LoadThirdParty()
         {
             
             formTitle += " (Modification)";
@@ -207,7 +209,6 @@ namespace GrcEvo.Forms
         private void tsbSave_Click(object sender, EventArgs e)
         {
             Save();
-            
         }
 
         private void tsbClose_Click(object sender, EventArgs e)
@@ -217,9 +218,7 @@ namespace GrcEvo.Forms
 
         private void CloseWithConfirmation()
         {
-            
             Close();
-            
         }
 
         private void ThirdPartyEditForm_FormClosed(object sender, FormClosedEventArgs e)

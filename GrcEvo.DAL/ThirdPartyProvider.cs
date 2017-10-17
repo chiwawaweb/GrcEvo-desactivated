@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using GrcEvo.DTO;
 using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
 
 namespace GrcEvo.DAL
 {

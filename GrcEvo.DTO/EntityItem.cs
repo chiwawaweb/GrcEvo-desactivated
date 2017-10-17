@@ -14,10 +14,10 @@ namespace GrcEvo.DTO
         public string Type { get; set; }
         public string Family { get; set; }
         public string SubFamily { get; set; }
+        public string Brand { get; set; }
         public string ShortDescription { get; set; }
         public string Ean { get; set; }
         public string PackagingUnit { get; set; }
-        public string Brand { get; set; }
         public double VatRate { get; set; }
         public bool InStock { get; set; }
         public double Stock { get; set; }

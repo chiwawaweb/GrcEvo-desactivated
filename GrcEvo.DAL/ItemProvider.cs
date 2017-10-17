@@ -27,7 +27,7 @@ namespace GrcEvo.DAL
             {
                 try
                 {
-                    return context.Items.ToList<EntityItem>();
+                    return context.Items.ToList();
                 }
                 catch
                 {
@@ -91,6 +91,77 @@ namespace GrcEvo.DAL
                               orderby t.ShortDescription ascending
                               select t);
                 return result.ToList();
+            }
+        }
+
+        /// <summary>
+        /// Renvoie le prochain code de l'article
+        /// </summary>
+        public int NextCode()
+        {
+            int lastCode = 0;
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                var query = (from t in context.Items
+                             orderby t.NumberCode descending
+                             select t).Take(1);
+
+                foreach (var result in query)
+                {
+                    lastCode = result.NumberCode;
+                }
+            }
+            return lastCode + 1;
+        }
+
+        /// <summary>
+        /// Recupère l'entité dont l'ID est passé en paramètre
+        /// </summary>
+        /// <param name="ID">ID(clé primaire) de l'entité à retrouver.</param>
+        /// <returns>L'entité si elle existe, sinon NULL</returns>
+        public EntityItem getItemById(int ID)
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                try
+                {
+                    return context.Items.Find(ID);
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Recupère les marques des différents articles de la base
+        /// </summary>
+        public List<string> GetBrands()
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                var query = (
+                    from item in context.Items
+                    group item by item.Brand into itemGroup
+                    select new { FirstLetter = itemGroup.Key, Names = itemGroup }).
+                        OrderBy(letter => letter.FirstLetter);
+
+                foreach (var contact in query)
+                {
+                    Console.WriteLine("Last names that start with the letter '{0}':",
+                        contact.FirstLetter);
+                    foreach (var name in contact.Names)
+                    {
+                        Console.WriteLine(name.Brand);
+                    }
+                }
+
+                /*var result = (from item in context.Items
+                               group item by item.Brand into ItemGroup
+                               //orderby ItemGroup.Key
+                               select ItemGroup.Key).ToList();*/
+                return null;
             }
         }
     }

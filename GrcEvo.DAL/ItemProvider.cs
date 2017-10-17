@@ -148,5 +148,20 @@ namespace GrcEvo.DAL
                 return result;
             }
         }
+
+        /// <summary>
+        /// Recupère les familles des différents articles de la base
+        /// </summary>
+        public List<string> GetFamilies()
+        {
+            using (GrcEvoContext context = new GrcEvoContext())
+            {
+                var result = (from item in context.Items
+                              group item by item.Family into ItemGroup
+                              orderby ItemGroup.Key
+                              select ItemGroup.Key).ToList();
+                return result;
+            }
+        }
     }
 }

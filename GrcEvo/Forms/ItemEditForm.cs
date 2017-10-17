@@ -66,6 +66,12 @@ namespace GrcEvo.Forms
                 cbxBrand.Items.Add(brand);
             }
 
+            /* ComboBox des familles */
+            List<string> Families = new List<string>(itemProvider.GetFamilies());
+            foreach (var family in Families)
+            {
+                cbxFamily.Items.Add(family);
+            }
 
 
         }
@@ -108,9 +114,11 @@ namespace GrcEvo.Forms
             formTitle += " (Modification)";
             lblCode.Text = itemProvider.GetItemById(_id).PrefixCode + itemNumberCode.ToString("00000");
             cbxType.Text = itemProvider.GetItemById(_id).Type;
-            
-            txtShortDescription.Text = itemProvider.GetItemById(_id).ShortDescription;
+            cbxFamily.Text = itemProvider.GetItemById(_id).Family;
+            chkBlocked.Checked = itemProvider.GetItemById(_id).Blocked;
             cbxBrand.Text = itemProvider.GetItemById(_id).Brand;
+            txtShortDescription.Text = itemProvider.GetItemById(_id).ShortDescription;
+            txtEan.Text = itemProvider.GetItemById(_id).Ean;
         }
     }
 }

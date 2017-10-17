@@ -22,5 +22,9 @@ namespace GrcEvo.DAL
         public DbSet<EntityThirdPartyFamily> ThirdPartyFamilies { get; set; }
         public DbSet<EntityItem> Items { get; set; }
         public DbSet<EntityItemFamily> ItemFamilies { get; set; }
+        public DbSet<EntityInvoice> Invoices { get; set; }
+        public DbSet<EntityOrder> Orders { get; set; }
+        public DbSet<EntityQuote> Quotes { get; set; }
+        public DbSet<EntityReceipt> Receipts { get; set; }
     }
 }
